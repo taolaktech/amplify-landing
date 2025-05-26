@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://useamplify.ai/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
