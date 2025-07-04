@@ -1,9 +1,12 @@
 import type React from "react"
+import Script from 'next/script';
+import { GA_TRACKING_ID } from '@/lib/gtag';
 import type { Metadata } from "next"
 import { eudoxusSans } from "./fonts"
 import FontForce from "./font-force"
 import FontScript from "./font-script"
 import "./globals.css"
+import { Analytics } from "./analytics";
 
 export const metadata: Metadata = {
   title: "Amplify - AI-Powered Ad Automation for Shopify Merchants",
@@ -126,8 +129,24 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Google Analytics Scripts */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <FontForce />
         <FontScript />
+        <Analytics />
         {children}
       </body>
     </html>
