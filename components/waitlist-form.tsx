@@ -139,6 +139,11 @@ export function WaitlistForm({
       isValid = false
     }
 
+    if (!formData.shopifyUrl.includes('.myshopify.com')) {
+      newErrors.shopifyUrl = "Please enter a valid Shopify URL"
+      isValid = false
+    }
+
     if (!formData.email.trim()) {
       newErrors.email = "Email is required"
       isValid = false
@@ -181,13 +186,22 @@ export function WaitlistForm({
         ...formData,
         salesLocations: filteredLocations,
       } as WaitlistFormData
+ 
+  
+      const res = await fetch('https://dev-api.useamplify.ai/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSubmit),
+      });
 
-      console.log("Submitting data:", dataToSubmit)
-      const result = await submitToWaitlist(dataToSubmit)
-      console.log("Submission result:", result)
+      if (!res.ok) throw new Error('Submission failed');
+      const result = await res.json();
+      console.log('Success:', result);
 
       setSubmissionResult(result)
-      setIsSubmitted(result.success)
+      setIsSubmitted(true)
     } catch (error) {
       console.error("Error submitting form:", error)
       setSubmissionResult({
