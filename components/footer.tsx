@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div className="md:col-span-2">
             <div className="flex items-center">
               <Image
                 src="/amplify-logo.png"
@@ -58,6 +58,60 @@ export default function Footer() {
                 <Youtube className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
               </Link>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">Product</h3>
+            <ul className="mt-4 space-y-4">
+              <li>
+                <Link
+                  href="/#features"
+                  className="text-base text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#pricing"
+                  className="text-base text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-base text-gray-400 hover:text-white transition-colors duration-200">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">Legal & Privacy</h3>
+            <ul className="mt-4 space-y-4">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-base text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-base text-gray-400 hover:text-white transition-colors duration-200">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/data-deletion"
+                  className="text-base text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Delete My Data
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
