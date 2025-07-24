@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Check, Rocket, Star, TrendingUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { WaitlistForm } from "@/components/waitlist-form"
@@ -138,36 +136,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             </div>
           </div>
         ))}
-      </div>
-
-      <div
-        className={`mt-16 mx-auto max-w-3xl rounded-2xl bg-purple-50 p-8 shadow-sm transition-all duration-1000 transform ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-        style={{ transitionDelay: "600ms" }}
-      >
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900">Need a custom plan?</h3>
-          <p className="mt-2 text-lg text-gray-600">
-            Contact us for a custom plan tailored to your specific business needs.
-          </p>
-          <div className="mt-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <WaitlistForm
-              buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700"
-              planInterest="Custom Plan"
-            />
-            <Link
-              href="https://calendly.com/useamplify/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button variant="outline" className="w-full border-purple-600 text-purple-600 hover:bg-purple-50">
-                Book a demo
-              </Button>
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   )
