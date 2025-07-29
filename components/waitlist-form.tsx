@@ -139,12 +139,10 @@ export function WaitlistForm({
       isValid = false
     }
 
-    formData.shopifyUrl = formData.shopifyUrl.trim();
-
-    // if (!formData.shopifyUrl.includes('.myshopify.com')) {
-    //   newErrors.shopifyUrl = "Please enter a valid Shopify URL"
-    //   isValid = false
-    // }
+    if (!formData.shopifyUrl.includes('.myshopify.com')) {
+      newErrors.shopifyUrl = "Please enter a valid Shopify URL"
+      isValid = false
+    }
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required"

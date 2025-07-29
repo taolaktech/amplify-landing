@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft, Shield, Eye, Lock, Users, FileText, Mail, Phone } from "lucide-react"
+import { ArrowLeft, Shield, Lock, Users, FileText, Mail, Phone, Globe, Database } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -37,11 +37,12 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-4xl font-bold text-gray-900">Privacy Policy</h1>
           </div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+            We respect your privacy and are committed to protecting the data you share with us through your use of
+            Amplify.
           </p>
           <div className="flex items-center justify-center gap-4 mt-6">
-            <Badge variant="outline">Last Updated: January 15, 2024</Badge>
-            <Badge variant="outline">Effective Date: January 15, 2024</Badge>
+            <Badge variant="outline">Last Updated: July 2025</Badge>
+            <Badge variant="outline">Effective Date: July 2025</Badge>
           </div>
         </div>
 
@@ -53,21 +54,21 @@ export default function PrivacyPolicyPage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <a href="#information-collection" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Information We Collect</div>
-                <div className="text-sm text-gray-600">What data we gather</div>
+              <a href="#what-we-collect" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">What We Collect</div>
+                <div className="text-sm text-gray-600">Data collection overview</div>
               </a>
-              <a href="#information-use" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">How We Use Information</div>
-                <div className="text-sm text-gray-600">Purpose of data collection</div>
+              <a href="#meta-platform-compliance" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Meta Platform Compliance</div>
+                <div className="text-sm text-gray-600">Facebook & Instagram data</div>
               </a>
-              <a href="#information-sharing" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Information Sharing</div>
-                <div className="text-sm text-gray-600">When we share data</div>
+              <a href="#data-usage" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Data Usage</div>
+                <div className="text-sm text-gray-600">How we use your data</div>
               </a>
-              <a href="#data-security" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Data Security</div>
-                <div className="text-sm text-gray-600">How we protect your data</div>
+              <a href="#data-retention" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Data Retention & Deletion</div>
+                <div className="text-sm text-gray-600">Storage and removal</div>
               </a>
               <a href="#your-rights" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
                 <div className="font-medium">Your Rights</div>
@@ -91,10 +92,9 @@ export default function PrivacyPolicyPage() {
           </CardHeader>
           <CardContent className="prose max-w-none">
             <p className="text-gray-700 leading-relaxed">
-              Amplify Technologies Inc. ("Amplify," "we," "us," or "our") is committed to protecting your privacy and
-              ensuring the security of your personal information. This Privacy Policy explains how we collect, use,
-              disclose, and safeguard your information when you use our AI-powered automated marketing platform and
-              related services (collectively, the "Services").
+              We respect your privacy and are committed to protecting the data you share with us through your use of
+              Amplify. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
+              you use our AI-powered automated marketing platform and related services.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               By using our Services, you consent to the collection and use of your information as described in this
@@ -103,197 +103,244 @@ export default function PrivacyPolicyPage() {
           </CardContent>
         </Card>
 
-        {/* Information We Collect */}
-        <Card className="mb-8" id="information-collection">
+        {/* What We Collect */}
+        <Card className="mb-8" id="what-we-collect">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Eye className="h-5 w-5 text-blue-600" />
-              Information We Collect
+              <Database className="h-5 w-5 text-blue-600" />
+              What We Collect
             </CardTitle>
-            <CardDescription>We collect information in several ways when you use our Services</CardDescription>
+            <CardDescription>Overview of data collection practices</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Personal Information You Provide</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Shopify Store Data</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>
-                  • <strong>Account Information:</strong> Name, email address, phone number, company name, and billing
-                  information
-                </li>
-                <li>
-                  • <strong>Profile Information:</strong> Business details, marketing preferences, and account settings
-                </li>
-                <li>
-                  • <strong>Communication Data:</strong> Messages, support tickets, and feedback you send to us
-                </li>
-                <li>
-                  • <strong>Payment Information:</strong> Credit card details and billing addresses (processed securely
-                  through third-party payment processors)
-                </li>
+                <li>• Product catalogs, descriptions, and pricing information</li>
+                <li>• Order history and transaction data</li>
+                <li>• Customer insights and demographic information</li>
+                <li>• Store configuration and settings</li>
+                <li>• Inventory levels and product performance metrics</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Information Collected Automatically</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Ad Performance Metrics</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>
-                  • <strong>Usage Data:</strong> How you interact with our Services, features used, and time spent
-                </li>
-                <li>
-                  • <strong>Device Information:</strong> IP address, browser type, operating system, and device
-                  identifiers
-                </li>
-                <li>
-                  • <strong>Log Data:</strong> Server logs, error reports, and performance metrics
-                </li>
-                <li>
-                  • <strong>Cookies and Tracking:</strong> Information collected through cookies, web beacons, and
-                  similar technologies
-                </li>
+                <li>• Campaign performance data from Facebook and Instagram</li>
+                <li>• Google Ads campaign metrics and insights</li>
+                <li>• Click-through rates, conversion data, and ROI metrics</li>
+                <li>• Audience engagement and demographic insights</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Third-Party Platform Data</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">User Input and Configuration</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>
-                  • <strong>Shopify Integration:</strong> Store data, product information, and sales metrics (with your
-                  permission)
-                </li>
-                <li>
-                  • <strong>Advertising Platforms:</strong> Campaign data from Google Ads, Facebook Ads, and other
-                  connected platforms
-                </li>
-                <li>
-                  • <strong>Analytics Data:</strong> Performance metrics and insights from integrated marketing tools
-                </li>
+                <li>• Campaign configuration settings and preferences</li>
+                <li>• Budget allocations and bidding strategies</li>
+                <li>• Target audience selections and parameters</li>
+                <li>• Creative assets and advertising content</li>
+                <li>• Account settings and user preferences</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Authentication Credentials</h3>
+              <p className="text-gray-700">
+                Authentication credentials for connected third-party services are collected via secure OAuth protocols,
+                including access tokens for:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Shopify store connections</li>
+                <li>• Meta (Facebook/Instagram) business accounts</li>
+                <li>• Google Ads account access</li>
               </ul>
             </div>
           </CardContent>
         </Card>
 
-        {/* How We Use Information */}
-        <Card className="mb-8" id="information-use">
+        {/* Meta Platform Data Compliance */}
+        <Card className="mb-8" id="meta-platform-compliance">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5 text-blue-600" />
-              How We Use Your Information
+              <Globe className="h-5 w-5 text-blue-600" />
+              Meta Platform Data Compliance
             </CardTitle>
-            <CardDescription>We use your information to provide and improve our Services</CardDescription>
+            <CardDescription>Facebook and Instagram data handling</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Provision</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Provide, operate, and maintain our AI-powered marketing platform</li>
-                <li>• Process transactions and manage your account</li>
-                <li>• Create and optimize advertising campaigns across multiple platforms</li>
-                <li>• Generate insights and analytics reports</li>
-              </ul>
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-blue-800 text-sm">
+                <strong>Meta Compliance:</strong> We collect Meta platform data in full compliance with Meta's Developer
+                Platform Terms and data usage policies.
+              </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Communication</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Send you service-related notifications and updates</li>
-                <li>• Respond to your inquiries and provide customer support</li>
-                <li>• Send marketing communications (with your consent)</li>
-                <li>• Notify you about changes to our Services or policies</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Improvement and Analytics</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Analyze usage patterns to improve our Services</li>
-                <li>• Develop new features and functionality</li>
-                <li>• Conduct research and analytics</li>
-                <li>• Ensure security and prevent fraud</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Information Sharing */}
-        <Card className="mb-8" id="information-sharing">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5 text-blue-600" />
-              Information Sharing and Disclosure
-            </CardTitle>
-            <CardDescription>When and how we share your information with others</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Providers</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Platform Data Collection</h3>
               <p className="text-gray-700 mb-2">
-                We may share your information with trusted third-party service providers who assist us in:
+                We collect Meta platform data to enable campaign creation, optimization, audience targeting, and
+                performance reporting. Platform Data includes business information such as:
               </p>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Payment processing and billing</li>
-                <li>• Cloud hosting and data storage</li>
-                <li>• Customer support and communication</li>
-                <li>• Analytics and performance monitoring</li>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Ad Accounts and account metadata</li>
+                <li>• Campaign Structures and configurations</li>
+                <li>• Performance Insights and analytics data</li>
+                <li>• Page Metadata and business information</li>
+                <li>• Audience data for targeting optimization</li>
+                <li>• Creative assets and ad content</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Advertising Partners</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Usage Scope</h3>
               <p className="text-gray-700">
-                With your explicit consent, we share necessary campaign data with advertising platforms (Google,
-                Facebook, etc.) to create and manage your marketing campaigns.
+                Meta platform data is used exclusively for campaign-related functions and is not sold, rented, or used
+                for profiling unrelated to ad automation. Specific uses include:
               </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Automated campaign creation and optimization</li>
+                <li>• Audience analysis and targeting improvements</li>
+                <li>• Performance reporting and insights generation</li>
+                <li>• Ad account management and administration</li>
+                <li>• Compliance monitoring and policy adherence</li>
+              </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Legal Requirements</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Access Revocation</h3>
               <p className="text-gray-700">
-                We may disclose your information if required by law, court order, or government regulation, or to
-                protect our rights, property, or safety.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Business Transfers</h3>
-              <p className="text-gray-700">
-                In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of
-                the business transaction.
+                You may revoke access at any time from your Meta settings by visiting Facebook Settings → Apps and
+                Websites and removing Amplify from your connected applications. This will immediately stop our access to
+                your Meta data.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Data Security */}
-        <Card className="mb-8" id="data-security">
+        {/* Data Usage */}
+        <Card className="mb-8" id="data-usage">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Lock className="h-5 w-5 text-blue-600" />
-              Data Security
+              <Users className="h-5 w-5 text-blue-600" />
+              Data Usage
             </CardTitle>
-            <CardDescription>How we protect your information</CardDescription>
+            <CardDescription>How we use your information</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-gray-700">
-              We implement appropriate technical and organizational security measures to protect your personal
-              information against unauthorized access, alteration, disclosure, or destruction.
-            </p>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Campaign-Related Functions</h3>
+              <p className="text-gray-700 mb-2">
+                Data is only used to fulfill campaign-related functions and is not sold, rented, or used for profiling
+                unrelated to ad automation. Specific uses include:
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Automated campaign creation and setup</li>
+                <li>• Real-time campaign optimization and bidding</li>
+                <li>• Audience targeting and segmentation</li>
+                <li>• Performance analysis and reporting</li>
+                <li>• Creative asset generation and testing</li>
+                <li>• Budget allocation and spend optimization</li>
+              </ul>
+            </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Measures Include:</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Improvement</h3>
+              <p className="text-gray-700">
+                We may use aggregated, anonymized data to improve our platform features and AI algorithms. This
+                includes:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Enhancing campaign optimization algorithms</li>
+                <li>• Improving audience targeting capabilities</li>
+                <li>• Developing new platform features</li>
+                <li>• Conducting performance benchmarking</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Communication and Support</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Encryption of data in transit and at rest</li>
-                <li>• Regular security assessments and audits</li>
-                <li>• Access controls and authentication systems</li>
-                <li>• Employee training on data protection</li>
-                <li>• Incident response and breach notification procedures</li>
+                <li>• Providing customer support and technical assistance</li>
+                <li>• Sending service-related notifications and updates</li>
+                <li>• Communicating about account status and billing</li>
+                <li>• Sharing platform updates and new features</li>
               </ul>
             </div>
 
             <div className="bg-yellow-50 p-4 rounded-lg">
               <p className="text-yellow-800 text-sm">
-                <strong>Important:</strong> While we strive to protect your information, no method of transmission over
-                the internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+                <strong>Important:</strong> We do not use your data to build user profiles outside the scope of ad
+                automation or share your data with third parties for their marketing purposes.
               </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Data Retention & Deletion */}
+        <Card className="mb-8" id="data-retention">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Lock className="h-5 w-5 text-blue-600" />
+              Data Retention & Deletion
+            </CardTitle>
+            <CardDescription>How long we keep your data and deletion options</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Retention Policy</h3>
+              <p className="text-gray-700 mb-2">
+                We retain campaign data and connected account metadata only as long as your account is active or as
+                needed to provide services. Specific retention periods include:
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Active campaign data: Retained while campaigns are running</li>
+                <li>• Historical performance data: Retained for up to 2 years for reporting</li>
+                <li>• Account information: Retained while account is active</li>
+                <li>• Billing records: Retained for 7 years for tax and legal compliance</li>
+                <li>• Support communications: Retained for 3 years</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Deletion Options</h3>
+              <p className="text-gray-700 mb-2">
+                You can request account deletion at any time. We provide multiple ways to request data deletion:
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li>
+                  • Use our{" "}
+                  <Link href="/data-deletion" className="text-blue-600 hover:text-blue-700">
+                    data deletion form
+                  </Link>
+                </li>
+                <li>• Email us directly at support@useamplify.ai</li>
+                <li>• Contact us through your account settings</li>
+                <li>• Call our support team at +1-647-671-1349</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Deletion Timeline</h3>
+              <p className="text-gray-700">Upon receiving a valid deletion request, we will:</p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Acknowledge your request within 2 business days</li>
+                <li>• Complete data deletion within 30 days</li>
+                <li>• Provide confirmation once deletion is complete</li>
+                <li>• Retain only legally required records (billing, tax records)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Automatic Deletion</h3>
+              <p className="text-gray-700">Data is automatically deleted in the following scenarios:</p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Account termination or cancellation</li>
+                <li>• Expiration of retention periods</li>
+                <li>• Revocation of third-party platform access</li>
+                <li>• Compliance with legal deletion requirements</li>
+              </ul>
             </div>
           </CardContent>
         </Card>
@@ -303,7 +350,7 @@ export default function PrivacyPolicyPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-blue-600" />
-              Your Privacy Rights
+              Your Rights
             </CardTitle>
             <CardDescription>Control over your personal information</CardDescription>
           </CardHeader>
@@ -311,117 +358,100 @@ export default function PrivacyPolicyPage() {
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Access and Portability</h3>
               <p className="text-gray-700">
-                You have the right to access your personal information and receive a copy of your data in a portable
-                format.
+                You can request access to, correction of, or deletion of your data at any time. We will provide your
+                data in a portable format within 30 days of a valid request.
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Correction and Updates</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Correction</h3>
               <p className="text-gray-700">
-                You can update or correct your personal information through your account settings or by contacting us.
+                You can update or correct your personal information through your account settings or by contacting our
+                support team. We will update your information promptly upon verification.
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Deletion</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Access Revocation</h3>
               <p className="text-gray-700 mb-2">
-                You have the right to request deletion of your personal information. You can:
+                You have the right to revoke Amplify's access to your connected accounts at any time:
               </p>
-              <ul className="space-y-1 text-gray-700">
-                <li>
-                  • Use our{" "}
-                  <Link href="/data-deletion" className="text-blue-600 hover:text-blue-700">
-                    data deletion form
-                  </Link>
-                </li>
-                <li>• Contact us directly at support@useamplify.ai</li>
-                <li>• Call us at +1-647-671-1349</li>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Meta accounts: Through Facebook/Instagram app settings</li>
+                <li>• Google Ads: Through Google account permissions</li>
+                <li>• Shopify: Through your Shopify app management</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Marketing Communications</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Communication Preferences</h3>
               <p className="text-gray-700">
                 You can opt out of marketing communications at any time by clicking the unsubscribe link in emails or
-                updating your preferences in your account.
+                updating your preferences in your account settings.
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Cookies and Tracking</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Legal Rights</h3>
               <p className="text-gray-700">
-                You can control cookies through your browser settings. Note that disabling cookies may affect the
-                functionality of our Services.
+                Depending on your location, you may have additional rights under data protection laws such as GDPR,
+                CCPA, or other applicable privacy regulations. Contact us to exercise these rights.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        {/* International Transfers */}
+        {/* Data Security */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>International Data Transfers</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <Lock className="h-5 w-5 text-blue-600" />
+              Data Security
+            </CardTitle>
+            <CardDescription>How we protect your information</CardDescription>
           </CardHeader>
-          <CardContent>
-            <p className="text-gray-700 mb-4">
-              Your information may be transferred to and processed in countries other than your country of residence. We
-              ensure appropriate safeguards are in place for international transfers, including:
-            </p>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Standard contractual clauses approved by regulatory authorities</li>
-              <li>• Adequacy decisions by relevant data protection authorities</li>
-              <li>• Other legally recognized transfer mechanisms</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Data Retention */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Data Retention</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-700 mb-4">
-              We retain your personal information for as long as necessary to provide our Services and fulfill the
-              purposes outlined in this Privacy Policy. Retention periods vary based on:
-            </p>
-            <ul className="space-y-2 text-gray-700">
-              <li>• The type of information and how it's used</li>
-              <li>• Legal and regulatory requirements</li>
-              <li>• Your account status and activity</li>
-              <li>• Legitimate business needs</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Children's Privacy */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Children's Privacy</CardTitle>
-          </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
             <p className="text-gray-700">
-              Our Services are not intended for children under 13 years of age. We do not knowingly collect personal
-              information from children under 13. If you are a parent or guardian and believe your child has provided us
-              with personal information, please contact us immediately.
+              We implement industry-standard security measures to protect your personal information against unauthorized
+              access, alteration, disclosure, or destruction.
             </p>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Measures Include:</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• End-to-end encryption of data in transit and at rest</li>
+                <li>• Regular security assessments and penetration testing</li>
+                <li>• Multi-factor authentication and access controls</li>
+                <li>• Employee training on data protection and security</li>
+                <li>• Incident response and breach notification procedures</li>
+                <li>• SOC 2 Type II compliance and regular audits</li>
+              </ul>
+            </div>
+
+            <div className="bg-yellow-50 p-4 rounded-lg">
+              <p className="text-yellow-800 text-sm">
+                <strong>Important:</strong> While we implement robust security measures, no method of transmission over
+                the internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+              </p>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Changes to Privacy Policy */}
+        {/* Policy Changes */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Changes to This Privacy Policy</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 mb-4">
-              We may update this Privacy Policy from time to time. When we make changes, we will:
+              We will notify you of material changes to this privacy policy with at least 7 days' notice. Changes will
+              be communicated through:
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• Update the "Last Updated" date at the top of this policy</li>
-              <li>• Notify you via email or through our Services</li>
-              <li>• For material changes, provide additional notice as required by law</li>
+              <li>• Email notifications to your registered email address</li>
+              <li>• In-app notifications when you log into your account</li>
+              <li>• Updates to the "Last Updated" date at the top of this policy</li>
+              <li>• Prominent notices on our website</li>
             </ul>
             <p className="text-gray-700 mt-4">
               Your continued use of our Services after any changes indicates your acceptance of the updated Privacy
@@ -472,6 +502,13 @@ export default function PrivacyPolicyPage() {
               <p className="text-blue-800 text-sm">
                 <strong>Response Time:</strong> We aim to respond to all privacy-related inquiries within 2 business
                 days. For urgent matters, please call us directly.
+              </p>
+            </div>
+
+            <div className="mt-4 p-4 bg-green-50 rounded-lg">
+              <p className="text-green-800 text-sm">
+                <strong>Data Requests:</strong> If you have any questions about this Privacy Policy or need to exercise
+                your data rights, reach out to us at support@useamplify.ai.
               </p>
             </div>
           </CardContent>

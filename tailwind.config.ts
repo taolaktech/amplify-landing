@@ -19,7 +19,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
-          "var(--font-eudoxus-sans)",
+          "var(--font-satoshi)",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",

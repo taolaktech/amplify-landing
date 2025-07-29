@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft, FileText, Scale, Shield, AlertTriangle, Mail, Phone } from "lucide-react"
+import { ArrowLeft, FileText, Scale, Shield, AlertTriangle, Mail, Phone, Globe } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -34,14 +34,14 @@ export default function TermsOfServicePage() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Scale className="h-8 w-8 text-blue-600" />
-            <h1 className="text-4xl font-bold text-gray-900">Terms of Service</h1>
+            <h1 className="text-4xl font-bold text-gray-900">Terms & Conditions</h1>
           </div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             These terms govern your use of Amplify's AI-powered marketing platform and related services.
           </p>
           <div className="flex items-center justify-center gap-4 mt-6">
-            <Badge variant="outline">Last Updated: January 15, 2024</Badge>
-            <Badge variant="outline">Effective Date: January 15, 2024</Badge>
+            <Badge variant="outline">Last Updated: July 2025</Badge>
+            <Badge variant="outline">Effective Date: July 2025</Badge>
           </div>
         </div>
 
@@ -53,36 +53,36 @@ export default function TermsOfServicePage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <a href="#acceptance" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Acceptance of Terms</div>
-                <div className="text-sm text-gray-600">Agreement to these terms</div>
+              <a href="#general-terms" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">General Terms</div>
+                <div className="text-sm text-gray-600">Platform overview and usage</div>
               </a>
-              <a href="#services" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Our Services</div>
-                <div className="text-sm text-gray-600">What we provide</div>
+              <a href="#meta-platform-data" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Meta Platform Data</div>
+                <div className="text-sm text-gray-600">Facebook & Instagram compliance</div>
               </a>
-              <a href="#user-obligations" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">User Obligations</div>
-                <div className="text-sm text-gray-600">Your responsibilities</div>
+              <a href="#data-restrictions" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Data Restrictions</div>
+                <div className="text-sm text-gray-600">User control and access</div>
               </a>
-              <a href="#payment" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Payment Terms</div>
-                <div className="text-sm text-gray-600">Billing and subscriptions</div>
-              </a>
-              <a href="#intellectual-property" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="font-medium">Intellectual Property</div>
-                <div className="text-sm text-gray-600">Rights and ownership</div>
+              <a href="#subprocessors" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Subprocessors</div>
+                <div className="text-sm text-gray-600">Third-party services</div>
               </a>
               <a href="#limitation" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
                 <div className="font-medium">Limitation of Liability</div>
                 <div className="text-sm text-gray-600">Legal limitations</div>
+              </a>
+              <a href="#termination" className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
+                <div className="font-medium">Termination</div>
+                <div className="text-sm text-gray-600">Account suspension</div>
               </a>
             </div>
           </CardContent>
         </Card>
 
         {/* Acceptance of Terms */}
-        <Card className="mb-8" id="acceptance">
+        <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <FileText className="h-5 w-5 text-blue-600" />
@@ -91,220 +91,227 @@ export default function TermsOfServicePage() {
           </CardHeader>
           <CardContent className="prose max-w-none">
             <p className="text-gray-700 leading-relaxed">
-              These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or
-              "your") and Amplify Technologies Inc. ("Amplify," "we," "us," or "our") regarding your use of our
-              AI-powered automated marketing platform and related services (collectively, the "Services").
+              By using Amplify, you agree to these Terms & Conditions, our Privacy Policy, and any additional terms
+              specific to certain services. These Terms constitute a legally binding agreement between you ("User,"
+              "you," or "your") and Amplify Technologies Inc. ("Amplify," "we," "us," or "our").
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
-              By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound
-              by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not use our Services.
+              If you do not agree to these Terms, you may not use our Services. Continued use of our Services after
+              changes indicates your acceptance of the updated Terms.
             </p>
-            <div className="bg-blue-50 p-4 rounded-lg mt-4">
-              <p className="text-blue-800 text-sm">
-                <strong>Important:</strong> These Terms may be updated from time to time. Continued use of our Services
-                after changes indicates your acceptance of the updated Terms.
-              </p>
-            </div>
           </CardContent>
         </Card>
 
-        {/* Description of Services */}
-        <Card className="mb-8" id="services">
+        {/* General Terms */}
+        <Card className="mb-8" id="general-terms">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-blue-600" />
-              Description of Services
+              General Terms
             </CardTitle>
-            <CardDescription>What Amplify provides to users</CardDescription>
+            <CardDescription>Platform overview and usage guidelines</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Core Services</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Platform Description</h3>
+              <p className="text-gray-700">
+                Amplify is a subscription-based platform that enables e-commerce brands, particularly Shopify store
+                owners, to create, manage, and optimize ad campaigns across platforms like Meta (Facebook, Instagram)
+                and Google.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">User Responsibilities</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>
+                  • You are responsible for ensuring that your use of Amplify complies with all applicable laws and
+                  regulations
+                </li>
+                <li>• You must provide accurate and complete information when creating campaigns</li>
+                <li>• You are responsible for all content and advertising materials created through our platform</li>
+                <li>• You must comply with all third-party platform policies (Meta, Google, etc.)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Features</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• AI-powered automated marketing campaign creation and optimization</li>
-                <li>• Multi-platform advertising management (Google Ads, Facebook, Instagram, AdRoll)</li>
+                <li>• Multi-platform advertising management (Google Ads, Facebook, Instagram)</li>
                 <li>• Real-time analytics and performance reporting</li>
                 <li>• Shopify and e-commerce platform integrations</li>
                 <li>• Dynamic Ad Optimization (DAO) technology</li>
               </ul>
             </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Availability</h3>
-              <p className="text-gray-700">
-                We strive to provide continuous service availability but do not guarantee uninterrupted access. Services
-                may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Modifications</h3>
-              <p className="text-gray-700">
-                We reserve the right to modify, suspend, or discontinue any aspect of our Services at any time, with or
-                without notice. We will make reasonable efforts to notify users of significant changes.
-              </p>
-            </div>
           </CardContent>
         </Card>
 
-        {/* User Obligations */}
-        <Card className="mb-8" id="user-obligations">
+        {/* Meta Platform Data */}
+        <Card className="mb-8" id="meta-platform-data">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5 text-orange-600" />
-              User Obligations and Prohibited Uses
+              <Globe className="h-5 w-5 text-blue-600" />
+              Use of Meta Platform Data
             </CardTitle>
-            <CardDescription>Your responsibilities when using our Services</CardDescription>
+            <CardDescription>Compliance with Meta's Developer Platform Terms</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-blue-800 text-sm">
+                <strong>Meta Compliance:</strong> In compliance with Meta's Developer Platform Terms (
+                <a
+                  href="https://developers.facebook.com/terms/dfc_platform_terms/"
+                  className="underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  developers.facebook.com/terms/dfc_platform_terms/
+                </a>
+                )
+              </p>
+            </div>
+
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Account Responsibilities</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Access Authorization</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Provide accurate and complete information when creating your account</li>
-                <li>• Maintain the security of your account credentials</li>
-                <li>• Notify us immediately of any unauthorized use of your account</li>
-                <li>• Be responsible for all activities that occur under your account</li>
+                <li>
+                  • Amplify may access Meta data such as Pages, Ad Accounts, Ad Campaigns, and Insights strictly for
+                  campaign automation, audience analysis, and performance reporting
+                </li>
+                <li>
+                  • You explicitly authorize Amplify to access and manage your connected Meta assets via Meta's APIs
+                </li>
+                <li>• All data access is performed through secure, authorized API connections</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Compliance Requirements</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Comply with all applicable laws and regulations</li>
-                <li>• Adhere to advertising platform policies (Google, Facebook, etc.)</li>
-                <li>• Respect intellectual property rights of others</li>
-                <li>• Follow data protection and privacy laws</li>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Usage Restrictions</h3>
+              <p className="text-gray-700">
+                Amplify does not use Platform Data to build user profiles outside the scope of ad automation. All Meta
+                data is used exclusively for:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Campaign creation and optimization</li>
+                <li>• Audience targeting and analysis</li>
+                <li>• Performance reporting and insights</li>
+                <li>• Ad account management and administration</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Prohibited Uses</h3>
-              <p className="text-gray-700 mb-2">You may not use our Services to:</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Platform Data Types</h3>
+              <p className="text-gray-700 mb-2">Platform Data includes business information such as:</p>
               <ul className="space-y-2 text-gray-700">
-                <li>• Promote illegal products, services, or activities</li>
-                <li>• Create misleading or deceptive advertising content</li>
-                <li>• Violate third-party advertising platform policies</li>
-                <li>• Engage in spam, fraud, or other harmful activities</li>
-                <li>• Attempt to reverse engineer or compromise our systems</li>
-                <li>• Use our Services for competitive intelligence or benchmarking</li>
+                <li>• Ad Accounts and account metadata</li>
+                <li>• Campaign structures and configurations</li>
+                <li>• Performance insights and analytics</li>
+                <li>• Page metadata and business information</li>
+                <li>• Audience data for targeting purposes</li>
               </ul>
             </div>
           </CardContent>
         </Card>
 
-        {/* Payment Terms */}
-        <Card className="mb-8" id="payment">
+        {/* Data Restrictions & User Control */}
+        <Card className="mb-8" id="data-restrictions">
           <CardHeader>
-            <CardTitle>Payment Terms and Billing</CardTitle>
-            <CardDescription>Subscription fees, billing cycles, and payment policies</CardDescription>
+            <CardTitle className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-blue-600" />
+              Data Restrictions & User Control
+            </CardTitle>
+            <CardDescription>Your control over data access and usage</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Subscription Plans</h3>
-              <p className="text-gray-700 mb-2">
-                Our Services are offered through various subscription plans with different features and pricing. Current
-                pricing is available on our website and may be updated from time to time.
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Access Revocation</h3>
+              <p className="text-gray-700">
+                You may revoke Amplify's access to your Meta account at any time through Facebook or Instagram account
+                settings. This can be done by:
               </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Billing and Payment</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Subscription fees are billed in advance on a monthly or annual basis</li>
-                <li>• Payment is due immediately upon subscription or renewal</li>
-                <li>• We accept major credit cards and other payment methods as specified</li>
-                <li>• All fees are non-refundable unless otherwise specified</li>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Visiting your Facebook Settings → Apps and Websites</li>
+                <li>• Locating Amplify in your connected apps</li>
+                <li>• Removing or modifying permissions as needed</li>
+                <li>• Contacting our support team for assistance</li>
               </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Price Changes</h3>
-              <p className="text-gray-700">
-                We may change our pricing at any time. For existing subscribers, price changes will take effect at the
-                next billing cycle, with at least 30 days' advance notice.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Cancellation and Refunds</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• You may cancel your subscription at any time through your account settings</li>
-                <li>• Cancellation takes effect at the end of your current billing period</li>
-                <li>• No refunds are provided for partial months or unused portions of your subscription</li>
-                <li>• We may offer refunds at our sole discretion for exceptional circumstances</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Intellectual Property */}
-        <Card className="mb-8" id="intellectual-property">
-          <CardHeader>
-            <CardTitle>Intellectual Property Rights</CardTitle>
-            <CardDescription>Ownership of content, technology, and user data</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Our Intellectual Property</h3>
-              <p className="text-gray-700 mb-2">
-                Amplify owns all rights, title, and interest in and to the Services, including:
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Software, algorithms, and AI technology</li>
-                <li>• Trademarks, logos, and brand elements</li>
-                <li>• Documentation, content, and user interfaces</li>
-                <li>• Proprietary methodologies and processes</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Your Content and Data</h3>
-              <p className="text-gray-700">
-                You retain ownership of your business data, advertising content, and other materials you provide to our
-                Services. By using our Services, you grant us a limited license to use your content solely for providing
-                and improving our Services.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">License to Use Services</h3>
-              <p className="text-gray-700">
-                Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to access and
-                use our Services for your business purposes during your subscription period.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Data and Privacy */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Data Protection and Privacy</CardTitle>
-            <CardDescription>How we handle your information</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-gray-700">
-              Your privacy is important to us. Our collection, use, and protection of your personal information is
-              governed by our Privacy Policy, which is incorporated into these Terms by reference.
-            </p>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Security</h3>
-              <p className="text-gray-700">
-                We implement industry-standard security measures to protect your data. However, no system is completely
-                secure, and we cannot guarantee absolute security.
-              </p>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Deletion</h3>
               <p className="text-gray-700">
-                You have the right to request deletion of your personal data. Visit our{" "}
-                <Link href="/data-deletion" className="text-blue-600 hover:text-blue-700">
-                  data deletion page
-                </Link>{" "}
-                or contact us at support@useamplify.ai to submit a request.
+                Amplify will delete user data upon account termination or upon direct user request in accordance with
+                data retention policies. You can request data deletion by:
               </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>
+                  • Using our data deletion form at{" "}
+                  <Link href="/data-deletion" className="text-blue-600 hover:text-blue-700">
+                    /data-deletion
+                  </Link>
+                </li>
+                <li>• Emailing us directly at support@useamplify.ai</li>
+                <li>• Contacting us through your account settings</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Portability</h3>
+              <p className="text-gray-700">
+                You have the right to request a copy of your data in a portable format. We will provide your data within
+                30 days of a valid request.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Subprocessors */}
+        <Card className="mb-8" id="subprocessors">
+          <CardHeader>
+            <CardTitle>Subprocessors</CardTitle>
+            <CardDescription>Third-party services used by Amplify</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Trusted Third-Party Services</h3>
+              <p className="text-gray-700 mb-4">
+                Amplify may use trusted third-party subprocessors that are bound to confidentiality and security
+                obligations and are only permitted to process data for campaign-related tasks.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">OpenAI</h4>
+                  <p className="text-sm text-gray-600">LLM support for campaign optimization and content generation</p>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Bannerbear</h4>
+                  <p className="text-sm text-gray-600">Creative generation and automated design services</p>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Stripe</h4>
+                  <p className="text-sm text-gray-600">Payment processing and billing management</p>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Cloud Infrastructure</h4>
+                  <p className="text-sm text-gray-600">Secure hosting and data storage services</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Obligations</h3>
+              <p className="text-gray-700">
+                All subprocessors are contractually bound to maintain the same level of data protection and security as
+                Amplify, including:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Confidentiality agreements and data protection clauses</li>
+                <li>• Security standards compliance (SOC 2, GDPR, etc.)</li>
+                <li>• Limited data processing scope for specific campaign functions</li>
+                <li>• Regular security audits and compliance reviews</li>
+              </ul>
             </div>
           </CardContent>
         </Card>
@@ -313,107 +320,102 @@ export default function TermsOfServicePage() {
         <Card className="mb-8" id="limitation">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Scale className="h-5 w-5 text-blue-600" />
-              Limitation of Liability and Disclaimers
+              <AlertTriangle className="h-5 w-5 text-orange-600" />
+              Limitation of Liability
             </CardTitle>
             <CardDescription>Legal limitations and disclaimers</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Service Disclaimers</h3>
-              <p className="text-gray-700 mb-2">
-                Our Services are provided "as is" and "as available." We disclaim all warranties, express or implied,
-                including:
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Platform Policy Enforcement</h3>
+              <p className="text-gray-700">
+                Amplify is not liable for any ad platform policy enforcement, account restrictions, or ad rejection
+                resulting from your campaign settings. This includes but is not limited to:
               </p>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Warranties of merchantability and fitness for a particular purpose</li>
-                <li>• Guarantees of uninterrupted or error-free service</li>
-                <li>• Warranties regarding the accuracy or completeness of content</li>
-                <li>• Guarantees of specific marketing results or ROI</li>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Meta (Facebook/Instagram) policy violations or account restrictions</li>
+                <li>• Google Ads policy enforcement or account suspensions</li>
+                <li>• Other platform policy issues</li>
+                <li>• Content moderation decisions by third-party platforms</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Limitation of Liability</h3>
-              <p className="text-gray-700 mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance Guarantees</h3>
+              <p className="text-gray-700">
+                We offer no guarantees on ad performance and are not responsible for ad budget decisions made by users.
+                Campaign performance depends on various factors including:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Market conditions and competition</li>
+                <li>• Product quality and pricing</li>
+                <li>• Target audience and timing</li>
+                <li>• Platform algorithm changes</li>
+                <li>• Budget allocation and bidding strategies</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">General Liability Limitations</h3>
+              <p className="text-gray-700">
                 To the maximum extent permitted by law, Amplify's total liability for any claims arising from or related
                 to these Terms or the Services shall not exceed the amount you paid us in the 12 months preceding the
                 claim.
               </p>
-              <p className="text-gray-700">
-                We shall not be liable for any indirect, incidental, special, consequential, or punitive damages,
-                including lost profits, data loss, or business interruption.
-              </p>
             </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Third-Party Platforms</h3>
-              <p className="text-gray-700">
-                We are not responsible for the actions, policies, or performance of third-party advertising platforms
-                (Google, Facebook, etc.) or their impact on your campaigns.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Indemnification */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Indemnification</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-700">
-              You agree to indemnify, defend, and hold harmless Amplify and its officers, directors, employees, and
-              agents from any claims, damages, losses, or expenses (including reasonable attorney fees) arising from
-              your use of the Services, violation of these Terms, or infringement of any third-party rights.
-            </p>
           </CardContent>
         </Card>
 
         {/* Termination */}
-        <Card className="mb-8">
+        <Card className="mb-8" id="termination">
           <CardHeader>
             <CardTitle>Termination</CardTitle>
-            <CardDescription>How these Terms may end</CardDescription>
+            <CardDescription>Account suspension and termination policies</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Termination by You</h3>
-              <p className="text-gray-700">
-                You may terminate your account and these Terms at any time by canceling your subscription through your
-                account settings or contacting us.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Termination by Us</h3>
-              <p className="text-gray-700 mb-2">
-                We may terminate or suspend your access to the Services immediately, without prior notice, if you:
-              </p>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Violate these Terms or our policies</li>
-                <li>• Engage in fraudulent or illegal activities</li>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Grounds for Termination</h3>
+              <p className="text-gray-700 mb-2">We may suspend or terminate access to Amplify if you:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Breach these terms or our policies</li>
+                <li>• Misuse platform integrations or violate third-party terms</li>
+                <li>• Engage in unauthorized use of data</li>
+                <li>• Violate applicable laws or regulations</li>
+                <li>• Engage in fraudulent or harmful activities</li>
                 <li>• Fail to pay subscription fees</li>
-                <li>• Pose a security risk to our systems or other users</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Effect of Termination</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Termination Process</h3>
               <p className="text-gray-700">
-                Upon termination, your right to use the Services will cease immediately. We may delete your account and
-                data in accordance with our data retention policies.
+                We will make reasonable efforts to notify you before termination, except in cases of severe violations
+                or legal requirements. Upon termination:
+              </p>
+              <ul className="space-y-2 text-gray-700 mt-2">
+                <li>• Your access to the platform will be immediately suspended</li>
+                <li>• Active campaigns may be paused or stopped</li>
+                <li>• Data deletion will occur according to our retention policies</li>
+                <li>• You may request data export before deletion</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">User-Initiated Termination</h3>
+              <p className="text-gray-700">
+                You may terminate your account at any time through your account settings or by contacting support.
+                Termination will take effect at the end of your current billing period.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Governing Law */}
+        {/* Additional Terms */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>Governing Law and Dispute Resolution</CardTitle>
+            <CardTitle>Additional Terms</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Governing Law</h3>
               <p className="text-gray-700">
@@ -423,26 +425,10 @@ export default function TermsOfServicePage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Dispute Resolution</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Changes to Terms</h3>
               <p className="text-gray-700">
-                Any disputes arising from these Terms or the Services shall be resolved through binding arbitration in
-                Toronto, Ontario, Canada, in accordance with the rules of the Ontario Arbitration Act.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* General Provisions */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>General Provisions</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Entire Agreement</h3>
-              <p className="text-gray-700">
-                These Terms, together with our Privacy Policy, constitute the entire agreement between you and Amplify
-                regarding the Services.
+                We may update these Terms from time to time. Material changes will be communicated with at least 7 days'
+                notice. Continued use after changes indicates acceptance of updated Terms.
               </p>
             </div>
 
@@ -451,30 +437,6 @@ export default function TermsOfServicePage() {
               <p className="text-gray-700">
                 If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in
                 full force and effect.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Assignment</h3>
-              <p className="text-gray-700">
-                You may not assign or transfer these Terms or your account without our written consent. We may assign
-                these Terms without restriction.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Waiver</h3>
-              <p className="text-gray-700">
-                Our failure to enforce any provision of these Terms does not constitute a waiver of that provision or
-                any other provision.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Force Majeure</h3>
-              <p className="text-gray-700">
-                We shall not be liable for any failure to perform our obligations due to circumstances beyond our
-                reasonable control, including natural disasters, government actions, or network failures.
               </p>
             </div>
           </CardContent>
