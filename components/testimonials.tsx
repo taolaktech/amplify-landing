@@ -1,191 +1,95 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import Image from "next/image"
 import { Star, Quote } from "lucide-react"
+import Image from "next/image"
 
 interface TestimonialsProps {
   isVisible: boolean
 }
 
 export default function Testimonials({ isVisible }: TestimonialsProps) {
-  const [columns, setColumns] = useState(3)
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setColumns(1)
-      } else if (window.innerWidth < 1024) {
-        setColumns(2)
-      } else {
-        setColumns(3)
-      }
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Fashion Boutique",
-      image: "/shopify-merchant-1.png",
-      backgroundImage: "/clothing-store.jpeg",
-      quote:
-        "Amplify has transformed our ad strategy. We've seen a 3x increase in ROAS since we started using the platform. The AI recommendations are spot on!",
-      stars: 5,
-      height: "tall",
-    },
-    {
-      name: "Michael Chen",
-      company: "Tech Accessories",
-      image: "/shopify-merchant-2.png",
-      backgroundImage: "/electronics-shop-women.jpeg",
-      quote:
-        "The automation saves me hours every week. I used to spend all day managing ads, now Amplify does it better than I could.",
-      stars: 5,
-      height: "medium",
-    },
-    {
-      name: "Emma Williams",
-      company: "Home Goods Store",
-      image: "/portrait-thoughtful-woman.jpeg",
-      backgroundImage: "/kitchen-tools-shelf.jpeg",
-      quote:
-        "The insights from Amplify helped us identify our best-performing products and double down on what works. Our ad budget is now working much harder for us.",
-      stars: 5,
-      height: "tall",
-    },
-    {
-      name: "David Rodriguez",
-      company: "Handmade Crafts",
-      image: "/woman-taking-photos.jpeg",
-      backgroundImage: "/craft-making-hands.jpeg",
-      quote:
-        "As a small business owner, I don't have time to become an ads expert. Amplify makes it simple and the results speak for themselves. 4.2x ROAS in our first month!",
-      stars: 5,
-      height: "medium",
-    },
-    {
-      name: "Jessica & Tina",
-      company: "Smartphone Accessories",
-      image: "/women-shopping-electronics.jpeg",
-      backgroundImage: "/thrift-shop-woman.jpeg",
-      quote:
-        "We were skeptical about AI managing our ads, but Amplify proved us wrong. It's like having a full-time ads manager at a fraction of the cost.",
-      stars: 4,
-      height: "medium",
-    },
-    {
-      name: "Alex Thompson",
-      company: "Fitness Equipment",
+      name: "Sarah Chen",
+      role: "Founder",
+      company: "Satya Organic",
       image: "/diverse-woman-smiling.png",
-      backgroundImage: "/gym-dumbbell-hand.jpeg",
-      quote:
-        "The multi-platform campaigns feature is a game-changer. Now we can reach our customers wherever they are with consistent messaging.",
-      stars: 5,
-      height: "short",
+      content:
+        "Amplify transformed our advertising strategy. We saw a 3x increase in ROAS within the first month, and the AI optimization saves us hours of manual work every week.",
+      rating: 5,
+      results: "300% ROAS increase",
+    },
+    {
+      name: "Marcus Johnson",
+      role: "Marketing Director",
+      company: "Koya",
+      image: "/thoughtful-man-glasses.png",
+      content:
+        "The multi-platform management is incredible. Being able to run Google, Meta, and AdRoll campaigns from one dashboard has streamlined our entire marketing operation.",
+      rating: 5,
+      results: "50% time savings",
+    },
+    {
+      name: "Priya Patel",
+      role: "E-commerce Manager",
+      company: "Kanra Lagos",
+      image: "/short-haired-woman.png",
+      content:
+        "The AI insights helped us discover new customer segments we never knew existed. Our conversion rates improved by 40% after implementing Amplify's recommendations.",
+      rating: 5,
+      results: "40% conversion boost",
     },
   ]
 
-  // Distribute testimonials into columns for masonry layout
-  const getColumnTestimonials = () => {
-    const result = Array.from({ length: columns }, () => [])
-
-    testimonials.forEach((testimonial, index) => {
-      const columnIndex = index % columns
-      result[columnIndex].push(testimonial)
-    })
-
-    return result
-  }
-
-  const columnTestimonials = getColumnTestimonials()
-
   return (
-    <section className="py-16 sm:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className={`mx-auto max-w-2xl text-center transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Loved by Shopify merchants</h2>
-          <p className="mt-4 text-lg text-gray-300">See what our customers have to say about Amplify</p>
-        </div>
-
-        <div className="mt-16 flex flex-wrap gap-4">
-          {columnTestimonials.map((column, columnIndex) => (
-            <div key={columnIndex} className="flex flex-1 flex-col gap-4 min-w-[280px]">
-              {column.map((testimonial, testimonialIndex) => {
-                const delay = columnIndex * 100 + testimonialIndex * 200
-                const heightClass =
-                  testimonial.height === "tall"
-                    ? "min-h-[320px]"
-                    : testimonial.height === "medium"
-                      ? "min-h-[260px]"
-                      : "min-h-[220px]"
-
-                return (
-                  <div
-                    key={`${columnIndex}-${testimonialIndex}`}
-                    className={`relative rounded-lg overflow-hidden shadow-sm ring-1 ring-gray-700 transition-all duration-700 transform hover:shadow-md hover:translate-y-[-4px] ${heightClass} ${
-                      isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                    }`}
-                    style={{ transitionDelay: `${delay}ms` }}
-                  >
-                    {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 w-full h-full">
-                      <Image
-                        src={testimonial.backgroundImage || "/placeholder.svg"}
-                        alt={`${testimonial.company} store environment`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      <div className="absolute inset-0 bg-gray-900 bg-opacity-85"></div>
-                    </div>
-
-                    {/* Testimonial Content */}
-                    <div className="relative z-10 p-6 h-full flex flex-col">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <Image
-                            className="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110"
-                            src={testimonial.image || "/placeholder.svg"}
-                            alt={`${testimonial.name} from ${testimonial.company} - Amplify customer testimonial`}
-                            width={48}
-                            height={48}
-                          />
-                        </div>
-                        <div className="ml-4">
-                          <h3 className="text-lg font-medium text-white">{testimonial.name}</h3>
-                          <p className="text-sm text-gray-300">{testimonial.company}</p>
-                        </div>
-                      </div>
-                      <div className="mt-4 flex">
-                        {Array.from({ length: testimonial.stars }).map((_, starIndex) => (
-                          <Star
-                            key={starIndex}
-                            className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110"
-                            style={{ transitionDelay: `${starIndex * 50}ms` }}
-                          />
-                        ))}
-                      </div>
-                      <div className="relative mt-4 flex-grow">
-                        <Quote className="absolute -left-1 -top-1 h-6 w-6 text-purple-600/60" />
-                        <p className="pl-5 text-base text-gray-300">"{testimonial.quote}"</p>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          ))}
-        </div>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Trusted by Growing Businesses</h2>
+        <p className="text-xl text-gray-200 leading-7 max-w-3xl mx-auto">
+          See how Amplify is helping e-commerce businesses achieve remarkable results with AI-powered advertising
+          automation.
+        </p>
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 transition-all duration-1000 transform hover:bg-white/15 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
+            style={{ transitionDelay: `${index * 200}ms` }}
+          >
+            <div className="flex items-center mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+
+            <Quote className="h-8 w-8 text-purple-400 mb-4" />
+
+            <p className="text-gray-200 leading-6 mb-6">"{testimonial.content}"</p>
+
+            <div className="flex items-center">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                <Image
+                  src={testimonial.image || "/placeholder.svg"}
+                  alt={`${testimonial.name} profile`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <div className="font-semibold text-white">{testimonial.name}</div>
+                <div className="text-sm text-gray-200">{testimonial.role}</div>
+                <div className="text-sm text-gray-200">{testimonial.company}</div>
+              </div>
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-white/20">
+              <div className="text-sm font-medium text-purple-300">{testimonial.results}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }

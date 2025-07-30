@@ -61,66 +61,68 @@ export default function FAQSection({ isVisible }: FAQSectionProps) {
   ]
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        className={`mx-auto max-w-3xl text-center transition-all duration-1000 transform ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-      >
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Frequently asked questions</h2>
-        <p className="mt-4 text-lg text-gray-300">
-          Everything you need to know about Amplify and how it can help grow your Shopify store.
-        </p>
-      </div>
-
-      <div className="mx-auto mt-12 max-w-3xl divide-y divide-gray-700">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`transition-all duration-700 transform ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
-            style={{ transitionDelay: `${index * 100}ms` }}
-          >
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="flex w-full items-start justify-between py-6 text-left"
-            >
-              <span className="text-lg font-medium text-white">{faq.question}</span>
-              <span className="ml-6 flex h-7 items-center">
-                <ChevronDown
-                  className={cn(
-                    "h-6 w-6 text-purple-400 transition-transform duration-200",
-                    openIndex === index ? "rotate-180 transform" : "",
-                  )}
-                />
-              </span>
-            </button>
-            <div
-              className={cn(
-                "pr-12 pb-6 text-base text-gray-300 transition-all duration-300",
-                openIndex === index ? "block opacity-100" : "hidden opacity-0",
-              )}
-            >
-              <p>{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div
-        className={`mx-auto mt-12 max-w-3xl rounded-2xl bg-purple-900/30 p-8 transition-all duration-1000 transform ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-        style={{ transitionDelay: "600ms" }}
-      >
-        <div className="flex flex-col items-center text-center">
-          <h3 className="text-xl font-bold text-white">Still have questions?</h3>
-          <p className="mt-2 text-gray-300">
-            Our team is here to help. Contact us for any questions not covered above.
+    <div className="bg-slate-800 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className={`mx-auto max-w-3xl text-center transition-all duration-1000 transform ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Frequently asked questions</h2>
+          <p className="mt-4 text-lg text-gray-300">
+            Everything you need to know about Amplify and how it can help grow your Shopify store.
           </p>
-          <div className="mt-6">
-            <ContactSupport className="bg-purple-600 hover:bg-purple-700" />
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl divide-y divide-gray-600">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-700 transform ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="flex w-full items-start justify-between py-6 text-left"
+              >
+                <span className="text-lg font-medium text-white">{faq.question}</span>
+                <span className="ml-6 flex h-7 items-center">
+                  <ChevronDown
+                    className={cn(
+                      "h-6 w-6 text-purple-400 transition-transform duration-200",
+                      openIndex === index ? "rotate-180 transform" : "",
+                    )}
+                  />
+                </span>
+              </button>
+              <div
+                className={cn(
+                  "pr-12 pb-6 text-base text-gray-300 transition-all duration-300",
+                  openIndex === index ? "block opacity-100" : "hidden opacity-0",
+                )}
+              >
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          className={`mx-auto mt-12 max-w-3xl rounded-2xl bg-slate-700/50 p-8 transition-all duration-1000 transform ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+          style={{ transitionDelay: "600ms" }}
+        >
+          <div className="flex flex-col items-center text-center">
+            <h3 className="text-xl font-bold text-white">Still have questions?</h3>
+            <p className="mt-2 text-gray-300">
+              Our team is here to help. Contact us for any questions not covered above.
+            </p>
+            <div className="mt-6">
+              <ContactSupport className="bg-purple-600 hover:bg-purple-700" />
+            </div>
           </div>
         </div>
       </div>

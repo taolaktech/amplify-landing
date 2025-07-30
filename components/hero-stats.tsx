@@ -5,7 +5,7 @@ interface HeroStatsProps {
 export default function HeroStats({ isVisible }: HeroStatsProps) {
   return (
     <div className="container mx-auto mt-16 px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-6 rounded-xl bg-white p-6 shadow-lg sm:grid-cols-2 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 rounded-xl bg-white p-6 shadow-lg sm:grid-cols-2 md:grid-cols-4 border border-gray-200">
         {[
           { label: "Average ROAS", value: "2.5x" },
           { label: "Ad spend managed", value: "$10M+" },
@@ -20,7 +20,7 @@ export default function HeroStats({ isVisible }: HeroStatsProps) {
             style={{ transitionDelay: `${index * 100}ms` }}
           >
             <p className="text-3xl font-bold text-purple-600">{stat.value}</p>
-            <p className="mt-1 text-sm text-gray-600">{stat.label}</p>
+            <p className="mt-1 text-sm font-medium text-gray-700">{stat.label}</p>
           </div>
         ))}
       </div>
