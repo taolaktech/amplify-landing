@@ -1,67 +1,69 @@
-import { Zap, Target, BarChart3, Shield, Clock, Users } from "lucide-react"
+import type React from "react"
+import Image from "next/image"
 
-export function FeatureSection() {
-  const features = [
-    {
-      icon: Zap,
-      title: "AI-Powered Optimization",
-      description:
-        "Advanced machine learning algorithms continuously optimize your campaigns for maximum ROAS and performance.",
-    },
-    {
-      icon: Target,
-      title: "Multi-Platform Management",
-      description: "Manage Google Ads, Meta Ads, and AdRoll campaigns from a single, unified dashboard.",
-    },
-    {
-      icon: BarChart3,
-      title: "Real-Time Analytics",
-      description:
-        "Get instant insights into campaign performance with detailed analytics and actionable recommendations.",
-    },
-    {
-      icon: Shield,
-      title: "Automated Budget Control",
-      description:
-        "Smart budget allocation and spend limits protect your advertising investment while maximizing results.",
-    },
-    {
-      icon: Clock,
-      title: "24/7 Campaign Monitoring",
-      description: "Round-the-clock monitoring ensures your campaigns are always performing at their best.",
-    },
-    {
-      icon: Users,
-      title: "Audience Targeting",
-      description: "Leverage customer data and AI insights to reach the most valuable audiences for your business.",
-    },
-  ]
+interface Feature {
+  title: string
+  description: string
+  icon: React.ReactNode
+}
 
+interface FeatureSectionProps {
+  title: string
+  description: string
+  features: Feature[]
+  image: string
+  isVisible: boolean
+}
+
+export default function FeatureSection({ title, description, features, image, isVisible }: FeatureSectionProps) {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-            Powerful Features for Modern E-commerce
-          </h2>
-          <p className="text-xl text-gray-200 leading-7 max-w-3xl mx-auto">
-            Everything you need to automate, optimize, and scale your advertising campaigns across all major platforms.
-          </p>
-        </div>
+    <section className="bg-white py-16 sm:py-24 px-6 sm:px-10 md:px-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
+          <div
+            className={`flex flex-col justify-center transition-all duration-1000 transform ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
+          >
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{title}</h2>
+            <p className="mt-4 text-lg text-gray-600">{description}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-200 leading-6">{feature.description}</p>
+            <div className="mt-10 space-y-10">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`flex transition-all duration-700 transform ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${index * 200}ms` }}
+                >
+                  <div className="flex-shrink-0">{feature.icon}</div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium text-gray-900">{feature.title}</h3>
+                    <p className="mt-2 text-base text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div
+            className={`relative lg:mt-0 transition-all duration-1000 delay-300 transform ${
+              isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+            }`}
+          >
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              <div className="overflow-hidden rounded-xl bg-white shadow-xl transition-transform duration-500 hover:shadow-2xl hover:scale-[1.02]">
+                <Image
+                  src={image || "/placeholder.svg"}
+                  alt="Amplify Feature"
+                  width={800}
+                  height={600}
+                  className="w-full object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

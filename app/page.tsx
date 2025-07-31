@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState, Suspense } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -102,7 +102,7 @@ export default function Home() {
                   <span className="block">Automate your ads.</span>
                   <span className="block text-purple-600">Amplify your sales.</span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-700 leading-8">
+                <p className="mt-6 text-xl text-gray-600">
                   Amplify helps Shopify merchants automate their ad campaigns with AI-powered optimization to maximize
                   ROAS and grow sales.
                 </p>
@@ -121,7 +121,7 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full transition-all duration-300 hover:bg-purple-50 bg-transparent border-gray-300 text-gray-700 hover:text-gray-900"
+                      className="w-full transition-all duration-300 hover:bg-purple-50"
                     >
                       Book a demo
                     </Button>
@@ -146,7 +146,7 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <p className="ml-4 text-sm font-medium text-gray-700">Trusted by +1000 Shopify Stores</p>
+                  <p className="ml-4 text-sm font-medium text-gray-600">Trusted by +1000 Shopify Stores</p>
                 </div>
               </div>
 
@@ -181,7 +181,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               id="trusted-brands-heading"
-              className="text-center text-sm font-semibold uppercase tracking-wide text-gray-700 mb-8"
+              className="text-center text-sm font-semibold uppercase tracking-wide text-gray-600 mb-8"
             >
               Trusted by leading Shopify brands
             </h2>
@@ -266,9 +266,7 @@ export default function Home() {
           <h2 id="pricing-heading" className="sr-only">
             Pricing Plans
           </h2>
-          <Suspense fallback={<div>Loading pricing...</div>}>
-            <PricingSection isVisible={isVisible.pricing} />
-          </Suspense>
+          <PricingSection isVisible={isVisible.pricing} />
         </section>
 
         {/* FAQ Section */}

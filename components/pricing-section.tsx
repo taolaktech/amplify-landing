@@ -1,29 +1,24 @@
 "use client"
 
 import { useState } from "react"
-import { Check, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Check, Rocket, Star, TrendingUp } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { WaitlistForm } from "@/components/waitlist-form"
 
-interface PricingSectionProps {
-  isVisible: boolean
-}
-
-export default function PricingSection({ isVisible }: PricingSectionProps) {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
+export default function PricingSection({ isVisible }: { isVisible: boolean }) {
+  const [annualBilling, setAnnualBilling] = useState(false)
 
   const plans = [
     {
-      name: "Free",
-      price: billingCycle === "monthly" ? 0 : 0,
-      originalPrice: null,
+      name: "Free Plan",
       description: "Perfect for getting started with AI-powered ads",
-      badge: "Get Started",
-      badgeVariant: "secondary" as const,
+      icon: <Rocket className="h-6 w-6" />,
+      emoji: "🚀",
+      price: "$0",
+      period: "/month",
       features: [
         "Shopify Integration",
-        "Up to $100 in ad credit after 5 successful referrals",
+        "Up to $100 in ad credit after 5 referrals",
         "Launch 1 AI-Powered Ad Product campaign across multiple ad platforms",
         "2 Set of AI-Generated Ad Creatives & Copy",
         "AI-Powered marketing campaign setup, automation and optimization",
@@ -32,157 +27,115 @@ export default function PricingSection({ isVisible }: PricingSectionProps) {
         "Unlimited Ad Spend",
         "15% commission on ad spend",
       ],
-      notIncluded: [],
-      buttonText: "Start Free",
-      buttonVariant: "outline" as const,
+      cta: "Join Waitlist",
+      popular: false,
+      ctaVariant: "outline",
     },
     {
-      name: "Starter",
-      price: billingCycle === "monthly" ? 35 : 350,
-      originalPrice: billingCycle === "yearly" ? 420 : null,
-      description: "Ideal for growing Shopify stores ready to scale",
-      badge: "Most Popular",
-      badgeVariant: "default" as const,
+      name: "Starter Plan",
+      description: "For growing businesses ready to scale their ads",
+      icon: <Star className="h-6 w-6" />,
+      emoji: "🌟",
+      price: "$35",
+      period: "/month",
       features: [
-        "Everything in Free plan plus",
+        "Everything in free plan plus",
         "Launch up to 15 AI-Powered Ad Product ad campaigns across multiple ad platforms",
         "Generate Up to 250 AI-Generated Product Ad Creatives & Copy",
         "Unlimited AI pre-generated product ads optimized to increase your product sales",
         "Unlimited Ad Spend",
-        "Pay 0% commission on ad spend",
+        "Pay 0% commission for the first 3 months, then only 2.5% on ad spend",
       ],
-      notIncluded: [],
-      buttonText: "Start Starter Plan",
-      buttonVariant: "default" as const,
+      cta: "Join Waitlist",
+      popular: true,
+      ctaVariant: "default",
     },
     {
-      name: "Grow",
-      price: billingCycle === "monthly" ? 99 : 990,
-      originalPrice: billingCycle === "yearly" ? 1188 : null,
-      description: "For established stores ready to dominate their market",
-      badge: "Best Value",
-      badgeVariant: "secondary" as const,
+      name: "Grow Plan",
+      description: "For established businesses looking to maximize ROAS",
+      icon: <TrendingUp className="h-6 w-6" />,
+      emoji: "📈",
+      price: "$99",
+      period: "/month",
       features: [
         "Everything in Starter plan plus",
         "Launch up to 30 AI-Powered Ad Product Campaigns across multiple ad platforms",
         "Generate Up to 450 AI-Generated Product Ad Creatives & Copy",
-        "Pay 0% commission on ad spend",
+        "Pay 0% commission for the first 3 months, then only 1.5% on ad spend",
       ],
-      notIncluded: [],
-      buttonText: "Start Grow Plan",
-      buttonVariant: "default" as const,
+      cta: "Join Waitlist",
+      popular: false,
+      ctaVariant: "outline",
     },
   ]
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        className={`mx-auto max-w-4xl text-center transition-all duration-1000 transform ${
+        className={`mx-auto max-w-2xl text-center transition-all duration-1000 transform ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Simple, transparent pricing</h2>
-        <p className="mt-4 text-lg text-gray-300">
-          Choose the perfect plan to grow your Shopify store with AI-powered advertising
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple, transparent pricing</h2>
+        <p className="mt-4 text-lg text-gray-600">
+          Choose the plan that's right for your business and start amplifying your sales today.
         </p>
-
-        {/* Billing Toggle */}
-        <div className="mt-8 flex items-center justify-center">
-          <div className="flex items-center rounded-lg bg-gray-800 p-1">
-            <button
-              onClick={() => setBillingCycle("monthly")}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
-                billingCycle === "monthly" ? "bg-purple-600 text-white shadow-sm" : "text-gray-300 hover:text-white"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingCycle("yearly")}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
-                billingCycle === "yearly" ? "bg-purple-600 text-white shadow-sm" : "text-gray-300 hover:text-white"
-              }`}
-            >
-              Yearly
-              <span className="ml-1 text-xs text-purple-300">(Save 17%)</span>
-            </button>
-          </div>
-        </div>
       </div>
 
-      <div className="mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {plans.map((plan, index) => (
-          <Card
+          <div
             key={plan.name}
-            className={`relative bg-gray-800/50 border-gray-700 transition-all duration-700 transform ${
+            className={`relative rounded-2xl border ${
+              plan.popular ? "border-purple-600" : "border-gray-200"
+            } bg-white p-10 shadow-sm transition-all duration-500 hover:shadow-lg transform ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            } ${plan.name === "Starter" ? "ring-2 ring-purple-500 scale-105 lg:scale-110" : "hover:scale-105"}`}
+            }`}
             style={{ transitionDelay: `${index * 200}ms` }}
           >
-            {plan.badge && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge variant={plan.badgeVariant} className="px-3 py-1">
-                  {plan.badge}
-                </Badge>
+            {plan.popular && (
+              <div className="absolute -top-4 left-0 right-0 mx-auto w-32 rounded-full bg-purple-600 px-3 py-1 text-center text-sm font-medium text-white">
+                Most Popular
               </div>
             )}
 
-            <CardHeader className="text-center pb-8 pt-8">
-              <CardTitle className="text-xl font-bold text-white">{plan.name}</CardTitle>
-              <div className="mt-4">
-                <span className="text-4xl font-bold text-white">${plan.price}</span>
-                <span className="text-gray-400">/{billingCycle === "monthly" ? "month" : "year"}</span>
-                {plan.originalPrice && (
-                  <div className="mt-1">
-                    <span className="text-sm text-gray-500 line-through">
-                      ${plan.originalPrice}/{billingCycle === "monthly" ? "month" : "year"}
-                    </span>
-                  </div>
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold text-gray-900 flex items-center">
+                <span className="mr-2 text-2xl">{plan.emoji}</span> {plan.name}
+              </h3>
+            </div>
+
+            <div className="mt-4 flex items-baseline">
+              <span className="text-4xl font-bold tracking-tight text-gray-900">{plan.price}</span>
+              <span className="ml-1 text-base font-medium text-gray-500">{plan.period}</span>
+            </div>
+
+            <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
+
+            <ul className="mt-6 space-y-4">
+              {plan.features.map((feature) => (
+                <li key={feature} className="flex items-start">
+                  <Check className="h-5 w-5 flex-shrink-0 text-purple-600" />
+                  <span className="ml-3 text-sm text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8">
+              <WaitlistForm
+                buttonText={plan.cta}
+                buttonVariant={plan.ctaVariant as "default" | "outline"}
+                buttonClassName={cn(
+                  "w-full",
+                  plan.popular
+                    ? "bg-purple-600 hover:bg-purple-700"
+                    : "bg-white text-purple-600 border-purple-600 hover:bg-purple-50",
                 )}
-              </div>
-              <CardDescription className="mt-4 text-gray-300">{plan.description}</CardDescription>
-            </CardHeader>
-
-            <CardContent className="pt-0">
-              <Button
-                className={`w-full mb-6 ${
-                  plan.buttonVariant === "default"
-                    ? "bg-purple-600 hover:bg-purple-700 text-white"
-                    : "bg-transparent border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white"
-                }`}
-                variant={plan.buttonVariant}
-              >
-                {plan.buttonText}
-              </Button>
-
-              <ul className="space-y-3">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
-                  </li>
-                ))}
-                {plan.notIncluded.map((feature, featureIndex) => (
-                  <li key={`not-${featureIndex}`} className="flex items-start">
-                    <X className="h-5 w-5 text-gray-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-500 text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+                planInterest={plan.name}
+              />
+            </div>
+          </div>
         ))}
-      </div>
-
-      <div
-        className={`mx-auto mt-12 max-w-4xl text-center transition-all duration-1000 transform ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-        style={{ transitionDelay: "600ms" }}
-      >
-        <p className="text-gray-400 text-sm">
-          All plans include our core AI-powered advertising features. Upgrade or downgrade at any time.
-        </p>
       </div>
     </div>
   )
