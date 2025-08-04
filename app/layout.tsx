@@ -1,7 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import "./globals.css"
 import { eudoxusSans } from "./fonts"
+import FontForce from "./font-force"
+import FontScript from "./font-script"
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "./analytics"
@@ -63,11 +65,6 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
     generator: 'v0.dev'
 }
 
@@ -85,16 +82,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={eudoxusSans.variable} suppressHydrationWarning>
       <head>
         <link rel="preload" href="/fonts/EudoxusSans-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Medium.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#8B5CF6" />
       </head>
       <body className={`${eudoxusSans.variable} font-sans`}>
+        <FontForce />
+        <FontScript />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <Suspense fallback={<LoadingFallback />}>
             <Analytics />

@@ -29,7 +29,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Adeola Obaseki",
       company: "Fashion Boutique",
       image: "/shopify-merchant-1.png",
       backgroundImage: "/clothing-store.jpeg",
@@ -39,7 +39,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
       height: "tall",
     },
     {
-      name: "Michael Chen",
+      name: "Lita",
       company: "Tech Accessories",
       image: "/shopify-merchant-2.png",
       backgroundImage: "/electronics-shop-women.jpeg",
@@ -49,17 +49,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
       height: "medium",
     },
     {
-      name: "Emma Williams",
-      company: "Home Goods Store",
-      image: "/portrait-thoughtful-woman.jpeg",
-      backgroundImage: "/kitchen-tools-shelf.jpeg",
-      quote:
-        "The insights from Amplify helped us identify our best-performing products and double down on what works. Our ad budget is now working much harder for us.",
-      stars: 5,
-      height: "tall",
-    },
-    {
-      name: "David Rodriguez",
+      name: "Jamie Rodriguez",
       company: "Handmade Crafts",
       image: "/woman-taking-photos.jpeg",
       backgroundImage: "/craft-making-hands.jpeg",
@@ -67,26 +57,6 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
         "As a small business owner, I don't have time to become an ads expert. Amplify makes it simple and the results speak for themselves. 4.2x ROAS in our first month!",
       stars: 5,
       height: "medium",
-    },
-    {
-      name: "Jessica & Tina",
-      company: "Smartphone Accessories",
-      image: "/women-shopping-electronics.jpeg",
-      backgroundImage: "/thrift-shop-woman.jpeg",
-      quote:
-        "We were skeptical about AI managing our ads, but Amplify proved us wrong. It's like having a full-time ads manager at a fraction of the cost.",
-      stars: 4,
-      height: "medium",
-    },
-    {
-      name: "Alex Thompson",
-      company: "Fitness Equipment",
-      image: "/diverse-woman-smiling.png",
-      backgroundImage: "/gym-dumbbell-hand.jpeg",
-      quote:
-        "The multi-platform campaigns feature is a game-changer. Now we can reach our customers wherever they are with consistent messaging.",
-      stars: 5,
-      height: "short",
     },
   ]
 

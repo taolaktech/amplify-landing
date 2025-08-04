@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Rocket, Star, TrendingUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { WaitlistForm } from "@/components/waitlist-form"
 
@@ -10,59 +9,75 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
 
   const plans = [
     {
-      name: "Free Plan",
-      description: "Perfect for getting started with AI-powered ads",
-      icon: <Rocket className="h-6 w-6" />,
+      name: "Launch",
+      description: "Perfect for new or curious users testing the waters.",
       emoji: "🚀",
       price: "$0",
       period: "/month",
       features: [
         "Shopify Integration",
-        "Up to $100 in ad credit after 5 referrals",
-        "Launch 1 AI-Powered Ad Product campaign across multiple ad platforms",
-        "2 Set of AI-Generated Ad Creatives & Copy",
-        "AI-Powered marketing campaign setup, automation and optimization",
-        "2 AI Pre-Generated product ads optimized to increase your product sales",
+        "Earn $100 Ad Credit (after 5 successful referrals)",
+        "Run 1 AI-Powered Campaign across Facebook, IG, Google & more",
+        "2 AI-Generated Ad Sets (Creative + Copy)",
+        "Automated Campaign Setup & Optimization",
         "AI-Powered A/B Testing",
         "Unlimited Ad Spend",
         "15% commission on ad spend",
       ],
+      idealFor: "Testing the platform risk-free",
       cta: "Join Waitlist",
       popular: false,
       ctaVariant: "outline",
     },
     {
-      name: "Starter Plan",
-      description: "For growing businesses ready to scale their ads",
-      icon: <Star className="h-6 w-6" />,
+      name: "Starter",
+      description: "Unlock more campaigns without any commission fees.",
       emoji: "🌟",
       price: "$35",
       period: "/month",
       features: [
-        "Everything in free plan plus",
-        "Launch up to 15 AI-Powered Ad Product ad campaigns across multiple ad platforms",
-        "Generate Up to 250 AI-Generated Product Ad Creatives & Copy",
-        "Unlimited AI pre-generated product ads optimized to increase your product sales",
+        "Everything in Launch, plus:",
+        "Run up to 15 AI-Powered Campaigns",
+        "Generate up to 250 AI Ad Creatives & Copies",
+        "Unlimited Pre-Generated Product Ads",
         "Unlimited Ad Spend",
-        "Pay 0% commission for the first 3 months, then only 2.5% on ad spend",
+        "0% commission on ad spend",
       ],
+      idealFor: "Small stores looking to scale profitably",
       cta: "Join Waitlist",
       popular: true,
       ctaVariant: "default",
     },
     {
-      name: "Grow Plan",
-      description: "For established businesses looking to maximize ROAS",
-      icon: <TrendingUp className="h-6 w-6" />,
+      name: "Grow",
+      description: "Double your creative output and campaign reach.",
       emoji: "📈",
       price: "$99",
       period: "/month",
       features: [
-        "Everything in Starter plan plus",
-        "Launch up to 30 AI-Powered Ad Product Campaigns across multiple ad platforms",
-        "Generate Up to 450 AI-Generated Product Ad Creatives & Copy",
-        "Pay 0% commission for the first 3 months, then only 1.5% on ad spend",
+        "Everything in Starter, plus:",
+        "Run up to 30 AI-Powered Campaigns",
+        "Generate up to 450 AI Ad Creatives & Copies",
+        "0% commission on ad spend",
       ],
+      idealFor: "Brands with consistent monthly campaigns",
+      cta: "Join Waitlist",
+      popular: false,
+      ctaVariant: "outline",
+    },
+    {
+      name: "Scale",
+      description: "For high-volume brands needing scale and efficiency.",
+      emoji: "🏆",
+      price: "$199",
+      period: "/month",
+      features: [
+        "Everything in Grow, plus:",
+        "Run up to 150 AI-Powered Campaigns",
+        "Generate up to 4500 AI Ad Creatives & Copies",
+        "0% commission on ad spend",
+      ],
+      idealFor: "Agencies or large brands running 24/7 ads",
       cta: "Join Waitlist",
       popular: false,
       ctaVariant: "outline",
@@ -82,13 +97,13 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {plans.map((plan, index) => (
           <div
             key={plan.name}
             className={`relative rounded-2xl border ${
               plan.popular ? "border-purple-600" : "border-gray-200"
-            } bg-white p-10 shadow-sm transition-all duration-500 hover:shadow-lg transform ${
+            } bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-lg transform ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
             style={{ transitionDelay: `${index * 200}ms` }}
@@ -112,16 +127,24 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
 
             <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
 
-            <ul className="mt-6 space-y-4">
-              {plan.features.map((feature) => (
-                <li key={feature} className="flex items-start">
-                  <Check className="h-5 w-5 flex-shrink-0 text-purple-600" />
-                  <span className="ml-3 text-sm text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4">
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">Includes:</h4>
+              <ul className="space-y-2">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <div className="mt-8">
+            <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                <span className="font-medium">Ideal for:</span> {plan.idealFor}
+              </p>
+            </div>
+
+            <div className="mt-6">
               <WaitlistForm
                 buttonText={plan.cta}
                 buttonVariant={plan.ctaVariant as "default" | "outline"}
