@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Linkedin, Youtube, Twitter } from "lucide-react"
+import { Instagram, Twitter, Facebook } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -31,31 +31,22 @@ export default function Footer() {
                 <Instagram className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
               </Link>
               <Link
-                href="https://x.com"
+                href="https://www.facebook.com/profile.php?id=61576198067484"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
+              </Link>
+              <Link
+                href="https://x.com/amplifyai_?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="X (Twitter)"
               >
                 <Twitter className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
               </Link>
             </div>
           </div>
@@ -77,11 +68,6 @@ export default function Footer() {
                   className="text-base text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-base text-gray-400 hover:text-white transition-colors duration-200">
-                  Blog
                 </Link>
               </li>
             </ul>
