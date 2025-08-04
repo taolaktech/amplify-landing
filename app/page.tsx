@@ -121,7 +121,7 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full transition-all duration-300 hover:bg-purple-50"
+                      className="w-full transition-all duration-300 hover:bg-purple-50 bg-transparent"
                     >
                       Book a demo
                     </Button>
@@ -146,7 +146,7 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <p className="ml-4 text-sm font-medium text-gray-600">Trusted by +1000 Shopify Stores</p>
+                  <p className="ml-4 text-sm font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
               </div>
 

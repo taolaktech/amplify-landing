@@ -11,7 +11,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Launch",
       description: "Perfect for new or curious users testing the waters.",
-      emoji: "🚀",
       price: "$0",
       period: "/month",
       features: [
@@ -32,7 +31,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Starter",
       description: "Unlock more campaigns without any commission fees.",
-      emoji: "🌟",
       price: "$35",
       period: "/month",
       features: [
@@ -51,7 +49,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Grow",
       description: "Double your creative output and campaign reach.",
-      emoji: "📈",
       price: "$99",
       period: "/month",
       features: [
@@ -68,7 +65,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Scale",
       description: "For high-volume brands needing scale and efficiency.",
-      emoji: "🏆",
       price: "$199",
       period: "/month",
       features: [
@@ -115,9 +111,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             )}
 
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold text-gray-900 flex items-center">
-                <span className="mr-2 text-2xl">{plan.emoji}</span> {plan.name}
-              </h3>
+              <h3 className="text-xl font-semibold text-gray-900">{plan.name}</h3>
             </div>
 
             <div className="mt-4 flex items-baseline">
