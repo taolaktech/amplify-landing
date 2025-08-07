@@ -30,18 +30,18 @@ export default function Home() {
   })
 
   const observerRefs = {
-    hero: useRef(null),
-    stats: useRef(null),
-    features: useRef(null),
-    howItWorks: useRef(null),
-    testimonials: useRef(null),
-    pricing: useRef(null),
-    faq: useRef(null),
-    cta: useRef(null),
+    hero: useRef<HTMLElement | null>(null),
+    stats: useRef<HTMLDivElement | null>(null),
+    features: useRef<HTMLElement | null>(null),
+    howItWorks: useRef<HTMLElement | null>(null),
+    testimonials: useRef<HTMLDivElement | null>(null),
+    pricing: useRef<HTMLElement | null>(null),
+    faq: useRef<HTMLElement | null>(null),
+    cta: useRef<HTMLElement | null>(null),
   }
 
   useEffect(() => {
-    const observers = {}
+    const observers: Record<string, IntersectionObserver> = {}
 
     Object.entries(observerRefs).forEach(([key, ref]) => {
       observers[key] = new IntersectionObserver(
@@ -50,7 +50,7 @@ export default function Home() {
             setIsVisible((prev) => ({ ...prev, [key]: true }))
           }
         },
-        { threshold: 0.1 },
+        { threshold: 0.1 }
       )
 
       if (ref.current) {
@@ -173,44 +173,6 @@ export default function Home() {
 
           <div ref={observerRefs.stats}>
             <HeroStats isVisible={isVisible.stats} />
-          </div>
-        </section>
-
-        {/* Logos Section */}
-        <section className="bg-gray-50 py-12 px-6 sm:px-10 md:px-16" aria-labelledby="trusted-brands-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2
-              id="trusted-brands-heading"
-              className="text-center text-sm font-semibold uppercase tracking-wide text-gray-600 mb-8"
-            >
-              Trusted by leading Shopify brands
-            </h2>
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-              {[
-                { name: "Satya Organic", image: "/satya-organic-logo.png", bgColor: "bg-white" },
-                { name: "Koya", image: "/koya-logo.png", bgColor: "bg-white" },
-                { name: "Kanra Lagos", image: "/kanra-lagos-logo.jpeg", bgColor: "bg-white" },
-                { name: "Essenza", image: "/essenza-logo.png", bgColor: "bg-gray-50" },
-                { name: "Allbirds", image: "/allbirds-logo.png", bgColor: "bg-white" },
-                { name: "Shoepify Store", image: "/shoepify-logo.jpeg", bgColor: "bg-white" },
-              ].map((logo, index) => (
-                <div key={index} className="flex justify-center items-center">
-                  <div
-                    className={`trusted-logo h-20 w-20 relative overflow-hidden rounded-full border-2 border-purple-200 transition-all duration-300 hover:scale-110 hover:border-purple-500 shadow-md ${logo.bgColor}`}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center p-3">
-                      <Image
-                        src={logo.image || "/placeholder.svg"}
-                        alt={`${logo.name} logo`}
-                        width={80}
-                        height={80}
-                        className="object-contain max-h-full max-w-full"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
