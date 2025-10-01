@@ -39,15 +39,15 @@ export default function HowItWorks({ isVisible }: { isVisible: boolean }) {
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">How Amplify works</h2>
-        <p className="mt-4 text-lg text-gray-600">Get started in minutes and see results in days, not months.</p>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">How Amplify works</h2>
+        <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">Get started in minutes and see results in days, not months.</p>
       </div>
 
-      <div className="mt-16 space-y-0">
+      <div className="mt-10 sm:mt-12 lg:mt-16 space-y-0">
         {steps.map((step, index) => (
-          <div key={index} className={`py-16 px-6 sm:px-10 md:px-16 ${step.bgClass || "bg-white"}`}>
+          <div key={index} className={`py-10 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-10 lg:px-16 ${step.bgClass || "bg-white"}`}>
             <div
-              className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 ${
+              className={`grid grid-cols-1 gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-2 ${
                 step.reversed ? "" : "lg:flex-row-reverse"
               } transition-all duration-700 transform ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -56,7 +56,7 @@ export default function HowItWorks({ isVisible }: { isVisible: boolean }) {
             >
               {/* Image Column - Always first for mobile, positioned based on reversed prop for desktop */}
               <div className={`relative ${step.reversed ? "order-1 lg:order-1" : "order-1 lg:order-2"}`}>
-                <div className="overflow-hidden rounded-xl bg-white shadow-xl transition-transform duration-500 hover:shadow-2xl hover:scale-[1.02]">
+                <div className="overflow-hidden rounded-lg sm:rounded-xl bg-white shadow-lg sm:shadow-xl transition-transform duration-500 hover:shadow-2xl hover:scale-[1.02]">
                   <Image
                     src={step.image || "/placeholder.svg"}
                     alt={`Step ${index + 1}: ${step.title} - Detailed view of how to ${step.title.toLowerCase()} with Amplify`}
@@ -72,17 +72,17 @@ export default function HowItWorks({ isVisible }: { isVisible: boolean }) {
                 className={`flex flex-col justify-center ${step.reversed ? "order-2 lg:order-2" : "order-2 lg:order-1"}`}
               >
                 <div className="flex items-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 text-purple-600">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-purple-100 text-purple-600 text-base sm:text-lg font-semibold">
                     {index + 1}
                   </div>
-                  <h3 className="ml-4 text-2xl font-bold text-gray-900">{step.title}</h3>
+                  <h3 className="ml-3 sm:ml-4 text-xl sm:text-2xl font-bold text-gray-900">{step.title}</h3>
                 </div>
-                <p className="mt-4 text-lg text-gray-600">{step.description}</p>
-                <ul className="mt-8 space-y-4 px-6">
+                <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">{step.description}</p>
+                <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 pl-4 sm:pl-6">
                   {step.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-purple-600" />
-                      <span className="ml-3 text-base text-gray-600">{feature}</span>
+                      <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-purple-600 mt-0.5" />
+                      <span className="ml-2 sm:ml-3 text-sm sm:text-base text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -119,6 +119,34 @@
   }
 }
 
+/* Mobile-specific optimizations */
+@layer utilities {
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent text size adjustment on orientation change */
+  body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Better touch feedback */
+  * {
+    -webkit-tap-highlight-color: rgba(147, 51, 234, 0.1);
+  }
+  
+  /* Momentum scrolling for scroll containers */
+  .overflow-auto,
+  .overflow-scroll,
+  .overflow-y-auto,
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Force Eudoxus Sans on all elements */
 html,
 body,

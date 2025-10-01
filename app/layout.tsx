@@ -82,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={eudoxusSans.variable} suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="preload" href="/fonts/EudoxusSans-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Medium.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />

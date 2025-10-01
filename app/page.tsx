@@ -89,27 +89,27 @@ export default function Home() {
         <section
           id="hero"
           ref={observerRefs.hero}
-          className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-24 md:pt-32 lg:pt-40"
+          className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-8 sm:pt-24 md:pt-32 lg:pt-40 lg:pb-0"
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
+            <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
               <div
                 className={`flex flex-col justify-center transition-all duration-1000 transform ${
                   isVisible.hero ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
                   <span className="block">Automate your ads.</span>
                   <span className="block text-purple-600">Amplify your sales.</span>
                 </h1>
-                <p className="mt-6 text-xl text-gray-600">
+                <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed">
                   Amplify helps Shopify merchants automate their ad campaigns with AI-powered optimization to maximize
                   ROAS and grow sales.
                 </p>
-                <div className="mt-8 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="mt-6 sm:mt-8 flex flex-col space-y-3 sm:space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <WaitlistForm
                     buttonSize="lg"
-                    buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+                    buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 text-base py-3"
                   />
                   <Link
                     href="https://calendly.com/useamplify/30min"
@@ -121,19 +121,19 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full transition-all duration-300 hover:bg-purple-50 bg-transparent"
+                      className="w-full transition-all duration-300 hover:bg-purple-50 bg-transparent text-base py-3"
                     >
                       Book a demo
                     </Button>
                   </Link>
                 </div>
 
-                <div className="mt-8 flex items-center">
+                <div className="mt-6 sm:mt-8 flex items-center flex-wrap gap-2">
                   <div className="flex -space-x-2">
                     {heroTrustedImages.map((image, i) => (
                       <div
                         key={i}
-                        className="inline-block h-8 w-8 rounded-full ring-2 ring-white transition-transform duration-300 hover:scale-110 hover:z-10 relative overflow-hidden"
+                        className="inline-block h-8 w-8 sm:h-10 sm:w-10 rounded-full ring-2 ring-white transition-transform duration-300 hover:scale-110 hover:z-10 relative overflow-hidden"
                         style={{ transitionDelay: `${i * 100}ms` }}
                       >
                         <Image
@@ -141,22 +141,22 @@ export default function Home() {
                           alt={`${image.name} logo`}
                           fill
                           className="object-cover"
-                          sizes="32px"
+                          sizes="40px"
                         />
                       </div>
                     ))}
                   </div>
-                  <p className="ml-4 text-sm font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
+                  <p className="ml-2 sm:ml-4 text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
               </div>
 
               <div
-                className={`relative lg:mt-0 transition-all duration-1000 delay-300 transform ${
+                className={`relative mt-8 lg:mt-0 transition-all duration-1000 delay-300 transform ${
                   isVisible.hero ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
-                <div className="relative mx-auto max-w-md lg:max-w-none">
-                  <div className="overflow-hidden rounded-xl bg-white shadow-xl transition-transform duration-500 hover:shadow-2xl hover:scale-[1.02]">
+                <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+                  <div className="overflow-hidden rounded-lg sm:rounded-xl bg-white shadow-lg sm:shadow-xl transition-transform duration-500 hover:shadow-2xl hover:scale-[1.02]">
                     <Image
                       src="/shopify-merchant-header.png"
                       alt="Shopify merchant using Amplify to automate ad campaigns"

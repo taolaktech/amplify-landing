@@ -60,36 +60,37 @@ export default function FeatureTabs() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 py-12 sm:py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
           Powerful features to grow your business
         </h2>
-        <p className="mt-4 text-lg text-gray-300">
+        <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-300">
           Everything you need to create, manage, and optimize your ad campaigns
         </p>
       </div>
 
-      <div className="mt-16">
-        <div className="flex flex-wrap justify-center gap-2 mb-8 px-2">
+      <div className="mt-10 sm:mt-12 lg:mt-16">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-2">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={cn(
-                "flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-full transition-all duration-200 text-sm sm:text-base",
+                "flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 sm:py-2.5 rounded-full transition-all duration-200 text-xs sm:text-sm lg:text-base min-h-[44px]",
                 activeTab === tab.id
                   ? "bg-purple-600 text-white shadow-md"
                   : "bg-gray-800 text-gray-200 hover:bg-gray-700",
               )}
             >
-              {tab.icon}
-              <span>{tab.title}</span>
+              <span className="flex-shrink-0">{tab.icon}</span>
+              <span className="hidden sm:inline">{tab.title}</span>
+              <span className="sm:hidden truncate max-w-[80px]">{tab.title.split(' ')[0]}</span>
             </button>
           ))}
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
           {tabs.map((tab) => (
             <div
               key={tab.id}
@@ -100,8 +101,8 @@ export default function FeatureTabs() {
               style={{ display: activeTab === tab.id ? "block" : "none" }}
             >
               <div className="flex flex-col justify-center h-full">
-                <h3 className="text-2xl font-bold text-white">{tab.title}</h3>
-                <p className="mt-4 text-lg text-gray-300">{tab.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">{tab.title}</h3>
+                <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-300 leading-relaxed">{tab.description}</p>
                 <ul className="mt-8 space-y-4">
                   {tab.id === "dashboard" && (
                     <>
