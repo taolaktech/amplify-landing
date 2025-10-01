@@ -1,8 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { eudoxusSans } from "./fonts"
-import FontForce from "./font-force"
-import FontScript from "./font-script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
@@ -89,8 +87,6 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/EudoxusSans-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
       <body className={`${eudoxusSans.variable} font-sans`}>
-        <FontForce />
-        <FontScript />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <Suspense fallback={<LoadingFallback />}>
             <Analytics />
