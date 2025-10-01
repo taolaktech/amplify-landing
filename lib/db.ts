@@ -151,7 +151,8 @@ export async function checkDatabaseConnection() {
 export async function getWaitlistStats() {
   try {
     // Get total count
-    const totalCount = await sql`SELECT COUNT(*) as count FROM waitlist`
+    const totalCountResult = await sql`SELECT COUNT(*) as count FROM waitlist`
+    const [totalCountRow] = totalCountResult as Record<string, any>[]
 
     // Get count by status
     const statusCounts = await sql`
@@ -187,7 +188,7 @@ export async function getWaitlistStats() {
     `
 
     return {
-      totalCount: totalCount[0]?.count || 0,
+      totalCount: totalCountRow?.count || 0,
       statusCounts: statusCounts || [],
       planCounts: planCounts || [],
       locationCounts: locationCounts || [],
