@@ -34,7 +34,15 @@ Amplify is a marketing automation platform built for Shopify merchants. It helps
 ```
 
 ## Recent Changes
-- **2025-10-01**: Fixed migration issues and cleaned up codebase
+- **2025-10-01**: Comprehensive mobile optimization and responsiveness improvements
+  - Implemented 44px minimum touch targets across all interactive elements
+  - Added responsive viewport meta tag (width=device-width, user-scalable=yes, maximum-scale=5)
+  - Optimized mobile typography with responsive text scaling (text-xs/sm/base/lg/xl)
+  - Enhanced mobile layouts with responsive padding, spacing, and grid configurations
+  - Improved all components for mobile: Hero, Navbar, Pricing, Features, How It Works, Footer
+  - Added mobile-specific CSS utilities for touch optimization and smooth scrolling
+  - Scoped -webkit-overflow-scrolling to overflow containers only
+  - Fixed migration issues and cleaned up codebase
   - Updated HeroStats component to accept optional isVisible prop
   - Fixed database typing error in lib/db.ts using array destructuring
   - Migrated Google Tag Manager to client-only Script component
@@ -89,6 +97,13 @@ pnpm dev --port 5000 --hostname 0.0.0.0
 - The application uses SSR (Server-Side Rendering) with some client components
 - Font loading uses local fonts (Eudoxus Sans)
 - Third-party scripts (GTM) may cause hydration warnings in development (expected)
+
+### Mobile Optimization
+- All interactive elements meet WCAG 44px minimum touch target on mobile
+- Responsive breakpoints: sm (640px), md (768px), lg (1024px)
+- Mobile-first approach with progressive enhancement
+- Touch-optimized with tap highlight colors and smooth scrolling
+- Text scales appropriately across all device sizes
 
 ## Deployment
 The application is configured for autoscale deployment on Replit:
