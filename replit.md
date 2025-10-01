@@ -34,6 +34,13 @@ Amplify is a marketing automation platform built for Shopify merchants. It helps
 ```
 
 ## Recent Changes
+- **2025-10-01**: Fixed migration issues
+  - Updated HeroStats component to accept optional isVisible prop
+  - Fixed database typing error in lib/db.ts using array destructuring
+  - Migrated Google Tag Manager to client-only Script component
+  - Removed server-side GTM rendering to reduce hydration warnings
+  - All TypeScript/LSP errors resolved
+
 - **2025-09-30**: Initial Replit setup
   - Installed Node.js 20 and pnpm package manager
   - Configured Next.js to work with Replit proxy (allowedDevOrigins)
@@ -89,6 +96,6 @@ The application is configured for autoscale deployment on Replit:
 - **Target**: Autoscale (stateless web application)
 
 ## Known Issues
-- Minor TypeScript errors in app/page.tsx and lib/db.ts (non-blocking)
-- Hydration mismatch warnings from Google Tag Manager (expected in development)
-- Cross-origin request warnings (framework-level, not affecting functionality)
+- Minor hydration warning from font utility components (FontForce, FontScript) - non-blocking, cosmetic only
+- Cross-origin request warnings in dev mode (framework-level, not affecting functionality)
+- Font components (FontForce/FontScript) are redundant since project uses next/font - can be removed to eliminate hydration warning
