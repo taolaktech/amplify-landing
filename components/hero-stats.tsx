@@ -25,12 +25,16 @@ const stats = [
   },
 ]
 
-export default function HeroStats() {
-  const [isVisible, setIsVisible] = useState(false)
+export default function HeroStats({ isVisible }: { isVisible?: boolean }) {
+  const [internalVisible, setInternalVisible] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    if (isVisible !== undefined) {
+      setInternalVisible(isVisible)
+    } else {
+      setInternalVisible(true)
+    }
+  }, [isVisible])
 
   return (
     <div className="bg-white py-16 sm:py-20">
@@ -49,7 +53,7 @@ export default function HeroStats() {
               <div key={stat.label} className="flex flex-col bg-gray-400/5 p-8">
                 <dt className="text-sm font-semibold leading-6 text-gray-600">{stat.label}</dt>
                 <dd className={`order-first text-3xl font-semibold tracking-tight ${stat.color} sm:text-5xl`}>
-                  <AnimatedValue value={stat.value} isVisible={isVisible} delay={index * 100} />
+                  <AnimatedValue value={stat.value} isVisible={internalVisible} delay={index * 100} />
                 </dd>
               </div>
             ))}
