@@ -62,22 +62,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       popular: false,
       ctaVariant: "outline",
     },
-    {
-      name: "Scale",
-      description: "For high-volume brands needing scale and efficiency.",
-      price: "$199",
-      period: "/month",
-      features: [
-        "Everything in Grow, plus:",
-        "Run up to 150 AI-Powered Campaigns",
-        "Generate up to 4500 AI Ad Creatives & Copies",
-        "0% commission on ad spend",
-      ],
-      idealFor: "Agencies or large brands running 24/7 ads",
-      cta: "Join Waitlist",
-      popular: false,
-      ctaVariant: "outline",
-    },
   ]
 
   return (
@@ -93,7 +77,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         </p>
       </div>
 
-      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {plans.map((plan, index) => (
           <div
             key={plan.name}
