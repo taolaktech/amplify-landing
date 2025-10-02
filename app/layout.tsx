@@ -7,6 +7,13 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "./analytics"
 import { Suspense } from "react"
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export const metadata: Metadata = {
   title: "Amplify - AI-Powered Marketing Automation for Shopify",
   description:
@@ -82,7 +89,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={eudoxusSans.variable} suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <link rel="preload" href="/fonts/EudoxusSans-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Medium.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/EudoxusSans-Bold.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
