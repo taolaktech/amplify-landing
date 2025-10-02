@@ -59,10 +59,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex md:items-center md:space-x-4">
-          <WaitlistForm buttonClassName="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105" />
+        <div className="hidden md:flex md:items-center md:gap-3">
+          <WaitlistForm buttonClassName="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 h-10" />
           <Link href="https://calendly.com/useamplify/30min" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" className="transition-all duration-300 hover:bg-purple-50">
+            <Button variant="outline" className="transition-all duration-300 hover:bg-purple-50 h-10">
               Book a demo
             </Button>
           </Link>
