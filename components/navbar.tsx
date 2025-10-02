@@ -39,7 +39,7 @@ export default function Navbar() {
             <Image src="/amplify-logo.png" alt="Amplify" width={160} height={40} className="h-8 sm:h-10 w-auto" style={{height: "auto"}} priority />
           </Link>
 
-          <div className="hidden md:ml-10 md:flex md:items-center md:space-x-8">
+          <div className="hidden md:ml-10 md:flex md:items-center md:space-x-6 lg:space-x-8">
             {[
               { name: "Features", href: "#features" },
               { name: "Pricing", href: "#pricing" },
@@ -50,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors duration-200 relative group"
+                className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors duration-200 relative group whitespace-nowrap"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
