@@ -39,6 +39,14 @@ export default function StructuredData({ type = "WebSite", data = {} }: Structur
     url: siteUrl,
     name: "Amplify",
     logo: `${siteUrl}/amplify-logo.png`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "909 Reinli Street",
+      addressLocality: "Austin",
+      addressRegion: "TX",
+      postalCode: "78751",
+      addressCountry: "US",
+    },
     sameAs: [
       "https://twitter.com/useamplify",
       "https://www.instagram.com/useamplify",

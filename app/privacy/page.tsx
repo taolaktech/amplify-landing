@@ -475,9 +475,8 @@ export default function PrivacyPolicyPage() {
                 <h3 className="font-semibold text-gray-900 mb-3">Data Protection Officer</h3>
                 <div className="space-y-2 text-gray-700">
                   <p>Amplify Technologies Inc.</p>
-                  <p>123 Business Ave, Suite 100</p>
-                  <p>Toronto, ON M5V 3A8</p>
-                  <p>Canada</p>
+                  <p>909 Reinli Street</p>
+                  <p>Austin, TX 78751</p>
                 </div>
               </div>
               <div>
