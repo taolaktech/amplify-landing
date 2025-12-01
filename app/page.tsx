@@ -89,7 +89,7 @@ export default function Home() {
         <section
           id="hero"
           ref={observerRefs.hero}
-          className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-8 sm:pt-24 md:pt-32 lg:pt-40 lg:pb-0"
+          className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-32 md:pb-24 lg:pt-40 lg:pb-28"
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
