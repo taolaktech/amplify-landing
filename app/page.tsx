@@ -187,14 +187,14 @@ export default function Home() {
                   
                   {/* Partner Badges - Below Hero Image */}
                   <div className="hidden lg:flex items-center justify-end gap-4 mt-6">
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[140px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
                       <Image
                         src="/shopify-partners-logo.png"
                         alt="Shopify Partners"
-                        width={200}
-                        height={64}
-                        className="w-auto max-w-[100px]"
-                        style={{ height: "auto", maxHeight: "42px" }}
+                        width={300}
+                        height={96}
+                        className="w-auto max-w-[120px]"
+                        style={{ height: "auto", maxHeight: "48px" }}
                       />
                     </div>
                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
