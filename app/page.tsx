@@ -134,35 +134,35 @@ export default function Home() {
                 </div>
 
                 {/* Mobile Partner Badges */}
-                <div className="mt-6 lg:hidden flex items-center gap-3 flex-wrap">
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2 flex items-center justify-center">
+                <div className="mt-6 lg:hidden flex items-center gap-2 sm:gap-3 flex-wrap">
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
                     <Image
                       src="/shopify-partners-logo.png"
                       alt="Shopify Partners"
-                      width={80}
-                      height={30}
+                      width={150}
+                      height={48}
                       className="w-auto"
-                      style={{ height: "auto", maxHeight: "20px" }}
+                      style={{ height: "auto", maxHeight: "32px" }}
                     />
                   </div>
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2 flex items-center justify-center">
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
                     <Image
                       src="/meta-business-partner-logo.webp"
                       alt="Meta Business Partner"
-                      width={80}
-                      height={30}
+                      width={100}
+                      height={36}
                       className="w-auto"
-                      style={{ height: "auto", maxHeight: "22px" }}
+                      style={{ height: "auto", maxHeight: "28px" }}
                     />
                   </div>
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2 flex items-center justify-center">
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
                     <Image
                       src="/google-partner-logo.webp"
                       alt="Google Partner"
-                      width={50}
-                      height={50}
+                      width={60}
+                      height={60}
                       className="w-auto"
-                      style={{ height: "auto", maxHeight: "28px" }}
+                      style={{ height: "auto", maxHeight: "32px" }}
                     />
                   </div>
                 </div>
