@@ -34,6 +34,17 @@ Amplify is a marketing automation platform built for Shopify merchants. It helps
 ```
 
 ## Recent Changes
+- **2025-12-01**: Header alignment and analytics improvements
+  - Fixed navbar alignment with consistent flex container heights (h-16/h-18/h-20)
+  - Improved logo, nav links, and CTA button vertical alignment
+  - Added Google Analytics (G-7Q60C6KS7N) alongside GTM tracking
+  - Fixed TypeScript errors in testimonials.tsx with proper Testimonial interface
+  - Enhanced testimonials masonry layout with typed arrays
+  - Converted waitlist modal to direct signup link (app.useamplify.ai/auth/signup)
+  - Removed "Book a demo" button from navbar and hero
+  - Eliminated "Scale" pricing tier (now Launch/Starter/Grow only)
+  - Updated contact address to "909 Reinli Street, Austin, TX 78751"
+
 - **2025-10-01**: Comprehensive mobile optimization and responsiveness improvements
   - Implemented 44px minimum touch targets across all interactive elements
   - Added responsive viewport meta tag (width=device-width, user-scalable=yes, maximum-scale=5)
@@ -42,12 +53,6 @@ Amplify is a marketing automation platform built for Shopify merchants. It helps
   - Improved all components for mobile: Hero, Navbar, Pricing, Features, How It Works, Footer
   - Added mobile-specific CSS utilities for touch optimization and smooth scrolling
   - Scoped -webkit-overflow-scrolling to overflow containers only
-  - Fixed migration issues and cleaned up codebase
-  - Updated HeroStats component to accept optional isVisible prop
-  - Fixed database typing error in lib/db.ts using array destructuring
-  - Migrated Google Tag Manager to client-only Script component
-  - Removed FontForce and FontScript components (redundant with next/font)
-  - Fixed image aspect ratio warning in navbar
   - All TypeScript/LSP errors and hydration warnings resolved
 
 - **2025-09-30**: Initial Replit setup
@@ -87,10 +92,10 @@ pnpm dev --port 5000 --hostname 0.0.0.0
 
 ### Key Features
 1. **Landing Page**: Hero section, features, testimonials, pricing, FAQ
-2. **Waitlist System**: Email collection with Shopify store info
+2. **Direct Signup**: Links to app.useamplify.ai/auth/signup
 3. **Admin Dashboard**: Waitlist management and analytics
 4. **Database Integration**: Neon PostgreSQL for data persistence
-5. **Analytics**: Google Tag Manager integration
+5. **Analytics**: Google Analytics (G-7Q60C6KS7N) and Google Tag Manager (GTM-WV76XP37)
 
 ### Important Notes
 - The dev server must bind to `0.0.0.0:5000` for Replit compatibility
