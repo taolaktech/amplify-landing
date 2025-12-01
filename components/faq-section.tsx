@@ -31,7 +31,7 @@ export default function FAQSection({ isVisible }: FAQSectionProps) {
     {
       question: "Which ad platforms does Amplify support?",
       answer:
-        "Amplify currently supports Facebook, Instagram, Google, TikTok, and Pinterest. We're constantly adding more platforms to help you reach your customers wherever they are.",
+        "Amplify currently supports Facebook, Instagram, and Google. We're constantly adding more platforms to help you reach your customers wherever they are.",
     },
     {
       question: "Do I need technical knowledge to use Amplify?",

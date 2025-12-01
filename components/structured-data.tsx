@@ -106,7 +106,7 @@ export default function StructuredData({ type = "WebSite", data = {} }: Structur
         name: "Which ad platforms does Amplify support?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Amplify currently supports Facebook, Instagram, Google, TikTok, and Pinterest. We're constantly adding more platforms to help you reach your customers wherever they are.",
+          text: "Amplify currently supports Facebook, Instagram, and Google. We're constantly adding more platforms to help you reach your customers wherever they are.",
         },
       },
     ],
