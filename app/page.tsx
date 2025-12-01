@@ -94,7 +94,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Desktop Partner Badges - Left Side */}
             <div className="hidden lg:flex flex-col gap-3 fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 z-40">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
                 <Image
                   src="/shopify-partners-logo.png"
                   alt="Shopify Partners"
@@ -104,7 +104,7 @@ export default function Home() {
                   style={{ height: "auto", maxHeight: "96px" }}
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
                 <Image
                   src="/meta-business-partner-logo.webp"
                   alt="Meta Business Partner"
@@ -114,7 +114,7 @@ export default function Home() {
                   style={{ height: "auto", maxHeight: "22px" }}
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
                 <Image
                   src="/google-partner-logo.webp"
                   alt="Google Partner"
