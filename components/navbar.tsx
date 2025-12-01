@@ -69,7 +69,41 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 lg:gap-4">
+          {/* Partner Logos */}
+          <div className="hidden lg:flex items-center gap-2 mr-2">
+            <div className="bg-gray-50 rounded px-2 py-1.5 flex items-center justify-center">
+              <Image
+                src="/shopify-partners-logo.png"
+                alt="Shopify Partners"
+                width={100}
+                height={32}
+                className="w-auto"
+                style={{ height: "auto", maxHeight: "24px" }}
+              />
+            </div>
+            <div className="bg-gray-50 rounded px-2 py-1.5 flex items-center justify-center">
+              <Image
+                src="/meta-business-partner-logo.webp"
+                alt="Meta Business Partner"
+                width={80}
+                height={24}
+                className="w-auto"
+                style={{ height: "auto", maxHeight: "18px" }}
+              />
+            </div>
+            <div className="bg-gray-50 rounded px-2 py-1.5 flex items-center justify-center">
+              <Image
+                src="/google-partner-logo.webp"
+                alt="Google Partner"
+                width={40}
+                height={40}
+                className="w-auto"
+                style={{ height: "auto", maxHeight: "22px" }}
+              />
+            </div>
+          </div>
+          
           <Link
             href="https://app.useamplify.ai/auth/login"
             target="_blank"
