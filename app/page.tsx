@@ -98,10 +98,10 @@ export default function Home() {
                 <Image
                   src="/shopify-partners-logo.png"
                   alt="Shopify Partners"
-                  width={120}
-                  height={40}
+                  width={240}
+                  height={80}
                   className="w-auto"
-                  style={{ height: "auto", maxHeight: "24px" }}
+                  style={{ height: "auto", maxHeight: "48px" }}
                 />
               </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
@@ -118,10 +118,10 @@ export default function Home() {
                 <Image
                   src="/google-partner-logo.webp"
                   alt="Google Partner"
-                  width={50}
-                  height={50}
+                  width={100}
+                  height={100}
                   className="w-auto"
-                  style={{ height: "auto", maxHeight: "32px" }}
+                  style={{ height: "auto", maxHeight: "64px" }}
                 />
               </div>
             </div>
