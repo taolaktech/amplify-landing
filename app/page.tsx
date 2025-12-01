@@ -112,59 +112,38 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="mt-6 sm:mt-8 flex items-center flex-wrap gap-2">
-                  <div className="flex -space-x-2">
-                    {heroTrustedImages.map((image, i) => (
-                      <div
-                        key={i}
-                        className="inline-block h-8 w-8 sm:h-10 sm:w-10 rounded-full ring-2 ring-white transition-transform duration-300 hover:scale-110 hover:z-10 relative overflow-hidden"
-                        style={{ transitionDelay: `${i * 100}ms` }}
-                      >
-                        <Image
-                          src={image.image || "/placeholder.svg"}
-                          alt={`${image.name} logo`}
-                          fill
-                          className="object-cover"
-                          sizes="40px"
-                        />
-                      </div>
-                    ))}
+                {/* Partner Logos with Trusted Text */}
+                <div className="mt-6 sm:mt-8 flex items-center flex-wrap gap-3 sm:gap-4">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="h-8 sm:h-10 w-auto flex items-center justify-center">
+                      <Image
+                        src="/shopify-partners-logo.png"
+                        alt="Shopify Partners"
+                        width={120}
+                        height={40}
+                        className="h-6 sm:h-8 w-auto object-contain"
+                      />
+                    </div>
+                    <div className="h-8 sm:h-10 w-auto flex items-center justify-center">
+                      <Image
+                        src="/meta-business-partner-logo.webp"
+                        alt="Meta Business Partner"
+                        width={120}
+                        height={40}
+                        className="h-6 sm:h-8 w-auto object-contain"
+                      />
+                    </div>
+                    <div className="h-8 sm:h-10 w-auto flex items-center justify-center">
+                      <Image
+                        src="/google-partner-logo.webp"
+                        alt="Google Partner"
+                        width={120}
+                        height={40}
+                        className="h-6 sm:h-8 w-auto object-contain"
+                      />
+                    </div>
                   </div>
-                  <p className="ml-2 sm:ml-4 text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
-                </div>
-
-                {/* Mobile Partner Badges */}
-                <div className="mt-6 lg:hidden flex items-center gap-2 sm:gap-3 flex-wrap">
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
-                    <Image
-                      src="/shopify-partners-logo.png"
-                      alt="Shopify Partners"
-                      width={150}
-                      height={48}
-                      className="w-auto"
-                      style={{ height: "auto", maxHeight: "32px" }}
-                    />
-                  </div>
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
-                    <Image
-                      src="/meta-business-partner-logo.webp"
-                      alt="Meta Business Partner"
-                      width={100}
-                      height={36}
-                      className="w-auto"
-                      style={{ height: "auto", maxHeight: "28px" }}
-                    />
-                  </div>
-                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
-                    <Image
-                      src="/google-partner-logo.webp"
-                      alt="Google Partner"
-                      width={60}
-                      height={60}
-                      className="w-auto"
-                      style={{ height: "auto", maxHeight: "32px" }}
-                    />
-                  </div>
+                  <p className="text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
               </div>
 
@@ -183,40 +162,6 @@ export default function Home() {
                       className="w-full"
                       priority
                     />
-                  </div>
-                  
-                  {/* Partner Badges - Below Hero Image */}
-                  <div className="hidden lg:flex items-center justify-end gap-4 mt-6">
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[140px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/shopify-partners-logo.png"
-                        alt="Shopify Partners"
-                        width={300}
-                        height={96}
-                        className="w-auto max-w-[120px]"
-                        style={{ height: "auto", maxHeight: "48px" }}
-                      />
-                    </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/meta-business-partner-logo.webp"
-                        alt="Meta Business Partner"
-                        width={100}
-                        height={32}
-                        className="w-auto max-w-[90px]"
-                        style={{ height: "auto", maxHeight: "28px" }}
-                      />
-                    </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/google-partner-logo.webp"
-                        alt="Google Partner"
-                        width={50}
-                        height={50}
-                        className="w-auto max-w-[45px]"
-                        style={{ height: "auto", maxHeight: "40px" }}
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
