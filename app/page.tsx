@@ -103,8 +103,7 @@ export default function Home() {
                   <span className="block text-purple-600">Amplify your sales.</span>
                 </h1>
                 <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  Amplify helps Shopify merchants automate their ad campaigns with AI-powered optimization to maximize
-                  ROAS and grow sales.
+                  Amplify helps Shopify merchants generate ready-to-run product ad creatives and automatically builds and optimizes your campaigns with AI to boost ROAS and sales.
                 </p>
                 <div className="mt-6 sm:mt-8">
                   <WaitlistForm
