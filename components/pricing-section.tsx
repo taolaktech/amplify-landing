@@ -51,11 +51,11 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       period: "/month",
       features: [
         "Everything in Starter, plus:",
-        "Run up to 30 AI-Powered Campaigns",
+        "Run up to 30 AI-Powered Product Campaigns",
         "Generate up to 450 AI Ad Creatives & Copies",
         "0% commission on ad spend",
       ],
-      idealFor: "Brands with consistent monthly campaigns",
+      idealFor: "Shopify brands with products with an AOV that is higher than $100",
       cta: "Sign Up",
       popular: false,
       ctaVariant: "outline",
