@@ -69,7 +69,15 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="https://app.useamplify.ai/auth/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-10 px-5 text-sm lg:text-base font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-md transition-all duration-300 transform hover:scale-105"
+          >
+            Login
+          </Link>
           <WaitlistForm buttonClassName="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 h-10 px-5 text-sm lg:text-base" />
         </div>
 
@@ -99,7 +107,16 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
+              <Link
+                href="https://app.useamplify.ai/auth/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center rounded-md px-4 py-3 min-h-[44px] text-base font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Login
+              </Link>
               <WaitlistForm buttonClassName="w-full bg-purple-600 hover:bg-purple-700 transition-colors duration-200 py-3 text-base min-h-[44px]" />
             </div>
           </div>
