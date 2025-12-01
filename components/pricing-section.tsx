@@ -14,7 +14,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       price: "$0",
       period: "/month",
       features: [
-        "Shopify Integration",
         "Run 1 AI-Powered Campaign across Facebook, IG, Google & more",
         "2 AI-Generated Ad Sets (Creative + Copy)",
         "Automated Campaign Setup & Optimization",
