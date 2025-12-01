@@ -14,9 +14,9 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       price: "$0",
       period: "/month",
       features: [
-        "Run 1 AI-Powered Campaign across Facebook, IG, Google & more",
+        "Run 1 AI-Powered Product Campaign across Facebook, Instagram and Google",
         "2 AI-Generated Ad Sets (Creative + Copy)",
-        "Automated Campaign Setup & Optimization",
+        "Automated Campaign Optimization",
         "AI-Powered A/B Testing",
         "Unlimited Ad Spend",
         "0% commission on ad spend",
