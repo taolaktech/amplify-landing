@@ -91,44 +91,6 @@ export default function Home() {
           ref={observerRefs.hero}
           className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-8 sm:pt-24 md:pt-32 lg:pt-40 lg:pb-0"
         >
-          {/* Floating Partner Badges - Left Side */}
-          <div 
-            className={`hidden lg:flex fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 z-40 flex-col gap-3 transition-all duration-1000 ${
-              isVisible.hero ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
-          >
-            <div className="bg-white rounded-lg shadow-md p-3 flex items-center justify-center hover:shadow-lg transition-shadow">
-              <Image
-                src="/shopify-partners-logo.png"
-                alt="Shopify Partners"
-                width={100}
-                height={40}
-                className="w-auto"
-                style={{ height: "auto", maxHeight: "28px" }}
-              />
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-3 flex items-center justify-center hover:shadow-lg transition-shadow">
-              <Image
-                src="/meta-business-partner-logo.webp"
-                alt="Meta Business Partner"
-                width={100}
-                height={40}
-                className="w-auto"
-                style={{ height: "auto", maxHeight: "32px" }}
-              />
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-3 flex items-center justify-center hover:shadow-lg transition-shadow">
-              <Image
-                src="/google-partner-logo.webp"
-                alt="Google Partner"
-                width={60}
-                height={60}
-                className="w-auto"
-                style={{ height: "auto", maxHeight: "40px" }}
-              />
-            </div>
-          </div>
-
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
               <div
@@ -221,6 +183,40 @@ export default function Home() {
                       className="w-full"
                       priority
                     />
+                  </div>
+                  
+                  {/* Partner Badges - Below Hero Image */}
+                  <div className="hidden lg:flex items-center justify-center gap-6 mt-6">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/shopify-partners-logo.png"
+                        alt="Shopify Partners"
+                        width={120}
+                        height={40}
+                        className="w-auto"
+                        style={{ height: "auto", maxHeight: "24px" }}
+                      />
+                    </div>
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/meta-business-partner-logo.webp"
+                        alt="Meta Business Partner"
+                        width={100}
+                        height={40}
+                        className="w-auto"
+                        style={{ height: "auto", maxHeight: "28px" }}
+                      />
+                    </div>
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/google-partner-logo.webp"
+                        alt="Google Partner"
+                        width={60}
+                        height={60}
+                        className="w-auto"
+                        style={{ height: "auto", maxHeight: "36px" }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
