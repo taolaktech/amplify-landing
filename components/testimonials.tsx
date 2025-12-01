@@ -4,6 +4,16 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Star, Quote } from "lucide-react"
 
+interface Testimonial {
+  name: string
+  company: string
+  image: string
+  backgroundImage: string
+  quote: string
+  stars: number
+  height: "tall" | "medium" | "short"
+}
+
 interface TestimonialsProps {
   isVisible: boolean
 }
@@ -27,7 +37,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       name: "Adeola Obaseki",
       company: "Fashion Boutique",
@@ -60,12 +70,12 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
     },
   ]
 
-  // Distribute testimonials into columns for masonry layout
-  const getColumnTestimonials = () => {
-    const result = Array.from({ length: columns }, () => [])
+  const getColumnTestimonials = (): Testimonial[][] => {
+    const columnCount = Math.max(columns, 1)
+    const result: Testimonial[][] = Array.from({ length: columnCount }, () => [] as Testimonial[])
 
     testimonials.forEach((testimonial, index) => {
-      const columnIndex = index % columns
+      const columnIndex = index % columnCount
       result[columnIndex].push(testimonial)
     })
 
@@ -75,78 +85,76 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
   const columnTestimonials = getColumnTestimonials()
 
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`mx-auto max-w-2xl text-center transition-all duration-1000 transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Loved by Shopify merchants</h2>
-          <p className="mt-4 text-lg text-gray-300">See what our customers have to say about Amplify</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">Loved by Shopify merchants</h2>
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-300">See what our customers have to say about Amplify</p>
         </div>
 
-        <div className="mt-16 flex flex-wrap gap-4">
+        <div className="mt-10 sm:mt-12 md:mt-16 flex flex-wrap gap-4 sm:gap-5 md:gap-6">
           {columnTestimonials.map((column, columnIndex) => (
-            <div key={columnIndex} className="flex flex-1 flex-col gap-4 min-w-[280px]">
+            <div key={columnIndex} className="flex flex-1 flex-col gap-4 sm:gap-5 md:gap-6 min-w-[280px] sm:min-w-[300px]">
               {column.map((testimonial, testimonialIndex) => {
                 const delay = columnIndex * 100 + testimonialIndex * 200
                 const heightClass =
                   testimonial.height === "tall"
-                    ? "min-h-[320px]"
+                    ? "min-h-[300px] sm:min-h-[320px]"
                     : testimonial.height === "medium"
-                      ? "min-h-[260px]"
-                      : "min-h-[220px]"
+                      ? "min-h-[240px] sm:min-h-[260px]"
+                      : "min-h-[200px] sm:min-h-[220px]"
 
                 return (
                   <div
                     key={`${columnIndex}-${testimonialIndex}`}
-                    className={`relative rounded-lg overflow-hidden shadow-sm ring-1 ring-gray-700 transition-all duration-700 transform hover:shadow-md hover:translate-y-[-4px] ${heightClass} ${
+                    className={`relative rounded-lg sm:rounded-xl overflow-hidden shadow-sm ring-1 ring-gray-700 transition-all duration-700 transform hover:shadow-md hover:translate-y-[-4px] ${heightClass} ${
                       isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}
                     style={{ transitionDelay: `${delay}ms` }}
                   >
-                    {/* Background Image with Overlay */}
                     <div className="absolute inset-0 w-full h-full">
                       <Image
                         src={testimonial.backgroundImage || "/placeholder.svg"}
                         alt={`${testimonial.company} store environment`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gray-900 bg-opacity-85"></div>
                     </div>
 
-                    {/* Testimonial Content */}
-                    <div className="relative z-10 p-6 h-full flex flex-col">
+                    <div className="relative z-10 p-4 sm:p-5 md:p-6 h-full flex flex-col">
                       <div className="flex items-center">
                         <div className="flex-shrink-0">
                           <Image
-                            className="h-12 w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110"
+                            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover transition-transform duration-300 hover:scale-110"
                             src={testimonial.image || "/placeholder.svg"}
                             alt={`${testimonial.name} from ${testimonial.company} - Amplify customer testimonial`}
                             width={48}
                             height={48}
                           />
                         </div>
-                        <div className="ml-4">
-                          <h3 className="text-lg font-medium text-white">{testimonial.name}</h3>
-                          <p className="text-sm text-gray-300">{testimonial.company}</p>
+                        <div className="ml-3 sm:ml-4">
+                          <h3 className="text-base sm:text-lg font-medium text-white">{testimonial.name}</h3>
+                          <p className="text-xs sm:text-sm text-gray-300">{testimonial.company}</p>
                         </div>
                       </div>
-                      <div className="mt-4 flex">
+                      <div className="mt-3 sm:mt-4 flex">
                         {Array.from({ length: testimonial.stars }).map((_, starIndex) => (
                           <Star
                             key={starIndex}
-                            className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110"
+                            className="h-4 w-4 sm:h-5 sm:w-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110"
                             style={{ transitionDelay: `${starIndex * 50}ms` }}
                           />
                         ))}
                       </div>
-                      <div className="relative mt-4 flex-grow">
-                        <Quote className="absolute -left-1 -top-1 h-6 w-6 text-purple-600/60" />
-                        <p className="pl-5 text-base text-gray-300">"{testimonial.quote}"</p>
+                      <div className="relative mt-3 sm:mt-4 flex-grow">
+                        <Quote className="absolute -left-1 -top-1 h-5 w-5 sm:h-6 sm:w-6 text-purple-600/60" />
+                        <p className="pl-4 sm:pl-5 text-sm sm:text-base text-gray-300">"{testimonial.quote}"</p>
                       </div>
                     </div>
                   </div>
