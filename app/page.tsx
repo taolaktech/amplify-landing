@@ -132,6 +132,36 @@ export default function Home() {
                   </div>
                   <p className="ml-2 sm:ml-4 text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
+
+                <div className="mt-6 sm:mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-xs sm:text-sm text-gray-500 mb-3">Official Partner</p>
+                  <div className="flex items-center flex-wrap gap-4 sm:gap-6">
+                    <Image
+                      src="/shopify-partners-logo.png"
+                      alt="Shopify Partners"
+                      width={140}
+                      height={40}
+                      className="opacity-80 hover:opacity-100 transition-opacity"
+                      style={{ height: "auto", maxHeight: "32px", width: "auto" }}
+                    />
+                    <Image
+                      src="/meta-business-partner-logo.png"
+                      alt="Meta Business Partner"
+                      width={120}
+                      height={40}
+                      className="opacity-80 hover:opacity-100 transition-opacity"
+                      style={{ height: "auto", maxHeight: "40px", width: "auto" }}
+                    />
+                    <Image
+                      src="/google-partner-logo.png"
+                      alt="Google Partner"
+                      width={80}
+                      height={80}
+                      className="opacity-80 hover:opacity-100 transition-opacity"
+                      style={{ height: "auto", maxHeight: "48px", width: "auto" }}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div
