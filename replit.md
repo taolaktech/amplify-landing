@@ -34,12 +34,6 @@ Amplify is a marketing automation platform built for Shopify merchants. It helps
 ```
 
 ## Recent Changes
-- **2025-12-01**: Partner logos moved to sticky header
-  - Shopify Partners, Meta Business Partner, and Google Partner logos now in navbar
-  - Logos display on desktop (lg: 1024px+) on the right side before Login/Sign Up buttons
-  - Removed partner logos from hero section (no longer duplicated)
-  - Logos stay visible as users scroll (sticky header behavior)
-
 - **2025-12-01**: Header alignment and analytics improvements
   - Fixed navbar alignment with consistent flex container heights (h-16/h-18/h-20)
   - Improved logo, nav links, and CTA button vertical alignment

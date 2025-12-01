@@ -133,6 +133,39 @@ export default function Home() {
                   <p className="ml-2 sm:ml-4 text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
 
+                {/* Mobile Partner Badges */}
+                <div className="mt-6 lg:hidden flex items-center gap-2 sm:gap-3 flex-wrap">
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
+                    <Image
+                      src="/shopify-partners-logo.png"
+                      alt="Shopify Partners"
+                      width={150}
+                      height={48}
+                      className="w-auto"
+                      style={{ height: "auto", maxHeight: "32px" }}
+                    />
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
+                    <Image
+                      src="/meta-business-partner-logo.webp"
+                      alt="Meta Business Partner"
+                      width={100}
+                      height={36}
+                      className="w-auto"
+                      style={{ height: "auto", maxHeight: "28px" }}
+                    />
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
+                    <Image
+                      src="/google-partner-logo.webp"
+                      alt="Google Partner"
+                      width={60}
+                      height={60}
+                      className="w-auto"
+                      style={{ height: "auto", maxHeight: "32px" }}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div
@@ -150,6 +183,40 @@ export default function Home() {
                       className="w-full"
                       priority
                     />
+                  </div>
+                  
+                  {/* Partner Badges - Below Hero Image */}
+                  <div className="hidden lg:flex items-center justify-end gap-4 mt-6">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[140px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/shopify-partners-logo.png"
+                        alt="Shopify Partners"
+                        width={300}
+                        height={96}
+                        className="w-auto max-w-[120px]"
+                        style={{ height: "auto", maxHeight: "48px" }}
+                      />
+                    </div>
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/meta-business-partner-logo.webp"
+                        alt="Meta Business Partner"
+                        width={100}
+                        height={32}
+                        className="w-auto max-w-[90px]"
+                        style={{ height: "auto", maxHeight: "28px" }}
+                      />
+                    </div>
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image
+                        src="/google-partner-logo.webp"
+                        alt="Google Partner"
+                        width={50}
+                        height={50}
+                        className="w-auto max-w-[45px]"
+                        style={{ height: "auto", maxHeight: "40px" }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
