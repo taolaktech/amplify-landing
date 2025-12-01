@@ -55,7 +55,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Generate up to 450 AI Ad Creatives & Copies",
         "0% commission on ad spend",
       ],
-      idealFor: "Shopify brands with products with an AOV that is higher than $100",
+      idealFor: "Shopify brands with an AOV that is higher than $100",
       cta: "Sign Up",
       popular: false,
       ctaVariant: "outline",
