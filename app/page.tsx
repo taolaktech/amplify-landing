@@ -92,6 +92,40 @@ export default function Home() {
           className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-32 md:pb-24 lg:pt-40 lg:pb-28"
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Desktop Partner Badges - Left Side */}
+            <div className="hidden lg:flex flex-col gap-3 fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 z-40">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                <Image
+                  src="/shopify-partners-logo.png"
+                  alt="Shopify Partners"
+                  width={120}
+                  height={40}
+                  className="w-auto"
+                  style={{ height: "auto", maxHeight: "24px" }}
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                <Image
+                  src="/meta-business-partner-logo.webp"
+                  alt="Meta Business Partner"
+                  width={100}
+                  height={32}
+                  className="w-auto"
+                  style={{ height: "auto", maxHeight: "22px" }}
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                <Image
+                  src="/google-partner-logo.webp"
+                  alt="Google Partner"
+                  width={50}
+                  height={50}
+                  className="w-auto"
+                  style={{ height: "auto", maxHeight: "32px" }}
+                />
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
               <div
                 className={`flex flex-col justify-center transition-all duration-1000 transform ${
@@ -185,39 +219,6 @@ export default function Home() {
                     />
                   </div>
                   
-                  {/* Partner Badges - Below Hero Image */}
-                  <div className="hidden lg:flex items-center justify-end gap-4 mt-6">
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[140px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/shopify-partners-logo.png"
-                        alt="Shopify Partners"
-                        width={300}
-                        height={96}
-                        className="w-auto max-w-[120px]"
-                        style={{ height: "auto", maxHeight: "48px" }}
-                      />
-                    </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/meta-business-partner-logo.webp"
-                        alt="Meta Business Partner"
-                        width={100}
-                        height={32}
-                        className="w-auto max-w-[90px]"
-                        style={{ height: "auto", maxHeight: "28px" }}
-                      />
-                    </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image
-                        src="/google-partner-logo.webp"
-                        alt="Google Partner"
-                        width={50}
-                        height={50}
-                        className="w-auto max-w-[45px]"
-                        style={{ height: "auto", maxHeight: "40px" }}
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
