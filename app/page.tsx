@@ -98,10 +98,10 @@ export default function Home() {
                 <Image
                   src="/shopify-partners-logo.png"
                   alt="Shopify Partners"
-                  width={240}
-                  height={80}
+                  width={480}
+                  height={160}
                   className="w-auto"
-                  style={{ height: "auto", maxHeight: "48px" }}
+                  style={{ height: "auto", maxHeight: "96px" }}
                 />
               </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
