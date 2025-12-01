@@ -59,13 +59,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex md:items-center md:gap-3">
+        <div className="hidden md:flex md:items-center">
           <WaitlistForm buttonClassName="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 h-10" />
-          <Link href="https://calendly.com/useamplify/30min" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" className="transition-all duration-300 hover:bg-purple-50 h-10">
-              Book a demo
-            </Button>
-          </Link>
         </div>
 
         <div className="flex md:hidden">
@@ -101,22 +96,8 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-2 space-y-3">
+            <div className="pt-2">
               <WaitlistForm buttonClassName="w-full bg-purple-600 hover:bg-purple-700 transition-colors duration-200 py-3 text-base" />
-              <Link
-                href="https://calendly.com/useamplify/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
-                <Button
-                  variant="outline"
-                  className="w-full transition-all duration-300 hover:bg-purple-50 py-3 text-base"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Book a demo
-                </Button>
-              </Link>
             </div>
           </div>
         </div>

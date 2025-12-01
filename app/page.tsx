@@ -106,26 +106,11 @@ export default function Home() {
                   Amplify helps Shopify merchants automate their ad campaigns with AI-powered optimization to maximize
                   ROAS and grow sales.
                 </p>
-                <div className="mt-6 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                <div className="mt-6 sm:mt-8">
                   <WaitlistForm
                     buttonSize="lg"
                     buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 text-base"
                   />
-                  <Link
-                    href="https://calendly.com/useamplify/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                    aria-label="Book a demo"
-                  >
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="w-full transition-all duration-300 hover:bg-purple-50 bg-transparent text-base"
-                    >
-                      Book a demo
-                    </Button>
-                  </Link>
                 </div>
 
                 <div className="mt-6 sm:mt-8 flex items-center flex-wrap gap-2">
