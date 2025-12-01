@@ -33,7 +33,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       period: "/month",
       features: [
         "Everything in Launch, plus:",
-        "Run up to 15 AI-Powered Campaigns",
+        "Run up to 15 AI-Powered Product Campaigns",
         "Generate up to 250 AI Ad Creatives & Copies",
         "Unlimited Pre-Generated Product Ads",
         "Unlimited Ad Spend",
