@@ -186,35 +186,35 @@ export default function Home() {
                   </div>
                   
                   {/* Partner Badges - Below Hero Image */}
-                  <div className="hidden lg:flex items-center justify-center gap-6 mt-6">
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                  <div className="hidden lg:flex items-center justify-end gap-4 mt-6">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
                       <Image
                         src="/shopify-partners-logo.png"
                         alt="Shopify Partners"
-                        width={120}
-                        height={40}
-                        className="w-auto"
+                        width={100}
+                        height={32}
+                        className="w-auto max-w-[90px]"
                         style={{ height: "auto", maxHeight: "24px" }}
                       />
                     </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
                       <Image
                         src="/meta-business-partner-logo.webp"
                         alt="Meta Business Partner"
                         width={100}
-                        height={40}
-                        className="w-auto"
+                        height={32}
+                        className="w-auto max-w-[90px]"
                         style={{ height: "auto", maxHeight: "28px" }}
                       />
                     </div>
-                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-4 py-3 flex items-center justify-center hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[120px] h-[56px] flex items-center justify-center hover:shadow-md transition-shadow">
                       <Image
                         src="/google-partner-logo.webp"
                         alt="Google Partner"
-                        width={60}
-                        height={60}
-                        className="w-auto"
-                        style={{ height: "auto", maxHeight: "36px" }}
+                        width={50}
+                        height={50}
+                        className="w-auto max-w-[45px]"
+                        style={{ height: "auto", maxHeight: "40px" }}
                       />
                     </div>
                   </div>
