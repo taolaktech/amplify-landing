@@ -35,9 +35,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       features: [
         "Everything in Launch, plus:",
         "Launch up to 3 AI-Powered Campaigns per month",
-        "Add up to 10 products per campaign",
         "Generate up to 300 AI Ad Creatives for A/B testing & optimization",
-        "Unlimited Pre-Generated Product Ads",
         "Unlimited Ad Spend",
         "0% commission on ad spend",
       ],
@@ -54,9 +52,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       features: [
         "Everything in Starter, plus:",
         "Launch up to 10 AI-Powered Campaigns per month",
-        "Add up to 30 products per campaign",
-        "Generate up to 1,000 AI Ad Creatives per month for A/B testing & optimization",
-        "Unlimited Pre-Generated Product Ads",
+        "Generate up to 600 AI Ad Creatives per month for A/B testing & optimization",
         "0% commission on ad spend",
       ],
       idealFor: "Stores with 50+ products looking to scale aggressively",
