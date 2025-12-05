@@ -92,8 +92,8 @@ export default function Home() {
           className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-32 md:pb-24 lg:pt-40 lg:pb-28"
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Desktop Partner Badges - Left Side */}
-            <div className="hidden lg:flex flex-col gap-3 fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 z-40">
+            {/* Desktop Partner Badges - Right Side */}
+            <div className="hidden lg:flex flex-col gap-3 fixed right-4 xl:right-8 top-1/2 -translate-y-1/2 z-40">
               <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
                 <Image
                   src="/shopify-partners-logo.png"
