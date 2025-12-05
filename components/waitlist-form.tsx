@@ -15,7 +15,7 @@ interface WaitlistFormProps {
 }
 
 export function WaitlistForm({
-  buttonText = "Sign Up",
+  buttonText = "Try for Free",
   buttonSize = "default",
   buttonVariant = "default",
   buttonClassName = "",
