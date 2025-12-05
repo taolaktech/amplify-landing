@@ -117,7 +117,7 @@ export default function Navbar() {
               >
                 Login
               </Link>
-              <WaitlistForm buttonClassName="w-full bg-purple-600 hover:bg-purple-700 transition-colors duration-200 py-3 text-base min-h-[44px]" />
+              <WaitlistForm buttonText="Try for Free" buttonClassName="w-full bg-purple-600 hover:bg-purple-700 transition-colors duration-200 py-3 text-base min-h-[44px]" />
             </div>
           </div>
         </div>
