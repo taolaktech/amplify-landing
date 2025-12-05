@@ -11,9 +11,10 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Launch",
       description: "Perfect for trying Amplify risk-free.",
-      price: "$0",
+      price: "$19",
       period: "/month",
       features: [
+        "7 day free trial",
         "Launch 1 AI-Powered Campaign per month",
         "Add up to 2 products per campaign",
         "Generate up to 10 AI Ad Creatives for A/B testing & optimization",
@@ -33,6 +34,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       price: "$35",
       period: "/month",
       features: [
+        "7 day free trial",
         "Everything in Launch, plus:",
         "Launch up to 3 AI-Powered Campaigns per month",
         "Generate up to 300 AI Ad Creatives for A/B testing & optimization",
@@ -50,6 +52,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       price: "$99",
       period: "/month",
       features: [
+        "7 day free trial",
         "Everything in Starter, plus:",
         "Launch up to 10 AI-Powered Campaigns per month",
         "Generate up to 600 AI Ad Creatives per month for A/B testing & optimization",
