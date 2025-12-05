@@ -18,7 +18,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Launch 1 AI-Powered Campaign per month",
         "Add up to 2 products per campaign",
         "Generate up to 10 AI Ad Creatives",
-        "Automated Campaign Optimization and Creatives A/B Testing",
         "Unlimited Ad Spend",
         "0% commission on ad spend",
       ],
