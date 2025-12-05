@@ -14,7 +14,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       price: "$19",
       period: "/month",
       features: [
-        "No Trial, Cancel Anytime",
         "Launch 1 AI-Powered Campaign per month",
         "Add up to 2 products per campaign",
         "Generate up to 10 AI Ad Creatives",

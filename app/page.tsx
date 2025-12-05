@@ -92,39 +92,6 @@ export default function Home() {
           className="relative overflow-hidden bg-gradient-to-b from-purple-50 to-white pt-20 pb-16 sm:pt-24 sm:pb-20 md:pt-32 md:pb-24 lg:pt-40 lg:pb-28"
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Desktop Partner Badges - Right Side */}
-            <div className="hidden lg:flex flex-col gap-3 fixed right-4 xl:right-8 top-1/2 -translate-y-1/2 z-40">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
-                <Image
-                  src="/shopify-partners-logo.png"
-                  alt="Shopify Partners"
-                  width={480}
-                  height={160}
-                  className="w-auto"
-                  style={{ height: "auto", maxHeight: "96px" }}
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
-                <Image
-                  src="/meta-business-partner-logo.webp"
-                  alt="Meta Business Partner"
-                  width={100}
-                  height={32}
-                  className="w-auto"
-                  style={{ height: "auto", maxHeight: "22px" }}
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-100 w-[100px] h-[100px] flex items-center justify-center hover:shadow-md transition-shadow p-2">
-                <Image
-                  src="/google-partner-logo.webp"
-                  alt="Google Partner"
-                  width={100}
-                  height={100}
-                  className="w-auto"
-                  style={{ height: "auto", maxHeight: "64px" }}
-                />
-              </div>
-            </div>
 
             <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
               <div
@@ -167,8 +134,8 @@ export default function Home() {
                   <p className="ml-2 sm:ml-4 text-sm sm:text-base font-medium text-gray-600">Trusted by +100 Shopify Stores</p>
                 </div>
 
-                {/* Mobile Partner Badges */}
-                <div className="mt-6 lg:hidden flex items-center gap-2 sm:gap-3 flex-wrap">
+                {/* Partner Badges */}
+                <div className="mt-6 flex items-center gap-2 sm:gap-3 flex-wrap">
                   <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
                     <Image
                       src="/shopify-partners-logo.png"
