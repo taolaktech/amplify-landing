@@ -62,6 +62,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       cta: "Sign Up",
       popular: false,
       ctaVariant: "outline",
+      gradient: true,
     },
   ]
 
@@ -78,15 +79,18 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         </p>
       </div>
 
-      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-4">
         {plans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`relative rounded-xl sm:rounded-2xl border ${
-              plan.popular ? "border-purple-600 border-2" : "border-gray-200"
-            } bg-white p-5 sm:p-6 shadow-sm transition-all duration-500 hover:shadow-lg transform ${
+            className={cn(
+              "relative rounded-xl sm:rounded-2xl border p-5 sm:p-6 shadow-sm transition-all duration-500 hover:shadow-lg transform",
+              plan.popular ? "border-purple-600 border-2" : "border-gray-200",
+              plan.gradient 
+                ? "bg-gradient-to-br from-orange-100 via-pink-100 to-rose-200 border-pink-200" 
+                : "bg-white",
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
+            )}
             style={{ transitionDelay: `${index * 200}ms` }}
           >
             {plan.popular && (
@@ -110,14 +114,18 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
               <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">Includes:</h4>
               <ul className="space-y-1.5 sm:space-y-2">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start">
+                  <li key={feature} className="flex items-start gap-2">
+                    <span className={cn("flex-shrink-0", plan.gradient ? "text-pink-600" : "text-purple-600")}>✓</span>
                     <span className="text-xs sm:text-sm text-gray-700 leading-snug">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 bg-gray-50 rounded-lg">
+            <div className={cn(
+              "mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-lg",
+              plan.gradient ? "bg-white/60" : "bg-gray-50"
+            )}>
               <p className="text-xs sm:text-sm text-gray-600">
                 <span className="font-medium">Ideal for:</span> {plan.idealFor}
               </p>
@@ -131,6 +139,8 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
                   "w-full",
                   plan.popular
                     ? "bg-purple-600 hover:bg-purple-700"
+                    : plan.gradient
+                    ? "bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white border-0"
                     : "bg-white text-purple-600 border-purple-600 hover:bg-purple-50",
                 )}
                 planInterest={plan.name}
@@ -138,93 +148,84 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             </div>
           </div>
         ))}
-      </div>
 
-      {/* Lifetime Grow Plan */}
-      <div
-        className={`mt-10 sm:mt-12 lg:mt-16 max-w-4xl mx-auto transition-all duration-1000 transform ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-        style={{ transitionDelay: "600ms" }}
-      >
-        <div className="relative rounded-xl sm:rounded-2xl border-2 border-purple-600 bg-gradient-to-br from-purple-50 to-white p-6 sm:p-8 shadow-lg">
-          <div className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-36 sm:w-44 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-3 py-1.5 text-center text-xs sm:text-sm font-semibold text-white">
+        {/* Lifetime Grow Plan */}
+        <div
+          className={cn(
+            "relative rounded-xl sm:rounded-2xl border-2 border-purple-300 p-5 sm:p-6 shadow-sm transition-all duration-500 hover:shadow-lg transform",
+            "bg-gradient-to-br from-purple-200 via-purple-100 to-pink-100",
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          )}
+          style={{ transitionDelay: "600ms" }}
+        >
+          <div className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-32 sm:w-36 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-2 sm:px-3 py-1 text-center text-xs sm:text-sm font-medium text-white">
             Limited Time Offer
           </div>
 
-          <div className="mt-4 sm:mt-2">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Lifetime Grow</h3>
-            <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
-              Future-proof your marketing workflow once and for all. Get lifetime access to Amplify Pro and unlock every feature we offer today — plus everything we build next.
-            </p>
-            <p className="mt-2 text-sm sm:text-base font-semibold text-purple-600">
-              One payment, forever powerful.
-            </p>
+          <div className="mt-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Grow</h3>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-baseline gap-2">
-            <span className="text-xl sm:text-2xl text-gray-400 line-through">$2,199</span>
-            <span className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">$599</span>
-            <span className="text-base sm:text-lg font-medium text-purple-600">Early Access</span>
-          </div>
-          <p className="mt-1 text-xs sm:text-sm text-gray-500">
-            ($899 after the first 2,000 spots are sold)
+          <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Future-proof your creative workflow once and for all. Get lifetime access to Pro and unlock every feature we offer now and everything we build next.
+          </p>
+          
+          <p className="mt-2 text-xs sm:text-sm font-semibold text-purple-700">
+            One payment, forever powerful.
           </p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">Everything in Grow +</h4>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Unlimited AI-Powered Campaigns</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Add Unlimited Products per Campaign</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Unlimited AI Ad Creatives for testing & optimization</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Unlimited Pre-Generated Product Ads</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-3 sm:opacity-0">Plus</h4>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Zero commission fees — forever</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Lifetime access to all current features</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Early access to all future features & updates</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span className="text-sm text-gray-700">Priority support for scaling brands</span>
-                </li>
-              </ul>
-            </div>
+          <div className="mt-3 sm:mt-4 flex flex-wrap items-baseline gap-1">
+            <span className="text-base sm:text-lg text-gray-400 line-through">$2,199</span>
+            <span className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">$599</span>
+            <span className="text-xs sm:text-sm font-medium text-purple-600">Early Access</span>
+          </div>
+          <p className="mt-0.5 text-xs text-gray-500">
+            ($899 After 2,000 Spots Sold)*
+          </p>
+
+          <div className="mt-3 sm:mt-4">
+            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">Everything in Grow +</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Unlimited AI-Powered Campaigns</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Unlimited Products per Campaign</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Unlimited AI Ad Creatives</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Zero commission — forever</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Lifetime access to all features</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Early access to future updates</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-purple-600 flex-shrink-0">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700">Priority support</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-4 sm:mt-6">
             <WaitlistForm
               buttonText="Get Lifetime Access"
               buttonVariant="default"
-              buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 px-8 py-3 text-base font-semibold"
+              buttonClassName="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold"
               planInterest="Lifetime Grow"
             />
-            <p className="text-xs sm:text-sm text-gray-500 font-medium">
-              Only 10,000 Lifetime Licenses Will Ever Be Sold
+            <p className="mt-2 text-xs text-center text-gray-500 font-medium">
+              Only 10,000 Lifetime Licenses Available
             </p>
           </div>
         </div>
