@@ -164,11 +164,11 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
           </div>
 
           <div className="mt-2">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Grow</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Grow Plan</h3>
           </div>
 
           <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Future-proof your creative workflow once and for all. Get lifetime access to Pro and unlock every feature we offer now and everything we build next.
+            Get lifetime access to the grow plan benefits and unlock every feature we offer now and everything we build next.
           </p>
           
           <p className="mt-2 text-xs sm:text-sm font-semibold text-purple-700">
@@ -223,7 +223,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
               buttonText="Get Lifetime Access"
               buttonVariant="default"
               buttonClassName="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold"
-              planInterest="Lifetime Grow"
+              planInterest="Lifetime Grow Plan"
             />
             <p className="mt-2 text-xs text-center text-gray-500 font-medium">
               Only 10,000 Lifetime Licenses Available
