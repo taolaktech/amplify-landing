@@ -9,7 +9,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
 
   const plans = [
     {
-      name: "Launch",
+      name: "Starter",
       description: "Perfect for trying Amplify risk-free.",
       price: "$19",
       period: "/month",
@@ -26,7 +26,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       ctaVariant: "outline",
     },
     {
-      name: "Starter",
+      name: "Grow",
       description: "Unlock more monthly campaigns with no commission fees.",
       price: "$35",
       period: "/month",
@@ -45,7 +45,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       ctaVariant: "default",
     },
     {
-      name: "Grow",
+      name: "Scale",
       description: "More campaigns, more products, more creative output.",
       price: "$99",
       period: "/month",
@@ -163,11 +163,11 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
           </div>
 
           <div className="mt-2">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Grow Plan</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Scale Plan</h3>
           </div>
 
           <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Get lifetime access to the grow plan benefits and unlock every feature we offer now and everything we build next.
+            Get lifetime access to the scale plan benefits and unlock every feature we offer now and everything we build next.
           </p>
           
           <p className="mt-2 text-xs sm:text-sm font-semibold text-purple-700">
@@ -184,7 +184,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
           </p>
 
           <div className="mt-3 sm:mt-4">
-            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">Everything in Grow +</h4>
+            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">Everything in Scale +</h4>
             <ul className="space-y-1.5 sm:space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-purple-600 flex-shrink-0">✓</span>
@@ -222,7 +222,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
               buttonText="Get Lifetime Access"
               buttonVariant="default"
               buttonClassName="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold"
-              planInterest="Lifetime Grow Plan"
+              planInterest="Lifetime Scale Plan"
             />
             <p className="mt-2 text-xs text-center text-gray-500 font-medium">
               Only 10,000 Lifetime Licenses Available
