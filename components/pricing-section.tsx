@@ -74,6 +74,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       description: "Best for growing brands that want more scale",
       basePrice: 59,
       features: [
+        "7-day free trial",
         "Up to 5 seats",
         "Everything in Starter",
         "Import up to 100 Shopify products",
@@ -91,6 +92,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       description: "Built for high-volume stores and aggressive advertisers",
       basePrice: 189,
       features: [
+        "7-day free trial",
         "Up to 15 seats",
         "Everything in Grow",
         "Import up to 100 Shopify products",
