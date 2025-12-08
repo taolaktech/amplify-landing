@@ -50,8 +50,8 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
 
   const plans = [
     {
-      name: "Starter",
-      description: "Best for new stores testing AI-powered ads",
+      name: "Starter Plan",
+      description: "Launch ad creatives fast and validate your products across multiple channels.",
       basePrice: 29,
       features: [
         "2,000 AI credits/month for ad generation",
@@ -68,8 +68,8 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       ctaVariant: "outline",
     },
     {
-      name: "Grow",
-      description: "Best for growing brands that want more scale",
+      name: "Grow Plan",
+      description: "Built for brands moving past testing into consistent growth.",
       basePrice: 59,
       features: [
         "7-day free trial",
@@ -85,8 +85,8 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       gradient: true,
     },
     {
-      name: "Scale",
-      description: "Built for high-volume stores and aggressive advertisers",
+      name: "Scale Plan",
+      description: "Unlimited speed for brands scaling across many campaigns and channels.",
       basePrice: 189,
       features: [
         "7-day free trial",
