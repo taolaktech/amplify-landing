@@ -22,7 +22,10 @@ export function WaitlistForm({
   planInterest = "",
   children,
 }: WaitlistFormProps) {
-  const signupUrl = "https://app.useamplify.ai/auth/signup"
+  const baseUrl = "https://app.useamplify.ai/auth/signup"
+  const signupUrl = planInterest 
+    ? `${baseUrl}?plan=${encodeURIComponent(planInterest)}`
+    : baseUrl
 
   if (children) {
     return (
