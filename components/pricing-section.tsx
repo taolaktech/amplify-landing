@@ -187,7 +187,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
                 <span className="text-sm text-gray-400 line-through ml-1">${plan.basePrice}</span>
               )}
             </div>
-            <p className="mt-1 text-xs text-gray-500">{getBillingNote(billingPeriod, plan.basePrice)}</p>
 
             <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed">{plan.description}</p>
 
