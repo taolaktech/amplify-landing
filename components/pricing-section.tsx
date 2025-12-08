@@ -51,7 +51,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
   const plans = [
     {
       name: "Starter",
-      description: "Perfect for trying Amplify risk-free.",
+      description: "Perfect for testing AI-powered ads for your store.",
       basePrice: 19,
       features: [
         "Launch 1 ad campaign on Google & Meta",
@@ -60,14 +60,14 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Unlimited ad spend",
         "0% commission on ad spend",
       ],
-      idealFor: "New users testing the platform",
+      idealFor: "New Shopify stores testing AI ads for the first time",
       cta: "Get Started",
       popular: false,
       ctaVariant: "outline",
     },
     {
       name: "Grow",
-      description: "Unlock more monthly campaigns with no commission fees.",
+      description: "More campaigns, more products, more creative power - built for growing stores.",
       basePrice: 39,
       features: [
         "7-day free trial",
@@ -76,7 +76,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Add up to 15 products",
         "Generate up to 300 AI ad creatives",
       ],
-      idealFor: "Small stores looking to scale profitably",
+      idealFor: "Small to mid-sized stores looking to scale profitably",
       cta: "Start Trial",
       popular: true,
       ctaVariant: "default",
@@ -84,7 +84,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     },
     {
       name: "Scale",
-      description: "More campaigns, more products, more creative output.",
+      description: "High-volume ad automation and optimization for stores that want to scale aggressively.",
       basePrice: 99,
       features: [
         "7-day free trial",
@@ -95,7 +95,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Automated campaign optimization",
         "Automated A/B testing",
       ],
-      idealFor: "Stores with 50+ products looking to scale aggressively",
+      idealFor: "Stores with 50+ products needing automated optimization",
       cta: "Start Trial",
       popular: false,
       ctaVariant: "outline",
