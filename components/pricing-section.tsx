@@ -77,7 +77,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         </p>
       </div>
 
-      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
         {plans.map((plan, index) => (
           <div
             key={plan.name}
@@ -146,87 +146,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             </div>
           </div>
         ))}
-
-        {/* Lifetime Grow Plan */}
-        <div
-          className={cn(
-            "relative rounded-xl sm:rounded-2xl border-2 border-purple-300 p-5 sm:p-6 shadow-sm transition-all duration-500 hover:shadow-lg transform",
-            "bg-gradient-to-br from-purple-200 via-purple-100 to-pink-100",
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          )}
-          style={{ transitionDelay: "600ms" }}
-        >
-          <div className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-32 sm:w-36 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-2 sm:px-3 py-1 text-center text-xs sm:text-sm font-medium text-white">
-            Limited Time Offer
-          </div>
-
-          <div className="mt-2">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Lifetime Scale Plan</h3>
-          </div>
-
-          <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Get lifetime access to the scale plan benefits and unlock every feature we offer now and everything we build next.
-          </p>
-          
-          <p className="mt-2 text-xs sm:text-sm font-semibold text-purple-700">
-            One payment, forever powerful.
-          </p>
-
-          <div className="mt-3 sm:mt-4 flex flex-wrap items-baseline gap-1">
-            <span className="text-base sm:text-lg text-gray-400 line-through">$2,199</span>
-            <span className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">$599</span>
-            <span className="text-xs sm:text-sm font-medium text-purple-600">Early Access</span>
-          </div>
-          <p className="mt-0.5 text-xs text-gray-500">
-            ($899 After 2,000 Spots Sold)*
-          </p>
-
-          <div className="mt-3 sm:mt-4">
-            <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">Everything in Scale +</h4>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Unlimited AI-Powered Campaigns</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Unlimited Products per Campaign</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Unlimited AI Ad Creatives</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Zero commission — forever</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Lifetime access to all features</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Early access to future updates</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-600 flex-shrink-0">✓</span>
-                <span className="text-xs sm:text-sm text-gray-700">Priority support</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-4 sm:mt-6">
-            <WaitlistForm
-              buttonText="Get Lifetime Access"
-              buttonVariant="default"
-              buttonClassName="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold"
-              planInterest="Lifetime Scale Plan"
-            />
-            <p className="mt-2 text-xs text-center text-gray-500 font-medium">
-              Only 10,000 Lifetime Licenses Available
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   )
