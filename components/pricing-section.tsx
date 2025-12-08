@@ -56,7 +56,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       features: [
         "2,000 AI credits/month for ad generation",
         "Import up to 50 Shopify products",
-        "Generate multiple ad concepts, offers, scripts, copy, video and image ads for each campaign",
+        "Generate multiple ad concepts, offers, copy, video and image ads for each campaign",
         "Run automated ads on Google, Facebook & Instagram",
         "Unlimited ad spend",
         "0% commission on ad spend",
