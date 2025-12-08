@@ -12,9 +12,9 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
   const getDiscount = (period: BillingPeriod) => {
     switch (period) {
       case "quarterly":
-        return 0.05
+        return 0.10
       case "annual":
-        return 0.15
+        return 0.20
       default:
         return 0
     }
@@ -137,7 +137,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             )}
           >
             Quarterly
-            <span className="ml-1 text-xs text-green-600 font-semibold">5% off</span>
+            <span className="ml-1 text-xs text-green-600 font-semibold">10% off</span>
           </button>
           <button
             onClick={() => setBillingPeriod("annual")}
@@ -149,7 +149,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             )}
           >
             Annual
-            <span className="ml-1 text-xs text-green-600 font-semibold">15% off</span>
+            <span className="ml-1 text-xs text-green-600 font-semibold">20% off</span>
           </button>
         </div>
       </div>
