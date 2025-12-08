@@ -4,15 +4,55 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { WaitlistForm } from "@/components/waitlist-form"
 
+type BillingPeriod = "monthly" | "quarterly" | "annual"
+
 export default function PricingSection({ isVisible }: { isVisible: boolean }) {
-  const [annualBilling, setAnnualBilling] = useState(false)
+  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
+
+  const getDiscount = (period: BillingPeriod) => {
+    switch (period) {
+      case "quarterly":
+        return 0.05
+      case "annual":
+        return 0.15
+      default:
+        return 0
+    }
+  }
+
+  const getPrice = (basePrice: number, period: BillingPeriod) => {
+    const discount = getDiscount(period)
+    const discountedPrice = basePrice * (1 - discount)
+    return Math.round(discountedPrice)
+  }
+
+  const getPeriodLabel = (period: BillingPeriod) => {
+    switch (period) {
+      case "quarterly":
+        return "/month"
+      case "annual":
+        return "/month"
+      default:
+        return "/month"
+    }
+  }
+
+  const getBillingNote = (period: BillingPeriod, basePrice: number) => {
+    switch (period) {
+      case "quarterly":
+        return `Billed $${getPrice(basePrice, period) * 3} every 3 months`
+      case "annual":
+        return `Billed $${getPrice(basePrice, period) * 12} annually`
+      default:
+        return "Billed monthly"
+    }
+  }
 
   const plans = [
     {
       name: "Starter",
       description: "Perfect for trying Amplify risk-free.",
-      price: "$19",
-      period: "/month",
+      basePrice: 19,
       features: [
         "Launch 1 ad campaign on Google & Meta",
         "Add up to 2 products",
@@ -28,8 +68,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     {
       name: "Grow",
       description: "Unlock more monthly campaigns with no commission fees.",
-      price: "$39",
-      period: "/month",
+      basePrice: 39,
       features: [
         "7-day free trial",
         "Everything in Starter",
@@ -41,12 +80,12 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       cta: "Start Trial",
       popular: true,
       ctaVariant: "default",
+      gradient: true,
     },
     {
       name: "Scale",
       description: "More campaigns, more products, more creative output.",
-      price: "$99",
-      period: "/month",
+      basePrice: 99,
       features: [
         "7-day free trial",
         "Everything in Grow",
@@ -60,7 +99,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       cta: "Start Trial",
       popular: false,
       ctaVariant: "outline",
-      gradient: true,
     },
   ]
 
@@ -75,6 +113,44 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
           Choose the plan that's right for your business and start amplifying your sales today.
         </p>
+
+        <div className="mt-6 sm:mt-8 inline-flex items-center rounded-full bg-gray-100 p-1">
+          <button
+            onClick={() => setBillingPeriod("monthly")}
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
+              billingPeriod === "monthly"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
+            )}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setBillingPeriod("quarterly")}
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 relative",
+              billingPeriod === "quarterly"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
+            )}
+          >
+            Quarterly
+            <span className="ml-1 text-xs text-green-600 font-semibold">5% off</span>
+          </button>
+          <button
+            onClick={() => setBillingPeriod("annual")}
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 relative",
+              billingPeriod === "annual"
+                ? "bg-white text-gray-900 shadow-sm"
+                : "text-gray-600 hover:text-gray-900"
+            )}
+          >
+            Annual
+            <span className="ml-1 text-xs text-green-600 font-semibold">15% off</span>
+          </button>
+        </div>
       </div>
 
       <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -92,7 +168,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
             style={{ transitionDelay: `${index * 200}ms` }}
           >
             {plan.popular && (
-              <div className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-28 sm:w-32 rounded-full bg-purple-600 px-2 sm:px-3 py-1 text-center text-xs sm:text-sm font-medium text-white">
+              <div className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-28 sm:w-32 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-2 sm:px-3 py-1 text-center text-xs sm:text-sm font-medium text-white">
                 Most Popular
               </div>
             )}
@@ -101,10 +177,16 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{plan.name}</h3>
             </div>
 
-            <div className="mt-3 sm:mt-4 flex items-baseline">
-              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">{plan.price}</span>
-              <span className="ml-1 text-sm sm:text-base font-medium text-gray-500">{plan.period}</span>
+            <div className="mt-3 sm:mt-4 flex items-baseline flex-wrap gap-1">
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+                ${getPrice(plan.basePrice, billingPeriod)}
+              </span>
+              <span className="text-sm sm:text-base font-medium text-gray-500">{getPeriodLabel(billingPeriod)}</span>
+              {billingPeriod !== "monthly" && (
+                <span className="text-sm text-gray-400 line-through ml-1">${plan.basePrice}</span>
+              )}
             </div>
+            <p className="mt-1 text-xs text-gray-500">{getBillingNote(billingPeriod, plan.basePrice)}</p>
 
             <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed">{plan.description}</p>
 
@@ -136,12 +218,10 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
                 buttonClassName={cn(
                   "w-full",
                   plan.popular
-                    ? "bg-purple-600 hover:bg-purple-700"
-                    : plan.gradient
-                    ? "bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white border-0"
+                    ? "bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white"
                     : "bg-white text-purple-600 border-purple-600 hover:bg-purple-50",
                 )}
-                planInterest={plan.name}
+                planInterest={`${plan.name} (${billingPeriod})`}
               />
             </div>
           </div>
