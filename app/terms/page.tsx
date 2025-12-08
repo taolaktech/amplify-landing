@@ -93,7 +93,7 @@ export default function TermsOfServicePage() {
             <p className="text-gray-700 leading-relaxed">
               By using Amplify, you agree to these Terms & Conditions, our Privacy Policy, and any additional terms
               specific to certain services. These Terms constitute a legally binding agreement between you ("User,"
-              "you," or "your") and Amplify Technologies Inc. ("Amplify," "we," "us," or "our").
+              "you," or "your") and Amplify Ads LLC ("Amplify," "we," "us," or "our").
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
               If you do not agree to these Terms, you may not use our Services. Continued use of our Services after
@@ -456,7 +456,7 @@ export default function TermsOfServicePage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-3">Legal Department</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p>Amplify Technologies Inc.</p>
+                  <p>Amplify Ads LLC</p>
                   <p>909 Reinli Street</p>
                   <p>Austin, TX 78751</p>
                 </div>
