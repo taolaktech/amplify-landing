@@ -63,7 +63,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "1GB assets storage",
         "Use your custom brand kit (fonts, colors, logo)",
       ],
-      idealFor: "New stores testing AI-powered ads",
       cta: "Get Started",
       popular: false,
       ctaVariant: "outline",
@@ -80,7 +79,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "10GB assets storage",
         "5,000 AI credits/month for ad generation",
       ],
-      idealFor: "Stores running multiple products and campaigns monthly",
       cta: "Start Trial",
       popular: true,
       ctaVariant: "default",
@@ -99,7 +97,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "10,000+ AI credits/month for ad generation",
         "Automated A/B testing for offers and ad creatives",
       ],
-      idealFor: "Brands with large catalogs and large monthly ad budgets",
       cta: "Start Trial",
       popular: false,
       ctaVariant: "outline",
@@ -204,15 +201,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className={cn(
-              "mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-lg",
-              plan.gradient ? "bg-white/60" : "bg-gray-50"
-            )}>
-              <p className="text-xs sm:text-sm text-gray-600">
-                <span className="font-medium">Ideal for:</span> {plan.idealFor}
-              </p>
             </div>
 
             <div className="mt-6">
