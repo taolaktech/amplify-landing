@@ -54,7 +54,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       description: "Best for new stores testing AI-powered ads",
       basePrice: 29,
       features: [
-        "1 seat",
         "2,000 AI credits for ad generation",
         "Import up to 50 Shopify products",
         "Generate multiple ad concepts, offers, scripts, copy, video and image ads for each campaign",
