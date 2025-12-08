@@ -95,7 +95,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
         "Automated campaign optimization",
         "Automated A/B testing",
       ],
-      idealFor: "Stores with 50+ products needing automated ad optimization",
+      idealFor: "Stores with 15+ products needing automated ad optimization",
       cta: "Start Trial",
       popular: false,
       ctaVariant: "outline",
