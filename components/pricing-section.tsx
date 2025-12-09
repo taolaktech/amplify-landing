@@ -37,17 +37,6 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
     }
   }
 
-  const getBillingNote = (period: BillingPeriod, basePrice: number) => {
-    switch (period) {
-      case "quarterly":
-        return `Billed $${getPrice(basePrice, period) * 3} every 3 months`
-      case "annual":
-        return `Billed $${getPrice(basePrice, period) * 12} annually`
-      default:
-        return "Billed monthly"
-    }
-  }
-
   const plans = [
     {
       name: "Starter Plan",

@@ -135,7 +135,7 @@ export default function Home() {
                 </div>
 
                 {/* Partner Badges */}
-                <div className="mt-6 flex items-center gap-2 sm:gap-3 flex-wrap">
+                <div className="mt-6 flex items-center justify-center sm:justify-start gap-2 sm:gap-3 flex-wrap">
                   <div className="bg-white rounded-lg shadow-sm border border-gray-100 px-3 py-2.5 min-h-[44px] flex items-center justify-center">
                     <Image
                       src="/shopify-partners-logo.png"
