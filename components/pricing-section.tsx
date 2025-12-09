@@ -62,7 +62,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       basePrice: 59,
       features: [
         "7-day free trial",
-        "Up to 5 seats",
+        "Up to 3 seats",
         "Everything in Starter",
         "Import up to 20 Shopify products",
         "10GB assets storage",
@@ -79,7 +79,7 @@ export default function PricingSection({ isVisible }: { isVisible: boolean }) {
       basePrice: 189,
       features: [
         "7-day free trial",
-        "Up to 15 seats",
+        "Up to 10 seats",
         "Everything in Grow",
         "Import up to 50+ Shopify products",
         "1TB assets storage",
