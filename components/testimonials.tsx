@@ -18,8 +18,24 @@ interface TestimonialsProps {
   isVisible: boolean
 }
 
+interface VideoTestimonial {
+  id: string
+  title: string
+}
+
 export default function Testimonials({ isVisible }: TestimonialsProps) {
   const [columns, setColumns] = useState(3)
+
+  const videoTestimonials: VideoTestimonial[] = [
+    {
+      id: "lIEPeEHZZH8",
+      title: "Shopify Merchant Review 1",
+    },
+    {
+      id: "18XqlvyiYco",
+      title: "Shopify Merchant Review 2",
+    },
+  ]
 
   useEffect(() => {
     const handleResize = () => {
@@ -162,6 +178,37 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
               })}
             </div>
           ))}
+        </div>
+
+        {/* Video Testimonials */}
+        <div
+          className={`mt-12 sm:mt-16 transition-all duration-1000 transform ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+          style={{ transitionDelay: "600ms" }}
+        >
+          <h3 className="text-xl sm:text-2xl font-bold text-white text-center mb-6 sm:mb-8">
+            Video Reviews from Shopify Merchants
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {videoTestimonials.map((video, index) => (
+              <div
+                key={video.id}
+                className="relative rounded-xl overflow-hidden shadow-lg ring-1 ring-gray-700 transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+                style={{ transitionDelay: `${700 + index * 100}ms` }}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  width="315"
+                  height="560"
+                  className="w-[280px] h-[500px] sm:w-[315px] sm:h-[560px]"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
