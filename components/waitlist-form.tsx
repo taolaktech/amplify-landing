@@ -367,7 +367,7 @@ export function WaitlistForm({
                     type="text"
                     value={formData.shopifyUrl}
                     onChange={handleInputChange}
-                    placeholder="www.yourstore.com"
+                    placeholder="www.store.myshopify.com"
                     required
                     className="mt-1"
                   />
