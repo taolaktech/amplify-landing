@@ -55,7 +55,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
                   title={video.title}
                   width="315"
                   height="560"
-                  className="w-[280px] h-[500px] sm:w-[315px] sm:h-[560px]"
+                  className="w-[180px] h-[320px] sm:w-[280px] sm:h-[500px] md:w-[315px] md:h-[560px]"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
