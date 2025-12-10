@@ -250,12 +250,14 @@ export default function Home() {
                 Become a Beta Tester
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6">
-                Join our waitlist now and lock in a <span className="font-bold">lifetime Grow Plan at just $39/month</span> — exclusively for early supporters.
+                Join our waitlist now and get <span className="font-bold">3 months free Starter subscription</span> on launch — exclusively for early supporters.
               </p>
-              <WaitlistForm 
-                buttonText="Join Waitlist & Get Beta Access" 
-                buttonClassName="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105"
-              />
+              <a 
+                href="#hero"
+                className="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105 rounded-md"
+              >
+                Join Waitlist & Get Beta Access
+              </a>
             </div>
           </div>
         </section>
