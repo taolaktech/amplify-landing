@@ -20,7 +20,7 @@ export default function Testimonials({ isVisible }: TestimonialsProps) {
       title: "Shopify Merchant Review 2",
     },
     {
-      id: "UdMbWqs2h8w",
+      id: "EKejm_BetE8",
       title: "Shopify Merchant Review 3",
     },
   ]
