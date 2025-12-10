@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Twitter, Facebook } from "lucide-react"
+import { Instagram, Twitter, Facebook, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -47,6 +47,15 @@ export default function Footer() {
                 aria-label="X (Twitter)"
               >
                 <Twitter className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@UseAmplify"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 w-11 sm:h-10 sm:w-10 items-center justify-center rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors duration-200"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-5 w-5 hover:text-purple-400 transition-colors duration-300" />
               </Link>
             </div>
           </div>
