@@ -108,6 +108,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6 sm:mt-8">
                   <WaitlistForm
+                    buttonText="Join Waitlist"
                     buttonSize="lg"
                     buttonClassName="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 text-base"
                   />
