@@ -238,6 +238,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Beta Testers Banner */}
+        <section className="bg-gradient-to-r from-purple-600 to-pink-500 py-8 sm:py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-3xl mx-auto">
+              <span className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                Limited Time Offer
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Become a Beta Tester
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6">
+                Join our waitlist now and lock in a <span className="font-bold">lifetime Grow Plan at just $39/month</span> — exclusively for early supporters.
+              </p>
+              <WaitlistForm 
+                buttonText="Join Waitlist & Get Beta Access" 
+                buttonClassName="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section
           id="pricing"
