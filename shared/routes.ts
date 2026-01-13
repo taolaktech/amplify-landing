@@ -40,3 +40,5 @@ export function buildUrl(path: string, params?: Record<string, string | number>)
   }
   return url;
 }
+
+export type InsertSubscriber = z.infer<typeof insertSubscriberSchema>;

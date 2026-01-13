@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -12,7 +12,7 @@ interface PricingCardProps {
   description: string;
   features: PricingFeature[];
   highlight?: boolean;
-  buttonText?: string;
+  includesLabel?: string;
 }
 
 export function PricingCard({ 
@@ -21,64 +21,64 @@ export function PricingCard({
   description, 
   features, 
   highlight = false,
-  buttonText = "Join Waitlist"
+  includesLabel = "Includes:"
 }: PricingCardProps) {
   return (
     <div 
       className={cn(
-        "relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full",
+        "relative rounded-2xl p-8 flex flex-col h-full border",
         highlight 
-          ? "bg-foreground text-background shadow-2xl scale-105 border-0 ring-4 ring-primary/20" 
-          : "bg-card border border-border shadow-lg hover:shadow-xl hover:border-primary/50"
+          ? "border-violet-200 shadow-lg" 
+          : "border-gray-200 bg-white"
       )}
     >
       {highlight && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-md">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
           Most Popular
         </div>
       )}
       
-      <div className="mb-8">
-        <h3 className={cn("text-xl font-bold mb-2", highlight ? "text-primary-foreground" : "text-foreground")}>
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">
           {title}
         </h3>
-        <div className="flex items-baseline gap-1 mb-4">
-          <span className="text-4xl font-bold tracking-tight">{price}</span>
-          <span className={highlight ? "text-primary-foreground/70" : "text-muted-foreground"}>/month</span>
+        <div className="flex items-baseline gap-1 mb-3">
+          <span className="text-4xl font-bold text-gray-900">{price}</span>
+          <span className="text-gray-500">/month</span>
         </div>
-        <p className={cn("text-sm leading-relaxed", highlight ? "text-primary-foreground/80" : "text-muted-foreground")}>
+        <p className="text-sm text-gray-600 leading-relaxed">
           {description}
         </p>
       </div>
 
-      <div className="space-y-4 mb-8 flex-1">
-        {features.map((feature, idx) => (
-          <div key={idx} className="flex items-start gap-3">
-            <div className={cn(
-              "mt-0.5 rounded-full p-1", 
-              highlight ? "bg-primary text-white" : "bg-primary/10 text-primary"
-            )}>
-              <Check className="h-3 w-3" strokeWidth={3} />
+      <div className="mb-6">
+        <p className="text-sm font-semibold text-gray-900 mb-4">{includesLabel}</p>
+        <div className="space-y-3">
+          {features.map((feature, idx) => (
+            <div key={idx} className="flex items-start gap-2">
+              <Check className="h-4 w-4 text-gray-600 mt-0.5 flex-shrink-0" strokeWidth={2} />
+              <span className="text-sm text-gray-600">
+                {feature.text}
+              </span>
             </div>
-            <span className={cn("text-sm", highlight ? "text-primary-foreground/90" : "text-foreground/90")}>
-              {feature.text}
-            </span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <Button 
-        variant={highlight ? "default" : "outline"}
-        className={cn(
-          "w-full font-semibold h-12 rounded-xl", 
-          highlight 
-            ? "bg-primary hover:bg-primary/90 text-white border-0" 
-            : "border-2 hover:bg-primary/5 hover:text-primary hover:border-primary"
-        )}
-        onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
-      >
-        {buttonText}
-      </Button>
+      <div className="mt-auto">
+        <Button 
+          className={cn(
+            "w-full rounded-full font-medium",
+            highlight 
+              ? "bg-violet-600 hover:bg-violet-700 text-white" 
+              : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+          )}
+          onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
+          data-testid={`button-pricing-${title.toLowerCase().replace(/\s+/g, "-")}`}
+        >
+          Join Waitlist {highlight && <ArrowRight className="ml-2 h-4 w-4" />}
+        </Button>
+      </div>
     </div>
   );
 }
