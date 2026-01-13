@@ -21,7 +21,6 @@ import {
 import step1Image from "@assets/Screenshot_2026-01-13_at_1.19.38_PM_1768328489722.png";
 import step2Image from "@assets/Screenshot_2026-01-13_at_1.19.53_PM_1768328489722.png";
 import step3Image from "@assets/Screenshot_2026-01-13_at_1.20.00_PM_1768328489723.png";
-import featuresImage from "@assets/Screenshot_2026-01-13_at_1.19.30_PM_1768328489721.png";
 
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
@@ -572,19 +571,35 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WAITLIST FORM - Hidden but functional */}
-        <div id="waitlist" className="hidden">
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <Input 
-              type="email" 
-              placeholder="Enter your email"
-              {...form.register("email")}
-            />
-            <Button type="submit" disabled={createSubscriber.isPending}>
-              {createSubscriber.isPending ? "Joining..." : "Join Waitlist"}
-            </Button>
-          </form>
-        </div>
+        {/* WAITLIST FORM - Visible with proper styling */}
+        <section id="waitlist" className="py-16 bg-white">
+          <div className="max-w-md mx-auto px-4">
+            <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">Join the Waitlist</h3>
+            <p className="text-gray-600 text-center mb-6">Be the first to know when we launch.</p>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-3">
+              <Input 
+                type="email" 
+                placeholder="Enter your email"
+                className="flex-1 rounded-full px-4"
+                {...form.register("email")}
+                data-testid="input-waitlist-email"
+              />
+              <Button 
+                type="submit" 
+                disabled={createSubscriber.isPending}
+                className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-6"
+                data-testid="button-waitlist-submit"
+              >
+                {createSubscriber.isPending ? "Joining..." : "Join Waitlist"}
+              </Button>
+            </form>
+            {form.formState.errors.email && (
+              <p className="text-red-500 text-sm mt-2 text-center" data-testid="text-waitlist-error">
+                {form.formState.errors.email.message}
+              </p>
+            )}
+          </div>
+        </section>
       </main>
 
       <Footer />
