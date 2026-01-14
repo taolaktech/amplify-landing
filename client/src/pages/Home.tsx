@@ -577,27 +577,32 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">Join the Waitlist</h3>
             <p className="text-gray-600 text-center mb-6">Be the first to know when we launch.</p>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-3">
-              <Input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 rounded-full px-4"
-                {...form.register("email")}
-                data-testid="input-waitlist-email"
-              />
+              <div className="flex-1">
+                <Input 
+                  type="email" 
+                  placeholder="Enter your email"
+                  className={cn(
+                    "w-full rounded-full px-4",
+                    form.formState.errors.email && "border-red-500 focus-visible:ring-red-500"
+                  )}
+                  {...form.register("email")}
+                  data-testid="input-waitlist-email"
+                />
+                {form.formState.errors.email && (
+                  <p className="text-red-500 text-xs mt-1.5 px-4" data-testid="text-waitlist-error">
+                    {form.formState.errors.email.message}
+                  </p>
+                )}
+              </div>
               <Button 
                 type="submit" 
                 disabled={createSubscriber.isPending}
-                className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-6"
+                className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-6 h-10"
                 data-testid="button-waitlist-submit"
               >
                 {createSubscriber.isPending ? "Joining..." : "Join Waitlist"}
               </Button>
             </form>
-            {form.formState.errors.email && (
-              <p className="text-red-500 text-sm mt-2 text-center" data-testid="text-waitlist-error">
-                {form.formState.errors.email.message}
-              </p>
-            )}
           </div>
         </section>
       </main>
