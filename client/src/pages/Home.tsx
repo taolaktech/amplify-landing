@@ -9,6 +9,7 @@ import { PricingCard } from "@/components/PricingCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 import { 
   ArrowRight, 
   Check,
