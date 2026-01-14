@@ -22,6 +22,8 @@ import {
 import step1Image from "@assets/Screenshot_2026-01-13_at_1.19.38_PM_1768328489722.png";
 import step2Image from "@assets/Screenshot_2026-01-13_at_1.19.53_PM_1768328489722.png";
 import step3Image from "@assets/Screenshot_2026-01-13_at_1.20.00_PM_1768328489723.png";
+import modelImage from "@assets/Kahe_set_in_S_P_6_610x_crop_center_(1)_1768434928821.webp";
+import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.png";
 
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
@@ -171,10 +173,17 @@ export default function Home() {
               {/* Feature 1 - Ad Generation */}
               <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
                 <div className="aspect-[4/3] bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center p-4 relative">
-                  <div className="absolute inset-4 bg-white/80 rounded-xl shadow-lg flex items-end justify-center pb-4">
-                    <Button size="sm" className="bg-gray-900 text-white rounded-md text-xs">
-                      Shop Now
-                    </Button>
+                  <div className="absolute inset-4 bg-white/80 rounded-xl shadow-lg overflow-hidden flex flex-col">
+                    <img 
+                      src={modelImage} 
+                      alt="Fashion Model" 
+                      className="w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                      <Button size="sm" className="bg-gray-900 text-white rounded-md text-xs">
+                        Shop Now
+                      </Button>
+                    </div>
                   </div>
                 </div>
                 <div className="p-6">
@@ -188,33 +197,14 @@ export default function Home() {
 
               {/* Feature 2 - AI Insights */}
               <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div className="aspect-[4/3] p-4">
-                  <div className="bg-white rounded-xl border border-gray-200 p-4 h-full flex flex-col">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Sparkles className="h-4 w-4 text-violet-600" />
-                      <span className="font-semibold text-sm">AI Insights</span>
-                    </div>
-                    <p className="text-xs text-gray-500 mb-3">Smart suggestions to boost your ad results.</p>
-                    <div className="flex gap-2 mb-3">
-                      <span className="text-xs bg-gray-100 px-2 py-1 rounded">All</span>
-                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Campaign Suggestion</span>
-                      <span className="text-xs bg-gray-100 px-2 py-1 rounded">Budget Optimization</span>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-3 flex-1">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
-                          <span className="text-xs font-bold text-violet-600">S</span>
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold">'Weekend Clearance Sale' Campaign Ready</p>
-                          <p className="text-xs text-green-600">CAMPAIGN SUGGESTION</p>
-                          <p className="text-xs text-gray-500 mt-1">Your campaign is complete and ready to go. Launch now to capture weekend shoppers.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] p-2">
+                  <img 
+                    src={insightsScreenshot} 
+                    alt="AI Insights Dashboard" 
+                    className="w-full h-full object-cover object-top rounded-lg"
+                  />
                 </div>
-                <div className="p-6 pt-0">
+                <div className="p-6 pt-4">
                   <h3 className="font-semibold text-gray-900 mb-1">Actionable insights that</h3>
                   <h3 className="font-semibold text-orange-500 mb-3">drives real results</h3>
                   <p className="text-sm text-gray-600">
