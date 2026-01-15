@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 
 import step1Image from "@assets/Connect_store_1768435395497.gif";
-import step2Image from "@assets/Screenshot_2026-01-13_at_1.19.53_PM_1768328489722.png";
-import step3Image from "@assets/Screenshot_2026-01-13_at_1.20.00_PM_1768328489723.png";
+import step2Image from "@assets/campaign-snapshot_(1)_1768435612757.jpeg";
+import step3Image from "@assets/insights-screenshot_(2)_1768435612765.png";
 import modelImage from "@assets/Kahe_set_in_S_P_6_610x_crop_center_(1)_1768434928821.webp";
 import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.png";
 
