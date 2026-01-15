@@ -26,6 +26,23 @@ import step3Image from "@assets/insights-screenshot_(2)_1768435612765.png";
 import modelImage from "@assets/Kahe_set_in_S_P_6_610x_crop_center_(1)_1768434928821.webp";
 import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.png";
 
+import adVideo1 from "@assets/c7b6bc98-06b5-4abe-b953-d711054aa817_1768436430392.mp4";
+import adVideo2 from "@assets/AQM5E_KyXvEkXlDaJzULHef3U3ucw0ALNHOBTdWQhm0THUpyVxZEBzJ6uwhfAS_1768436430396.mp4";
+import adVideo3 from "@assets/AQNKvb0XrvGGeMdXKdSpf6XVFDlVt-w90uoCq4Y1GEzMlg9kEqz0WDbwdLrtNV_1768436430397.mp4";
+import adVideo4 from "@assets/AQP8eyx5D8yntxpO7rCFFWxb7gSKlojV0dcA6loTB-tl462LjLSTB4CaYtV57e_1768436430397.mp4";
+import adVideo5 from "@assets/AQPdjIi8QFIM2GG9T0nvkISyhZBFUWW7wA02iq1BUZlxw0t6CUMDiTIHwRswe4_1768436430397.mp4";
+import adVideo6 from "@assets/AQPRTgBVdYj83IchzmGk4NrNf2XZQR3IcDDCwIx8X96g8Fvy7mSQjyFl24hnUi_1768436430398.mp4";
+import adVideo7 from "@assets/a5928bf1-8cca-4f11-80c1-d48602facf5a_1768436430398.mp4";
+import adVideo8 from "@assets/b45b2243-c01d-4719-a6d7-4aec7dfac4e5_1768436430398.mp4";
+import adVideo9 from "@assets/a069269c-49e5-4068-a750-007e54a3d580_1768436430399.mp4";
+import adVideo10 from "@assets/a7aa648c-6d7b-463a-8c47-998e25342aaa_1768436430399.mp4";
+import adVideo11 from "@assets/Download_(1)_1768436430400.mp4";
+import adVideo12 from "@assets/Download_(4)_1768436430400.mp4";
+import adVideo13 from "@assets/Download_(5)_1768436430400.mp4";
+import adVideo14 from "@assets/Download_(6)_1768436430400.mp4";
+import adVideo15 from "@assets/Download_(9)_1768436430401.mp4";
+import adImage1 from "@assets/b82c1957-5f8a-4cd2-998e-bf7f45f86db2_1768436430399.png";
+
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
   const [activeCategory, setActiveCategory] = useState("Top Ads of the Week");
@@ -64,13 +81,27 @@ export default function Home() {
     "Product Shoots"
   ];
 
-  const adTemplates = [
-    { title: "Viral Product Ad", subtitle: "High-converting video ad that drove 10x ROAS for fashion brands." },
-    { title: "Trending Style Reel", subtitle: "Scroll-stopping creative that boosted engagement by 300%." },
-    { title: "Product Showcase", subtitle: "Clean visual storytelling that converts browsers to buyers." },
-    { title: "Lifestyle Feature", subtitle: "Authentic content that resonates with target audiences." },
-    { title: "Brand Story Ad", subtitle: "Compelling narrative that builds emotional connection." },
+  const adTemplates: { title: string; subtitle: string; media: string; type: "video" | "image"; category: string }[] = [
+    { title: "Viral Product Ad", subtitle: "High-converting video ad that drove 10x ROAS.", media: adVideo1, type: "video", category: "Top Ads of the Week" },
+    { title: "Trending Style Reel", subtitle: "Scroll-stopping creative that boosted engagement.", media: adVideo2, type: "video", category: "Top Ads of the Week" },
+    { title: "Product Showcase", subtitle: "Clean visual storytelling that converts.", media: adVideo3, type: "video", category: "Top Ads of the Week" },
+    { title: "Lifestyle Feature", subtitle: "Authentic content that resonates.", media: adVideo4, type: "video", category: "Top Ads of the Week" },
+    { title: "Brand Story Ad", subtitle: "Compelling narrative that builds connection.", media: adVideo5, type: "video", category: "Top Ads of the Week" },
+    { title: "UGC Review", subtitle: "Authentic customer testimonial content.", media: adVideo6, type: "video", category: "Social & UGC Ads" },
+    { title: "Influencer Feature", subtitle: "Social-first content that drives engagement.", media: adVideo7, type: "video", category: "Social & UGC Ads" },
+    { title: "User Story", subtitle: "Real customer experiences shared.", media: adVideo8, type: "video", category: "Social & UGC Ads" },
+    { title: "Viral Stitch", subtitle: "Trending duet-style content.", media: adVideo9, type: "video", category: "Viral Video Stitches" },
+    { title: "Reaction Video", subtitle: "Engaging response format content.", media: adVideo10, type: "video", category: "Viral Video Stitches" },
+    { title: "Product Demo", subtitle: "Clear product demonstration video.", media: adVideo11, type: "video", category: "Video Ads" },
+    { title: "Feature Highlight", subtitle: "Key benefits showcased.", media: adVideo12, type: "video", category: "Video Ads" },
+    { title: "Brand Video", subtitle: "Premium brand storytelling.", media: adVideo13, type: "video", category: "Video Ads" },
+    { title: "Lifestyle Ad", subtitle: "Product in real-world context.", media: adVideo14, type: "video", category: "Video Ads" },
+    { title: "Quick Promo", subtitle: "Fast-paced promotional content.", media: adVideo15, type: "video", category: "Video Ads" },
+    { title: "Product Shot", subtitle: "Professional product photography.", media: adImage1, type: "image", category: "Product Shoots" },
+    { title: "Product Shot", subtitle: "Professional product photography.", media: adImage1, type: "image", category: "Image Ads" },
   ];
+
+  const filteredAds = adTemplates.filter(ad => ad.category === activeCategory);
 
   const testimonials = [
     { name: "Kyra", channel: "Amplify Ads", videoId: "lIEPeEHZZH8" },
@@ -417,26 +448,48 @@ export default function Home() {
 
             {/* Ad Cards - Horizontal scroll on mobile */}
             <div className="flex md:grid md:grid-cols-5 gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
-              {adTemplates.map((ad, idx) => (
+              {filteredAds.length > 0 ? filteredAds.map((ad, idx) => (
                 <div 
                   key={idx}
                   className="bg-slate-800 rounded-xl overflow-hidden group flex-shrink-0 w-[160px] md:w-auto snap-start"
                   data-testid={`card-ad-${idx}`}
                 >
-                  <div className="aspect-[9/16] bg-gradient-to-br from-slate-700 to-slate-800 relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-                        <Play className="h-6 w-6 text-white fill-white" />
+                  <div className="aspect-[9/16] bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
+                    {ad.type === "video" ? (
+                      <video 
+                        src={ad.media}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        muted
+                        loop
+                        playsInline
+                        onMouseEnter={(e) => e.currentTarget.play()}
+                        onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                      />
+                    ) : (
+                      <img 
+                        src={ad.media}
+                        alt={ad.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    )}
+                    {ad.type === "video" && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                          <Play className="h-6 w-6 text-white fill-white" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="absolute top-3 left-3 text-xs text-gray-400">bestseller.xyz</div>
+                    )}
                   </div>
                   <div className="p-4">
                     <h4 className="font-semibold text-white text-sm mb-1">{ad.title}</h4>
                     <p className="text-xs text-gray-400">{ad.subtitle}</p>
                   </div>
                 </div>
-              ))}
+              )) : (
+                <div className="col-span-5 text-center py-12 text-gray-500">
+                  No ads in this category yet.
+                </div>
+              )}
             </div>
             <p className="text-center text-gray-500 text-xs mt-2 md:hidden">Swipe to see more</p>
           </div>
