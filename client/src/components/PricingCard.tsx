@@ -26,9 +26,9 @@ export function PricingCard({
   return (
     <div 
       className={cn(
-        "relative rounded-2xl p-8 flex flex-col h-full border",
+        "relative rounded-2xl p-8 flex flex-col h-full border hover-lift",
         highlight 
-          ? "border-violet-200 shadow-lg" 
+          ? "border-violet-200 shadow-lg bg-white" 
           : "border-gray-200 bg-white"
       )}
     >
@@ -68,7 +68,7 @@ export function PricingCard({
       <div className="mt-auto">
         <Button 
           className={cn(
-            "w-full rounded-full font-medium",
+            "w-full rounded-full font-medium transition-transform hover:scale-105",
             highlight 
               ? "bg-violet-600 hover:bg-violet-700 text-white" 
               : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"

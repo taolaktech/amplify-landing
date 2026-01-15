@@ -125,23 +125,23 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-violet-200/40 to-transparent" />
           
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up opacity-0">
               Run proven ads that work
               <br />
               <span className="italic text-violet-600">and stop wasting money.</span>
             </h1>
             
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2 animate-fade-in-up opacity-0 animate-delay-100">
               Amplify helps Shopify merchants generate winning creatives, cut losers fast, and scale what converts automatically.
             </p>
             
-            <p className="text-sm text-gray-500 italic mb-8">
+            <p className="text-sm text-gray-500 italic mb-8 animate-fade-in-up opacity-0 animate-delay-200">
               (yes, it's really that simple)
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 animate-fade-in-up opacity-0 animate-delay-300">
               <Button 
-                className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-3 text-base font-medium"
+                className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-3 text-base font-medium transition-transform hover:scale-105"
                 onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
                 data-testid="button-hero-join-waitlist"
               >
@@ -175,7 +175,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6">
               {/* Feature 1 - Ad Generation */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift">
                 <div className="aspect-square relative">
                   <img 
                     src={modelImage} 
@@ -198,7 +198,7 @@ export default function Home() {
               </div>
 
               {/* Feature 2 - AI Insights */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift">
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="h-4 w-4 text-violet-500" />
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
 
               {/* Feature 3 - ROAS */}
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100 overflow-hidden shadow-sm">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100 overflow-hidden shadow-sm hover-lift">
                 <div className="p-6">
                   <div className="flex justify-end mb-6">
                     <span className="text-xs text-emerald-600 font-medium flex items-center gap-1">
@@ -291,7 +291,7 @@ export default function Home() {
             </div>
 
             {/* Step 1 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8 hover-scale transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -322,7 +322,7 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8 hover-scale transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                   <img src={step2Image} alt="Create Campaigns" className="w-full h-auto" />
@@ -353,7 +353,7 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 hover-scale transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -455,7 +455,7 @@ export default function Home() {
               {testimonials.map((t, idx) => (
                 <div 
                   key={idx}
-                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group"
+                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group hover-lift"
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
