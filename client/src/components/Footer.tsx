@@ -98,9 +98,9 @@ export function Footer() {
             <div>
               <h4 className="font-semibold text-sm uppercase tracking-wider text-gray-300 mb-4">Legal & Privacy</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Delete My Data</a></li>
+                <li><a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+                <li><a href="/data-deletion" className="text-gray-400 hover:text-white text-sm transition-colors">Delete My Data</a></li>
               </ul>
             </div>
           </div>
