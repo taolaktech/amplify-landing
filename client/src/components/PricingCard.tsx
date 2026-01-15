@@ -26,7 +26,7 @@ export function PricingCard({
   return (
     <div 
       className={cn(
-        "relative rounded-2xl p-8 flex flex-col h-full border hover-lift",
+        "relative rounded-2xl p-8 flex flex-col h-full border",
         highlight 
           ? "border-violet-200 shadow-lg bg-white" 
           : "border-gray-200 bg-white"

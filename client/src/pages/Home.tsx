@@ -175,12 +175,12 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-6">
               {/* Feature 1 - Ad Generation */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift">
-                <div className="aspect-square relative">
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                <div className="aspect-square relative overflow-hidden">
                   <img 
                     src={modelImage} 
                     alt="Fashion Model" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
                     <Button size="sm" className="bg-gray-900 hover:bg-gray-800 text-white rounded-md text-xs px-4">
@@ -198,7 +198,7 @@ export default function Home() {
               </div>
 
               {/* Feature 2 - AI Insights */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift">
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="h-4 w-4 text-violet-500" />
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
 
               {/* Feature 3 - ROAS */}
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100 overflow-hidden shadow-sm hover-lift">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100 overflow-hidden shadow-sm">
                 <div className="p-6">
                   <div className="flex justify-end mb-6">
                     <span className="text-xs text-emerald-600 font-medium flex items-center gap-1">
@@ -291,7 +291,7 @@ export default function Home() {
             </div>
 
             {/* Step 1 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8 hover-scale transition-all duration-300">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -315,17 +315,17 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                  <img src={step1Image} alt="Connect Shopify" className="w-full h-auto" />
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group">
+                  <img src={step1Image} alt="Connect Shopify" className="w-full h-auto transition-transform duration-300 group-hover:scale-105" />
                 </div>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8 hover-scale transition-all duration-300">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="order-2 md:order-1 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                  <img src={step2Image} alt="Create Campaigns" className="w-full h-auto" />
+                <div className="order-2 md:order-1 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group">
+                  <img src={step2Image} alt="Create Campaigns" className="w-full h-auto transition-transform duration-300 group-hover:scale-105" />
                 </div>
                 <div className="order-1 md:order-2">
                   <div className="flex items-center gap-3 mb-4">
@@ -353,7 +353,7 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 hover-scale transition-all duration-300">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -377,8 +377,8 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                  <img src={step3Image} alt="AI Insights" className="w-full h-auto" />
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group">
+                  <img src={step3Image} alt="AI Insights" className="w-full h-auto transition-transform duration-300 group-hover:scale-105" />
                 </div>
               </div>
             </div>
@@ -457,7 +457,7 @@ export default function Home() {
               {testimonials.map((t, idx) => (
                 <div 
                   key={idx}
-                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group hover-lift flex-shrink-0 w-[280px] md:w-auto snap-start"
+                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group flex-shrink-0 w-[280px] md:w-auto snap-start"
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
