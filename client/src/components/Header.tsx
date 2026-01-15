@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
+import amplifyLogo from "@assets/amplify-logo_1768435198168.png";
 
 const navLinks = [
   { href: "#features", label: "Features" },
@@ -25,11 +26,8 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 26L16 4L28 26H4Z" fill="#7C3AED" />
-            </svg>
-            <span className="text-xl font-bold text-gray-900">Amplify</span>
+          <div className="flex items-center">
+            <img src={amplifyLogo} alt="Amplify" className="h-7" />
           </div>
 
           <nav className="hidden md:flex items-center gap-8">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { SiInstagram, SiFacebook, SiX, SiYoutube } from "react-icons/si";
+import amplifyLogo from "@assets/amplify-logo_1768435198168.png";
 
 export function Footer() {
   return (
@@ -62,11 +63,8 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             {/* Logo & Description */}
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 26L16 4L28 26H4Z" fill="#7C3AED" />
-                </svg>
-                <span className="text-xl font-bold">Amplify</span>
+              <div className="flex items-center mb-4">
+                <img src={amplifyLogo} alt="Amplify" className="h-7 brightness-0 invert" />
               </div>
               <p className="text-gray-400 text-sm mb-6 max-w-xs">
                 Automate your ad campaigns and amplify your sales with AI-powered optimization.
