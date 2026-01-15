@@ -392,13 +392,13 @@ export default function Home() {
               Proven ads that drive real results for your store
             </h2>
             
-            {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {/* Category Tabs - Horizontal scroll on mobile */}
+            <div className="flex md:flex-wrap md:justify-center gap-2 mb-12 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
                     activeCategory === cat 
                       ? "bg-violet-600 text-white" 
                       : "bg-slate-800 text-gray-300 hover:bg-slate-700"
@@ -415,12 +415,12 @@ export default function Home() {
               <p className="text-gray-400">Copy winning ad creatives trending across Shopify right now — proven to convert.</p>
             </div>
 
-            {/* Ad Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {/* Ad Cards - Horizontal scroll on mobile */}
+            <div className="flex md:grid md:grid-cols-5 gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
               {adTemplates.map((ad, idx) => (
                 <div 
                   key={idx}
-                  className="bg-slate-800 rounded-xl overflow-hidden group"
+                  className="bg-slate-800 rounded-xl overflow-hidden group flex-shrink-0 w-[160px] md:w-auto snap-start"
                   data-testid={`card-ad-${idx}`}
                 >
                   <div className="aspect-[9/16] bg-gradient-to-br from-slate-700 to-slate-800 relative">
@@ -438,6 +438,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="text-center text-gray-500 text-xs mt-2 md:hidden">Swipe to see more</p>
           </div>
         </section>
 
@@ -451,11 +452,12 @@ export default function Home() {
               See what our customers have to say about Amplify
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            {/* Testimonials - Horizontal scroll on mobile */}
+            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
               {testimonials.map((t, idx) => (
                 <div 
                   key={idx}
-                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group hover-lift"
+                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group hover-lift flex-shrink-0 w-[280px] md:w-auto snap-start"
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
@@ -489,6 +491,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <p className="text-center text-gray-500 text-xs mt-2 md:hidden">Swipe to see more</p>
           </div>
         </section>
 
@@ -501,27 +504,27 @@ export default function Home() {
                 Choose the plan that's right for your business and start amplifying your sales today.
               </p>
               
-              <div className="inline-flex items-center gap-1 bg-gray-100 p-1 rounded-full text-sm">
+              <div className="inline-flex flex-wrap justify-center items-center gap-1 bg-gray-100 p-1 rounded-full text-sm">
                 <button 
                   onClick={() => setBillingPeriod("monthly")}
-                  className={`px-4 py-2 rounded-full transition-all ${billingPeriod === 'monthly' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-3 sm:px-4 py-2 rounded-full transition-all text-xs sm:text-sm ${billingPeriod === 'monthly' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
                   data-testid="button-billing-monthly"
                 >
                   Monthly
                 </button>
                 <button 
                   onClick={() => setBillingPeriod("quarterly")}
-                  className={`px-4 py-2 rounded-full transition-all ${billingPeriod === 'quarterly' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-3 sm:px-4 py-2 rounded-full transition-all text-xs sm:text-sm ${billingPeriod === 'quarterly' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
                   data-testid="button-billing-quarterly"
                 >
-                  Quarterly <span className="text-violet-600 font-medium ml-1">10% off</span>
+                  Quarterly <span className="text-violet-600 font-medium ml-1">10%</span>
                 </button>
                 <button 
                   onClick={() => setBillingPeriod("annual")}
-                  className={`px-4 py-2 rounded-full transition-all ${billingPeriod === 'annual' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-3 sm:px-4 py-2 rounded-full transition-all text-xs sm:text-sm ${billingPeriod === 'annual' ? 'bg-white shadow text-gray-900 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
                   data-testid="button-billing-annual"
                 >
-                  Annual <span className="text-violet-600 font-medium ml-1">20% off</span>
+                  Annual <span className="text-violet-600 font-medium ml-1">20%</span>
                 </button>
               </div>
             </div>

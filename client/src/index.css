@@ -315,4 +315,13 @@ html {
   .hover-glow:hover {
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
