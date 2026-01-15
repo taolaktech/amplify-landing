@@ -41,10 +41,10 @@ export function Footer() {
             <Button
               variant="outline"
               className="bg-white text-violet-700 hover:bg-gray-100 border-0 rounded-full px-8 py-3 font-medium"
-              onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
-              data-testid="button-cta-join-waitlist"
+              onClick={() => window.open("https://app.useamplify.ai/", "_blank")}
+              data-testid="button-cta-try-free"
             >
-              Join Waitlist
+              Try for Free
             </Button>
             <Button
               className="bg-violet-700 hover:bg-violet-800 text-white rounded-full px-8 py-3 font-medium"

@@ -46,10 +46,10 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-5 py-2 text-sm font-medium"
-              onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
-              data-testid="button-header-join-waitlist"
+              onClick={() => window.open("https://app.useamplify.ai/", "_blank")}
+              data-testid="button-header-try-free"
             >
-              Join Waitlist <ArrowRight className="ml-1.5 h-4 w-4" />
+              Try for Free <ArrowRight className="ml-1.5 h-4 w-4" />
             </Button>
           </div>
 
@@ -77,12 +77,12 @@ export function Header() {
               <Button
                 className="bg-violet-600 hover:bg-violet-700 text-white rounded-full w-full mt-2"
                 onClick={() => {
-                  document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
+                  window.open("https://app.useamplify.ai/", "_blank");
                   setMobileMenuOpen(false);
                 }}
-                data-testid="button-mobile-join-waitlist"
+                data-testid="button-mobile-try-free"
               >
-                Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
+                Try for Free <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </nav>
           </div>

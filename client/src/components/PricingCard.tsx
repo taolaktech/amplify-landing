@@ -73,10 +73,10 @@ export function PricingCard({
               ? "bg-violet-600 hover:bg-violet-700 text-white" 
               : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
           )}
-          onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => window.open("https://app.useamplify.ai/", "_blank")}
           data-testid={`button-pricing-${title.toLowerCase().replace(/\s+/g, "-")}`}
         >
-          Join Waitlist {highlight && <ArrowRight className="ml-2 h-4 w-4" />}
+          Try for Free {highlight && <ArrowRight className="ml-2 h-4 w-4" />}
         </Button>
       </div>
     </div>
