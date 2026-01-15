@@ -6,6 +6,7 @@ import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PricingCard } from "@/components/PricingCard";
+import { VideoModal } from "@/components/VideoModal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -28,6 +29,8 @@ import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.pn
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
   const [activeCategory, setActiveCategory] = useState("Top Ads of the Week");
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [testimonialVideo, setTestimonialVideo] = useState<string | null>(null);
   const createSubscriber = useCreateSubscriber();
 
   const form = useForm<InsertSubscriber>({
@@ -70,9 +73,9 @@ export default function Home() {
   ];
 
   const testimonials = [
-    { name: "Kyra", channel: "Amplify Ads" },
-    { name: "Kaya", channel: "Amplify Ads" },
-    { name: "Haley", channel: "Amplify Ads" },
+    { name: "Kyra", channel: "Amplify Ads", videoId: "lIEPeEHZZH8" },
+    { name: "Kaya", channel: "Amplify Ads", videoId: "18XqlvyiYco" },
+    { name: "Haley", channel: "Amplify Ads", videoId: "EKejm_BetE8" },
   ];
 
   const faqItems = [
@@ -147,6 +150,7 @@ export default function Home() {
               <Button 
                 variant="outline"
                 className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-8 py-3 text-base font-medium"
+                onClick={() => setDemoModalOpen(true)}
                 data-testid="button-hero-watch-demo"
               >
                 <Play className="mr-2 h-4 w-4 fill-current" /> Watch Demo
@@ -451,7 +455,8 @@ export default function Home() {
               {testimonials.map((t, idx) => (
                 <div 
                   key={idx}
-                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700"
+                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group"
+                  onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
                   <div className="p-4 flex items-center justify-between border-b border-slate-700">
@@ -469,9 +474,16 @@ export default function Home() {
                     </div>
                     <ArrowRight className="h-4 w-4 text-gray-400 -rotate-45" />
                   </div>
-                  <div className="aspect-[9/12] bg-gradient-to-br from-slate-700 to-slate-800 relative flex items-center justify-center">
-                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
-                      <Play className="h-8 w-8 text-white fill-white" />
+                  <div className="aspect-[9/16] relative overflow-hidden">
+                    <img 
+                      src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
+                      alt={`${t.name} testimonial`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="h-8 w-8 text-white fill-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -631,6 +643,19 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <VideoModal 
+        isOpen={demoModalOpen}
+        onClose={() => setDemoModalOpen(false)}
+        videoId="UdMbWqs2h8w"
+      />
+
+      <VideoModal 
+        isOpen={!!testimonialVideo}
+        onClose={() => setTestimonialVideo(null)}
+        videoId={testimonialVideo || ""}
+        isShort
+      />
     </div>
   );
 }
