@@ -169,75 +169,107 @@ export default function Home() {
         {/* FEATURES SECTION */}
         <section id="features" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Feature 1 - Ad Generation */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div className="aspect-[4/3] bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center p-4 relative">
-                  <div className="absolute inset-4 bg-white/80 rounded-xl shadow-lg overflow-hidden flex flex-col">
-                    <img 
-                      src={modelImage} 
-                      alt="Fashion Model" 
-                      className="w-full h-full object-cover object-top"
-                    />
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                      <Button size="sm" className="bg-gray-900 text-white rounded-md text-xs">
-                        Shop Now
-                      </Button>
-                    </div>
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                <div className="aspect-square relative">
+                  <img 
+                    src={modelImage} 
+                    alt="Fashion Model" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                    <Button size="sm" className="bg-gray-900 hover:bg-gray-800 text-white rounded-md text-xs px-4">
+                      Shop Now
+                    </Button>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-gray-900 mb-1">Copy Competitor Ads,</h3>
-                  <h3 className="font-semibold text-orange-500 mb-3">Generate stunning on brand ads</h3>
-                  <p className="text-sm text-gray-600">
+                  <h3 className="font-semibold text-gray-900 mb-0.5">Copy Competitor Ads,</h3>
+                  <h3 className="font-semibold text-emerald-500 mb-3">Generate stunning on brand ads</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
                     Launch fast across Meta and Google, uncover winning hooks early, and kill weak creatives before they waste spend.
                   </p>
                 </div>
               </div>
 
               {/* Feature 2 - AI Insights */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div className="aspect-[4/3] p-2">
-                  <img 
-                    src={insightsScreenshot} 
-                    alt="AI Insights Dashboard" 
-                    className="w-full h-full object-cover object-top rounded-lg"
-                  />
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Sparkles className="h-4 w-4 text-violet-500" />
+                    <span className="font-semibold text-gray-900 text-sm">AI Insights</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-4">Smart suggestions to boost your ad results.</p>
+                  
+                  <div className="flex gap-2 mb-4">
+                    <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">All</span>
+                    <span className="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-medium">Campaign Suggestion</span>
+                    <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">Budget Optimization</span>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-xl p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-xs font-bold text-orange-600">S</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-gray-900 text-sm mb-0.5">'Weekend Clearance Sale' Campaign Ready</p>
+                        <p className="text-[10px] text-orange-500 font-medium uppercase tracking-wide mb-1">CAMPAIGN SUGGESTION</p>
+                        <p className="text-xs text-gray-500 leading-relaxed">Your campaign is complete and ready to go. Launch now to capture weekend shoppers.</p>
+                        
+                        <div className="flex items-center gap-2 mt-3">
+                          <div className="flex -space-x-2">
+                            <div className="w-6 h-6 bg-gray-300 rounded-full border-2 border-white" />
+                            <div className="w-6 h-6 bg-gray-400 rounded-full border-2 border-white" />
+                            <div className="w-6 h-6 bg-gray-500 rounded-full border-2 border-white" />
+                          </div>
+                          <span className="text-xs text-gray-400">+12</span>
+                          <span className="text-xs text-gray-500">View Products</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6 pt-4">
-                  <h3 className="font-semibold text-gray-900 mb-1">Actionable insights that</h3>
-                  <h3 className="font-semibold text-orange-500 mb-3">drives real results</h3>
-                  <p className="text-sm text-gray-600">
+                <div className="p-6 pt-2">
+                  <h3 className="font-semibold text-gray-900 mb-0.5">Actionable insights that</h3>
+                  <h3 className="font-semibold text-emerald-500 mb-3">drives real results</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
                     Smart insights from Shopify, Meta, and Google power AI decisions like when to pause, scale, or relaunch — without manual checks.
                   </p>
                 </div>
               </div>
 
               {/* Feature 3 - ROAS */}
-              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div className="aspect-[4/3] p-6 flex flex-col justify-center">
-                  <div className="text-right mb-2">
-                    <span className="text-xs text-green-600 font-medium">ROAS</span>
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100 overflow-hidden shadow-sm">
+                <div className="p-6">
+                  <div className="flex justify-end mb-6">
+                    <span className="text-xs text-emerald-600 font-medium flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+                      ROAS
+                    </span>
                   </div>
-                  <div className="flex items-center justify-center gap-4 mb-4">
+                  
+                  <div className="flex items-center justify-center gap-6 mb-6">
                     <div className="text-center">
-                      <div className="text-3xl font-light text-gray-400">1.2x</div>
-                      <div className="text-xs text-gray-400">Before</div>
+                      <div className="text-3xl font-light text-gray-400">1.2<span className="text-xl">x</span></div>
+                      <div className="text-xs text-gray-400 mt-1">Before</div>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-orange-500" />
+                    <ArrowRight className="h-5 w-5 text-orange-400" />
                     <div className="text-center">
                       <div className="text-4xl font-bold text-gray-900">3<span className="text-orange-500">x</span></div>
-                      <div className="text-xs text-gray-500">After</div>
+                      <div className="text-xs text-gray-500 mt-1">After</div>
                     </div>
                   </div>
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-teal-400 to-teal-500 w-3/4 rounded-full" />
+                  
+                  <div className="h-2.5 bg-white/60 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-teal-400 to-emerald-400 w-3/4 rounded-full" />
                   </div>
                 </div>
-                <div className="p-6 pt-0">
-                  <h3 className="font-semibold text-gray-900 mb-1">Meta and Google offer hundreds of optimization rules –</h3>
+                <div className="p-6 pt-4">
+                  <h3 className="font-semibold text-gray-900 mb-0.5">Meta and Google offer hundreds of optimization rules –</h3>
                   <h3 className="font-semibold text-orange-500 mb-3">launch your ads with confidence</h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-500 leading-relaxed">
                     Amplify automatically starts your campaigns with proven configurations that remove guesswork and drive real returns.
                   </p>
                 </div>
