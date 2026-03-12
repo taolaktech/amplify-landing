@@ -586,16 +586,19 @@ export default function Home() {
               <PricingCard 
                 title="Starter Plan"
                 price={formatPrice(29)}
-                description="Launch ad creatives fast and validate your products across multiple channels."
+                description="Perfect for launching your first ad creatives and validating product ideas."
+                bestFor="New Shopify stores testing Meta ads."
                 features={[
-                  { text: "2,000 AI credits/month for ad generation" },
-                  { text: "Import up to 5 Shopify products" },
-                  { text: "Generate multiple ad concepts, offers, copy, video and image ads for each campaign" },
-                  { text: "Run automated ads on Google, Facebook & Instagram" },
+                  { text: "500 AI credits/month for ad generation" },
+                  { text: "Facebook & Instagram ads only" },
+                  { text: "Run up to 3 concurrent AI ad campaigns at once" },
+                  { text: "Generate image ads, video ads (12s), and ad copy" },
+                  { text: "Generate up to 50 image creatives/month" },
+                  { text: "Generate up to 5 video ads/month" },
                   { text: "Unlimited ad spend" },
                   { text: "0% commission on ad spend" },
-                  { text: "1GB assets storage" },
-                  { text: "Use your custom brand kit (fonts, colors, logo)" },
+                  { text: "1GB asset storage" },
+                  { text: "Use your brand kit (fonts, colors, logo)" },
                 ]}
               />
               
@@ -604,28 +607,36 @@ export default function Home() {
                 price={formatPrice(59)}
                 description="Built for brands moving past testing into consistent growth."
                 highlight={true}
+                bestFor="Brands running multiple campaigns across Meta and Google."
                 features={[
-                  { text: "7-day free trial" },
-                  { text: "Up to 3 seats" },
+                  { text: "1,500 AI credits/month" },
+                  { text: "Facebook, Instagram + Google Ads generation" },
+                  { text: "Run up to 10 concurrent AI ad campaigns at once" },
+                  { text: "Generate image ads, video ads (12s), ad copy and Google text ads" },
+                  { text: "Generate up to 200 image creatives/month" },
+                  { text: "Generate up to 10 video ads/month" },
+                  { text: "Up to 3 team seats" },
+                  { text: "10GB asset storage" },
                   { text: "Everything in Starter" },
-                  { text: "Import up to 20 Shopify products" },
-                  { text: "10GB assets storage" },
-                  { text: "5,000 AI credits/month for ad generation" },
                 ]}
               />
               
               <PricingCard 
                 title="Scale Plan"
-                price={formatPrice(189)}
-                description="Unlimited speed for brands scaling across many campaigns and channels."
+                price={formatPrice(199)}
+                description="Unlimited creative production for brands scaling multiple campaigns."
+                bestFor="Scaling brands running multiple campaigns and testing creatives weekly."
                 features={[
-                  { text: "7-day free trial" },
-                  { text: "Up to 10 seats" },
+                  { text: "3,000 AI credits/month" },
+                  { text: "Facebook, Instagram + Google Ads generation" },
+                  { text: "Run up to 25 concurrent AI ad campaigns at once" },
+                  { text: "Generate image ads, video ads (12s), ad copy and Google text ads" },
+                  { text: "Generate up to 500 image creatives/month" },
+                  { text: "Generate up to 25 video ads/month" },
+                  { text: "Automated A/B testing for offers and creatives" },
+                  { text: "Up to 10 team seats" },
+                  { text: "1TB asset storage" },
                   { text: "Everything in Grow" },
-                  { text: "Import up to 50+ Shopify products" },
-                  { text: "1TB assets storage" },
-                  { text: "10,000+ AI credits/month for ad generation" },
-                  { text: "Automated A/B testing for offers and ad creatives" },
                 ]}
               />
             </div>

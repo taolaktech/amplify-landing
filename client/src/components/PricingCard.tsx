@@ -13,6 +13,7 @@ interface PricingCardProps {
   features: PricingFeature[];
   highlight?: boolean;
   includesLabel?: string;
+  bestFor?: string;
 }
 
 export function PricingCard({ 
@@ -21,7 +22,8 @@ export function PricingCard({
   description, 
   features, 
   highlight = false,
-  includesLabel = "Includes:"
+  includesLabel = "Includes",
+  bestFor,
 }: PricingCardProps) {
   return (
     <div 
@@ -51,12 +53,12 @@ export function PricingCard({
         </p>
       </div>
 
-      <div className="mb-6">
+      <div className="mb-6 flex-1">
         <p className="text-sm font-semibold text-gray-900 mb-4">{includesLabel}</p>
         <div className="space-y-3">
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-start gap-2">
-              <Check className="h-4 w-4 text-gray-600 mt-0.5 flex-shrink-0" strokeWidth={2} />
+              <Check className="h-4 w-4 text-violet-600 mt-0.5 flex-shrink-0" strokeWidth={2.5} />
               <span className="text-sm text-gray-600">
                 {feature.text}
               </span>
@@ -64,6 +66,13 @@ export function PricingCard({
           ))}
         </div>
       </div>
+
+      {bestFor && (
+        <div className="mb-6 bg-gray-50 rounded-lg px-4 py-3 border border-gray-100">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Best for</p>
+          <p className="text-sm text-gray-700">{bestFor}</p>
+        </div>
+      )}
 
       <div className="mt-auto">
         <Button 
