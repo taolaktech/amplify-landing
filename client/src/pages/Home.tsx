@@ -613,7 +613,6 @@ export default function Home() {
                   { text: "Run up to 10 concurrent AI ad campaigns at once" },
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 50 image & video creatives/month" },
-                  { text: "Up to 3 team seats" },
                   { text: "10GB asset storage" },
                   { text: "Everything in Starter" },
                 ]}
@@ -631,7 +630,6 @@ export default function Home() {
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 50 image & video creatives/month" },
                   { text: "Automated A/B testing for offers and creatives" },
-                  { text: "Up to 10 team seats" },
                   { text: "1TB asset storage" },
                   { text: "Everything in Grow" },
                 ]}
