@@ -585,7 +585,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <PricingCard 
                 title="Starter Plan"
-                price={formatPrice(29)}
+                price={formatPrice(35)}
                 description="Perfect for launching your first ad creatives and validating product ideas."
                 bestFor="New Shopify stores testing Meta ads."
                 features={[
@@ -603,7 +603,7 @@ export default function Home() {
               
               <PricingCard 
                 title="Grow Plan"
-                price={formatPrice(59)}
+                price={formatPrice(99)}
                 description="Built for brands moving past testing into consistent growth."
                 highlight={true}
                 bestFor="Brands running multiple campaigns across Meta and Google."
