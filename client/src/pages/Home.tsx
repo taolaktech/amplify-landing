@@ -591,7 +591,6 @@ export default function Home() {
                 features={[
                   { text: "500 AI credits/month for ad generation" },
                   { text: "Facebook & Instagram ads only" },
-                  { text: "Run up to 3 concurrent AI ad campaigns at once" },
                   { text: "Generate image ads, video ads, and ad copy" },
                   { text: "Generate up to 50 AI ad creatives per month" },
                   { text: "Unlimited ad spend" },
@@ -610,7 +609,6 @@ export default function Home() {
                 features={[
                   { text: "1,500 AI credits/month" },
                   { text: "Facebook, Instagram + Google Ads generation" },
-                  { text: "Run up to 10 concurrent AI ad campaigns at once" },
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 200 AI ad creatives per month" },
                   { text: "10GB asset storage" },
@@ -626,7 +624,6 @@ export default function Home() {
                 features={[
                   { text: "3,000 AI credits/month" },
                   { text: "Facebook, Instagram + Google Ads generation" },
-                  { text: "Run up to 25 concurrent AI ad campaigns at once" },
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 500 AI ad creatives per month" },
                   { text: "Automated A/B testing for offers and creatives" },
