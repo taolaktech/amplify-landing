@@ -46,7 +46,7 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-5 py-2 text-sm font-medium"
-              onClick={() => window.open("https://app.useamplify.ai/", "_blank")}
+              onClick={() => window.open("http://app.useamplify.ai/", "_blank")}
               data-testid="button-header-try-free"
             >
               Try for Free <ArrowRight className="ml-1.5 h-4 w-4" />
@@ -77,7 +77,7 @@ export function Header() {
               <Button
                 className="bg-violet-600 hover:bg-violet-700 text-white rounded-full w-full mt-2"
                 onClick={() => {
-                  window.open("https://app.useamplify.ai/", "_blank");
+                  window.open("http://app.useamplify.ai/", "_blank");
                   setMobileMenuOpen(false);
                 }}
                 data-testid="button-mobile-try-free"

@@ -173,7 +173,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6 animate-fade-in-up opacity-0 animate-delay-300">
               <Button 
                 className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8 py-3 text-base font-medium transition-transform hover:scale-105"
-                onClick={() => window.open("https://app.useamplify.ai/", "_blank")}
+                onClick={() => window.open("http://app.useamplify.ai/", "_blank")}
                 data-testid="button-hero-try-free"
               >
                 Try for Free <ArrowRight className="ml-2 h-4 w-4" />
