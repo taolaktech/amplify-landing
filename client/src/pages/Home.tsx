@@ -43,6 +43,9 @@ import adVideo12 from "@assets/Download_(4)_1768436430400.mp4";
 import adVideo13 from "@assets/Download_(5)_1768436430400.mp4";
 import adVideo14 from "@assets/Download_(6)_1768436430400.mp4";
 import adVideo15 from "@assets/Download_(9)_1768436430401.mp4";
+import ugcVideo1 from "@assets/0821a6d94135486ea7b1851055a54779_1775069728569.MP4";
+import ugcVideo2 from "@assets/3a5a9fa1f6994ce4b18b98e5dad5c9f7_1775069728577.MP4";
+import ugcVideo3 from "@assets/00db676bdcf54a4d9c28e979b475b370.MP4_1775069728578.mp4";
 import adImage2 from "@assets/hf_20260331_223236_12d1a1c5-54ce-451f-9ae8-ce817b9699cf_1775069045122.png";
 import adImage3 from "@assets/hf_20260331_225702_811b5214-7236-45dd-9de7-16450847eb6a_(1)_1775069045123.png";
 import adImage4 from "@assets/hf_20260331_224411_0d36861a-e6bb-4634-bd8a-a0d3a1dcb6e7_1775069045123.png";
@@ -115,6 +118,9 @@ export default function Home() {
     { title: "UGC Review", subtitle: "Authentic customer testimonial content.", media: adVideo6, type: "video", category: "Social & UGC Ads" },
     { title: "Influencer Feature", subtitle: "Social-first content that drives engagement.", media: adVideo7, type: "video", category: "Social & UGC Ads" },
     { title: "User Story", subtitle: "Real customer experiences shared.", media: adVideo8, type: "video", category: "Social & UGC Ads" },
+    { title: "UGC Creator", subtitle: "Raw authentic creator content.", media: ugcVideo1, type: "video", category: "Social & UGC Ads" },
+    { title: "Social Reel", subtitle: "Trending social media style ad.", media: ugcVideo2, type: "video", category: "Social & UGC Ads" },
+    { title: "Community Moment", subtitle: "Real people, real results.", media: ugcVideo3, type: "video", category: "Social & UGC Ads" },
     { title: "Viral Stitch", subtitle: "Trending duet-style content.", media: adVideo9, type: "video", category: "Viral Video Stitches" },
     { title: "Reaction Video", subtitle: "Engaging response format content.", media: adVideo10, type: "video", category: "Viral Video Stitches" },
     { title: "Product Demo", subtitle: "Clear product demonstration video.", media: adVideo11, type: "video", category: "Video Ads" },
