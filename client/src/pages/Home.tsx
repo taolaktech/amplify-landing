@@ -28,45 +28,7 @@ import step3Image from "@assets/insights-screenshot_(2)_1768435612765.png";
 import modelImage from "@assets/hf_20260331_223248_64b19599-ff32-4336-b712-365f5dd88632_1775071421919.png";
 import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.png";
 
-import adVideo1 from "@assets/c7b6bc98-06b5-4abe-b953-d711054aa817_1768436430392.mp4";
-import adVideo2 from "@assets/AQM5E_KyXvEkXlDaJzULHef3U3ucw0ALNHOBTdWQhm0THUpyVxZEBzJ6uwhfAS_1768436430396.mp4";
-import adVideo3 from "@assets/AQNKvb0XrvGGeMdXKdSpf6XVFDlVt-w90uoCq4Y1GEzMlg9kEqz0WDbwdLrtNV_1768436430397.mp4";
-import adVideo4 from "@assets/AQP8eyx5D8yntxpO7rCFFWxb7gSKlojV0dcA6loTB-tl462LjLSTB4CaYtV57e_1768436430397.mp4";
-import adVideo5 from "@assets/AQPdjIi8QFIM2GG9T0nvkISyhZBFUWW7wA02iq1BUZlxw0t6CUMDiTIHwRswe4_1768436430397.mp4";
-import adVideo6 from "@assets/AQPRTgBVdYj83IchzmGk4NrNf2XZQR3IcDDCwIx8X96g8Fvy7mSQjyFl24hnUi_1768436430398.mp4";
-import adVideo7 from "@assets/a5928bf1-8cca-4f11-80c1-d48602facf5a_1768436430398.mp4";
-import adVideo8 from "@assets/b45b2243-c01d-4719-a6d7-4aec7dfac4e5_1768436430398.mp4";
-import adVideo9 from "@assets/a069269c-49e5-4068-a750-007e54a3d580_1768436430399.mp4";
-import adVideo10 from "@assets/a7aa648c-6d7b-463a-8c47-998e25342aaa_1768436430399.mp4";
-import adVideo11 from "@assets/Download_(1)_1768436430400.mp4";
-import adVideo12 from "@assets/Download_(4)_1768436430400.mp4";
-import adVideo13 from "@assets/Download_(5)_1768436430400.mp4";
-import adVideo14 from "@assets/Download_(6)_1768436430400.mp4";
-import adVideo15 from "@assets/Download_(9)_1768436430401.mp4";
-import ugcVideo1 from "@assets/0821a6d94135486ea7b1851055a54779_1775069728569.MP4";
-import ugcVideo2 from "@assets/3a5a9fa1f6994ce4b18b98e5dad5c9f7_1775069728577.MP4";
-import ugcVideo3 from "@assets/00db676bdcf54a4d9c28e979b475b370.MP4_1775069728578.mp4";
-import viralVideo1 from "@assets/f67f1a90b6c14d86bdd6ac84dea4a6f1_1775069749301.MP4";
-import viralVideo2 from "@assets/preview_video_0e8782fa_compressed_v2_1775069926112.mp4";
-import viralVideo3 from "@assets/preview_video_318c01b0_compressed_v2_1775069926125.mp4";
-import viralVideo4 from "@assets/ee6c1b4fc71b4b9d96daed7510440707_1775069926126.MP4";
-import adImage2 from "@assets/hf_20260331_223236_12d1a1c5-54ce-451f-9ae8-ce817b9699cf_1775069045122.png";
-import adImage3 from "@assets/hf_20260331_225702_811b5214-7236-45dd-9de7-16450847eb6a_(1)_1775069045123.png";
-import adImage4 from "@assets/hf_20260331_224411_0d36861a-e6bb-4634-bd8a-a0d3a1dcb6e7_1775069045123.png";
-import adImage5 from "@assets/hf_20260331_224450_8b5e2669-0a2a-4145-a99b-43a598824f9c_1775069045124.png";
-import adImage10 from "@assets/hf_20260331_230741_81df4f8e-d965-47fb-9bff-b9baf6919e16_1775069045125.png";
-import adImage11 from "@assets/hf_20260331_225628_02a16758-c580-46a9-99e9-34cbb1e7008e_(1)_1775069045126.png";
-import adImage12 from "@assets/hf_20260331_224921_6f1b66c0-8461-4062-80db-26c8a5c63c91_1775069045126.png";
-import psImage1 from "@assets/hf_20260331_230503_b44878eb-fcd8-4466-afea-ed214c623fbe_1775069282934.png";
-import psImage2 from "@assets/hf_20260331_230237_44a7bbf6-1377-485b-ad3d-f53b405618b2_1775069282942.png";
-import psImage3 from "@assets/1b4739e4-836e-4d2c-ac1c-4ff3647179de_1775069309447.png";
-import psImage4 from "@assets/1c98d4a1-2fa3-4344-b6ac-6c29f45693dd_1775069309455.png";
-import psImage5 from "@assets/3aa3afa0-2198-4edc-a9d9-cf50ab5deb35_1775069309455.png";
-import psImage6 from "@assets/3e9a4922-5724-44ba-8b02-4497e8fc3779_1775069309456.png";
-import psImage7 from "@assets/5a02e6c7-d7fd-4ce5-93c0-160224707c13_1775069309456.png";
-import psImage8 from "@assets/5cfd59ef-1474-42cb-8432-673a8e206a4b_1775069309456.png";
-import psImage9 from "@assets/5fe8b733-320b-4bcf-ab9b-8be7eac8a2a6_1775069309457.png";
-import psImage10 from "@assets/6da1073c-b66a-4448-9269-80afa64e9ac9_1775069309457.png";
+const S3 = "https://amplify-shopify-uploads.s3.amazonaws.com/website";
 
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
@@ -114,45 +76,60 @@ export default function Home() {
   ];
 
   const adTemplates: { title: string; subtitle: string; media: string; type: "video" | "image"; category: string }[] = [
-    { title: "Viral Product Ad", subtitle: "High-converting video ad that drove 10x ROAS.", media: adVideo1, type: "video", category: "Top Ads of the Week" },
-    { title: "Trending Style Reel", subtitle: "Scroll-stopping creative that boosted engagement.", media: adVideo2, type: "video", category: "Top Ads of the Week" },
-    { title: "Product Showcase", subtitle: "Clean visual storytelling that converts.", media: adVideo3, type: "video", category: "Top Ads of the Week" },
-    { title: "Lifestyle Feature", subtitle: "Authentic content that resonates.", media: adVideo4, type: "video", category: "Top Ads of the Week" },
-    { title: "Brand Story Ad", subtitle: "Compelling narrative that builds connection.", media: adVideo5, type: "video", category: "Top Ads of the Week" },
-    { title: "UGC Review", subtitle: "Authentic customer testimonial content.", media: adVideo6, type: "video", category: "Social & UGC Ads" },
-    { title: "Influencer Feature", subtitle: "Social-first content that drives engagement.", media: adVideo7, type: "video", category: "Social & UGC Ads" },
-    { title: "User Story", subtitle: "Real customer experiences shared.", media: adVideo8, type: "video", category: "Social & UGC Ads" },
-    { title: "UGC Creator", subtitle: "Raw authentic creator content.", media: ugcVideo1, type: "video", category: "Social & UGC Ads" },
-    { title: "Social Reel", subtitle: "Trending social media style ad.", media: ugcVideo2, type: "video", category: "Social & UGC Ads" },
-    { title: "Community Moment", subtitle: "Real people, real results.", media: ugcVideo3, type: "video", category: "Social & UGC Ads" },
-    { title: "Viral Stitch", subtitle: "Trending duet-style content.", media: adVideo9, type: "video", category: "Viral Video Stitches" },
-    { title: "Reaction Video", subtitle: "Engaging response format content.", media: adVideo10, type: "video", category: "Viral Video Stitches" },
-    { title: "Stitch Creator", subtitle: "High-engagement viral stitch format.", media: viralVideo1, type: "video", category: "Viral Video Stitches" },
-    { title: "Trend Hijack", subtitle: "Riding trending audio and formats.", media: viralVideo2, type: "video", category: "Viral Video Stitches" },
-    { title: "Duet Ad", subtitle: "Side-by-side reaction style creative.", media: viralVideo3, type: "video", category: "Viral Video Stitches" },
-    { title: "Viral Hook", subtitle: "Stop-scroll opening stitch creative.", media: viralVideo4, type: "video", category: "Viral Video Stitches" },
-    { title: "Product Demo", subtitle: "Clear product demonstration video.", media: adVideo11, type: "video", category: "Video Ads" },
-    { title: "Feature Highlight", subtitle: "Key benefits showcased.", media: adVideo12, type: "video", category: "Video Ads" },
-    { title: "Brand Video", subtitle: "Premium brand storytelling.", media: adVideo13, type: "video", category: "Video Ads" },
-    { title: "Lifestyle Ad", subtitle: "Product in real-world context.", media: adVideo14, type: "video", category: "Video Ads" },
-    { title: "Quick Promo", subtitle: "Fast-paced promotional content.", media: adVideo15, type: "video", category: "Video Ads" },
-    { title: "Seaduce", subtitle: "Summer campaign group lifestyle shot.", media: psImage1, type: "image", category: "Product Shoots" },
-    { title: "Campaign Creative", subtitle: "Beauty close-up with CTA overlay.", media: psImage2, type: "image", category: "Product Shoots" },
-    { title: "Muse Skin", subtitle: "Bold skincare product hold shot.", media: psImage3, type: "image", category: "Product Shoots" },
-    { title: "Street Style", subtitle: "Casual lifestyle fashion portrait.", media: psImage4, type: "image", category: "Product Shoots" },
-    { title: "Golden Hour", subtitle: "Warm outdoor fashion editorial.", media: psImage5, type: "image", category: "Product Shoots" },
-    { title: "Mirror Selfie", subtitle: "Lifestyle product moment shoot.", media: psImage6, type: "image", category: "Product Shoots" },
-    { title: "Activewear", subtitle: "Studio fitness apparel shoot.", media: psImage7, type: "image", category: "Product Shoots" },
-    { title: "Knitwear", subtitle: "Cosy fashion close-up portrait.", media: psImage8, type: "image", category: "Product Shoots" },
-    { title: "Café Portrait", subtitle: "Authentic lifestyle brand moment.", media: psImage9, type: "image", category: "Product Shoots" },
-    { title: "Lip Color", subtitle: "Beauty product application shot.", media: psImage10, type: "image", category: "Product Shoots" },
-    { title: "Great Product Ad", subtitle: "Skincare creative with bold headline.", media: adImage2, type: "image", category: "Image Ads" },
-    { title: "Launch Campaign", subtitle: "Bold lifestyle ad for modern brands.", media: adImage3, type: "image", category: "Image Ads" },
-    { title: "New Season", subtitle: "Editorial fashion brand creative.", media: adImage4, type: "image", category: "Image Ads" },
-    { title: "New Era", subtitle: "Cinematic fashion campaign creative.", media: adImage5, type: "image", category: "Image Ads" },
-    { title: "Sunkini", subtitle: "Luxury swimwear brand creative.", media: adImage10, type: "image", category: "Image Ads" },
-    { title: "Designed for Stillness", subtitle: "Minimal lifestyle product ad.", media: adImage11, type: "image", category: "Image Ads" },
-    { title: "Atelier Lab", subtitle: "Fashion case study brand creative.", media: adImage12, type: "image", category: "Image Ads" },
+    // Top Ads of the Week
+    { title: "Viral Product Ad", subtitle: "High-converting video ad that drove 10x ROAS.", media: `${S3}/c7b6bc98-06b5-4abe-b953-d711054aa817.mp4`, type: "video", category: "Top Ads of the Week" },
+    { title: "Trending Style Reel", subtitle: "Scroll-stopping creative that boosted engagement.", media: `${S3}/AQM5E_KyXvEkXlDaJzULHef3U3ucw0ALNHOBTdWQhm0THUpyVxZEBzJ6uwhfAS4T9F_X60T7Pkf6OtrLYbwQHgKxLB9Z_Rc5H0fMQvKC3Q.mp4`, type: "video", category: "Top Ads of the Week" },
+    { title: "Product Showcase", subtitle: "Clean visual storytelling that converts.", media: `${S3}/AQNKvb0XrvGGeMdXKdSpf6XVFDlVt-w90uoCq4Y1GEzMlg9kEqz0WDbwdLrtNVvLxJVRqz0e--SGu_5ou7jyoHVo8-1wa0ENEpJghpZ4tQ.mp4`, type: "video", category: "Top Ads of the Week" },
+    { title: "Lifestyle Feature", subtitle: "Authentic content that resonates.", media: `${S3}/AQNOIe2lAl3SlfGar_XU8YgRuGvVtBK6InT-wTNikOwniq36QlN7yAIXx_hi1u9nfq2zNoHGsBcrWhGt0ppiDNCyTHQDXDouGQmF3XK2oyVyvQ.mp4`, type: "video", category: "Top Ads of the Week" },
+    { title: "Brand Story Ad", subtitle: "Compelling narrative that builds connection.", media: `${S3}/AQPdjIi8QFIM2GG9T0nvkISyhZBFUWW7wA02iq1BUZlxw0t6CUMDiTIHwRswe4NpWGeVxQtexQIbUWAPWJD_q96Pn4jXN04D2r4B9nC5uA.mp4`, type: "video", category: "Top Ads of the Week" },
+    // Social & UGC Ads
+    { title: "UGC Creator", subtitle: "Raw authentic creator content.", media: `${S3}/0821a6d94135486ea7b1851055a54779.MP4`, type: "video", category: "Social & UGC Ads" },
+    { title: "Social Reel", subtitle: "Trending social media style ad.", media: `${S3}/3a5a9fa1f6994ce4b18b98e5dad5c9f7.MP4`, type: "video", category: "Social & UGC Ads" },
+    { title: "Community Moment", subtitle: "Real people, real results.", media: `${S3}/00db676bdcf54a4d9c28e979b475b370.MP4.mp4`, type: "video", category: "Social & UGC Ads" },
+    { title: "UGC Review", subtitle: "Authentic customer testimonial content.", media: `${S3}/a069269c-49e5-4068-a750-007e54a3d580.mp4`, type: "video", category: "Social & UGC Ads" },
+    { title: "Influencer Feature", subtitle: "Social-first content that drives engagement.", media: `${S3}/a5928bf1-8cca-4f11-80c1-d48602facf5a.mp4`, type: "video", category: "Social & UGC Ads" },
+    { title: "User Story", subtitle: "Real customer experiences shared.", media: `${S3}/AQM5t-ckEeemTVOfiHeDH_WW-FK8AqdisNM-t-40QH17at3slBZHt-tdu8vUXBycEeFxG1C7k-shUkQJMqrjg0jqfzDcFvHLXt2oCfngtA.mp4`, type: "video", category: "Social & UGC Ads" },
+    // Viral Video Stitches
+    { title: "Stitch Creator", subtitle: "High-engagement viral stitch format.", media: `${S3}/f67f1a90b6c14d86bdd6ac84dea4a6f1.MP4`, type: "video", category: "Viral Video Stitches" },
+    { title: "Trend Hijack", subtitle: "Riding trending audio and formats.", media: `${S3}/preview_video_0e8782fa_compressed_v2.mp4`, type: "video", category: "Viral Video Stitches" },
+    { title: "Duet Ad", subtitle: "Side-by-side reaction style creative.", media: `${S3}/preview_video_318c01b0_compressed_v2.mp4`, type: "video", category: "Viral Video Stitches" },
+    { title: "Viral Hook", subtitle: "Stop-scroll opening stitch creative.", media: `${S3}/ee6c1b4fc71b4b9d96daed7510440707.MP4`, type: "video", category: "Viral Video Stitches" },
+    { title: "Viral Stitch", subtitle: "Trending duet-style content.", media: `${S3}/c75be66a-b6a9-4cfb-add1-d2a98fa78080.mp4`, type: "video", category: "Viral Video Stitches" },
+    { title: "Reaction Video", subtitle: "Engaging response format content.", media: `${S3}/d3b6fcfd-4074-4e98-9fb9-8e81d0d78cbe.mp4`, type: "video", category: "Viral Video Stitches" },
+    // Video Ads
+    { title: "Product Demo", subtitle: "Clear product demonstration video.", media: `${S3}/Download%20(1).mp4`, type: "video", category: "Video Ads" },
+    { title: "Feature Highlight", subtitle: "Key benefits showcased.", media: `${S3}/Download%20(2).mp4`, type: "video", category: "Video Ads" },
+    { title: "Brand Video", subtitle: "Premium brand storytelling.", media: `${S3}/Download%20(4).mp4`, type: "video", category: "Video Ads" },
+    { title: "Lifestyle Ad", subtitle: "Product in real-world context.", media: `${S3}/Download%20(5).mp4`, type: "video", category: "Video Ads" },
+    { title: "Quick Promo", subtitle: "Fast-paced promotional content.", media: `${S3}/Download%20(6).mp4`, type: "video", category: "Video Ads" },
+    { title: "Campaign Video", subtitle: "Full-funnel campaign creative.", media: `${S3}/Download%20(8).mp4`, type: "video", category: "Video Ads" },
+    { title: "Story Ad", subtitle: "Vertical story format ad.", media: `${S3}/download.mp4`, type: "video", category: "Video Ads" },
+    { title: "Retargeting Ad", subtitle: "Re-engage warm audience creative.", media: `${S3}/161e7c18-6448-4e3a-80aa-86523027dc8c.mp4`, type: "video", category: "Video Ads" },
+    { title: "Dynamic Ad", subtitle: "Personalised dynamic product ad.", media: `${S3}/a7aa648c-6d7b-463a-8c47-998e25342aaa.mp4`, type: "video", category: "Video Ads" },
+    // Image Ads
+    { title: "Fashion Campaign", subtitle: "High-impact fashion brand creative.", media: `${S3}/048e4527-3388-4771-ba50-b7e4958b2c0c.png`, type: "image", category: "Image Ads" },
+    { title: "Brand Creative", subtitle: "Bold brand identity visual.", media: `${S3}/18ed7eab-3eab-4b61-8694-7c3bb097e4e8.png`, type: "image", category: "Image Ads" },
+    { title: "Skincare Ad", subtitle: "Clean beauty product creative.", media: `${S3}/3c3419c2-f3b5-4820-8b5d-c4851751bc09.png`, type: "image", category: "Image Ads" },
+    { title: "Launch Campaign", subtitle: "Bold lifestyle ad for modern brands.", media: `${S3}/48c5e4d2-fe9d-4eff-ba45-dfb03ace2ffc.png`, type: "image", category: "Image Ads" },
+    { title: "Minimal Ad", subtitle: "Clean, minimal product creative.", media: `${S3}/b82c1957-5f8a-4cd2-998e-bf7f45f86db2.png`, type: "image", category: "Image Ads" },
+    { title: "Cinematic Ad", subtitle: "Cinematic fashion campaign creative.", media: `${S3}/d1fe354f-56f5-4502-a098-c65cc6941e28.png`, type: "image", category: "Image Ads" },
+    // Product Shoots
+    { title: "Editorial Shot", subtitle: "Fashion editorial product portrait.", media: `${S3}/1b4739e4-836e-4d2c-ac1c-4ff3647179de.png`, type: "image", category: "Product Shoots" },
+    { title: "Studio Portrait", subtitle: "Clean studio brand portrait.", media: `${S3}/1c98d4a1-2fa3-4344-b6ac-6c29f45693dd.png`, type: "image", category: "Product Shoots" },
+    { title: "Lifestyle Photo", subtitle: "Authentic lifestyle product shot.", media: `${S3}/3aa3afa0-2198-4edc-a9d9-cf50ab5deb35.png`, type: "image", category: "Product Shoots" },
+    { title: "Golden Hour", subtitle: "Warm outdoor fashion editorial.", media: `${S3}/3e9a4922-5724-44ba-8b02-4497e8fc3779.png`, type: "image", category: "Product Shoots" },
+    { title: "Activewear", subtitle: "Studio fitness apparel shoot.", media: `${S3}/5a02e6c7-d7fd-4ce5-93c0-160224707c13.png`, type: "image", category: "Product Shoots" },
+    { title: "Knitwear", subtitle: "Cosy fashion close-up portrait.", media: `${S3}/5cfd59ef-1474-42cb-8432-673a8e206a4b.png`, type: "image", category: "Product Shoots" },
+    { title: "Summer Shoot", subtitle: "Bright summer lifestyle product shot.", media: `${S3}/5fe8b733-320b-4bcf-ab9b-8be7eac8a2a6.png`, type: "image", category: "Product Shoots" },
+    { title: "Lip Color", subtitle: "Beauty product application shot.", media: `${S3}/6da1073c-b66a-4448-9269-80afa64e9ac9.png`, type: "image", category: "Product Shoots" },
+    { title: "Product Detail", subtitle: "Close-up product detail photograph.", media: `${S3}/IMG_4211.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Campaign Image", subtitle: "On-location campaign photograph.", media: `${S3}/IMG_4212.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Brand Portrait", subtitle: "Natural light brand portrait.", media: `${S3}/IMG_4213.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Clean Product Shot", subtitle: "Minimal clean product photograph.", media: `${S3}/IMG_4216.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Outdoor Lifestyle", subtitle: "Outdoor lifestyle product image.", media: `${S3}/IMG_4218.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Street Style", subtitle: "Casual lifestyle fashion portrait.", media: `${S3}/IMG_4219.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Featured Product", subtitle: "Hero product showcase photograph.", media: `${S3}/IMG_4220.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Studio Shot", subtitle: "Studio-lit product photograph.", media: `${S3}/IMG_4223.jpg`, type: "image", category: "Product Shoots" },
   ];
 
   const filteredAds = adTemplates.filter(ad => ad.category === activeCategory);
