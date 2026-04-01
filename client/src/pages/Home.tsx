@@ -1,7 +1,4 @@
 import { useState, useRef } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { insertSubscriberSchema, type InsertSubscriber } from "@shared/schema";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -43,16 +40,17 @@ export default function Home() {
     el.scrollBy({ left: direction === "left" ? -320 : 320, behavior: "smooth" });
   };
   const createSubscriber = useCreateSubscriber();
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
 
-  const form = useForm<InsertSubscriber>({
-    resolver: zodResolver(insertSubscriberSchema),
-    defaultValues: { email: "" },
-  });
-
-  const onSubmit = (data: InsertSubscriber) => {
-    createSubscriber.mutate(data, {
-      onSuccess: () => form.reset(),
-    });
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+    setEmailError("");
+    createSubscriber.mutate({ email }, { onSuccess: () => setEmail("") });
   };
 
   const getPriceMultiplier = () => {
@@ -718,21 +716,22 @@ export default function Home() {
           <div className="max-w-md mx-auto px-4">
             <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">Join the Waitlist</h3>
             <p className="text-gray-600 text-center mb-6">Be the first to know when we launch.</p>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
                 <Input 
-                  type="email" 
+                  type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className={cn(
                     "w-full rounded-full px-4",
-                    form.formState.errors.email && "border-red-500 focus-visible:ring-red-500"
+                    emailError && "border-red-500 focus-visible:ring-red-500"
                   )}
-                  {...form.register("email")}
                   data-testid="input-waitlist-email"
                 />
-                {form.formState.errors.email && (
+                {emailError && (
                   <p className="text-red-500 text-xs mt-1.5 px-4" data-testid="text-waitlist-error">
-                    {form.formState.errors.email.message}
+                    {emailError}
                   </p>
                 )}
               </div>
