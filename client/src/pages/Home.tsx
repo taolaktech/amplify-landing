@@ -47,10 +47,6 @@ import adImage2 from "@assets/hf_20260331_223236_12d1a1c5-54ce-451f-9ae8-ce817b9
 import adImage3 from "@assets/hf_20260331_225702_811b5214-7236-45dd-9de7-16450847eb6a_(1)_1775069045123.png";
 import adImage4 from "@assets/hf_20260331_224411_0d36861a-e6bb-4634-bd8a-a0d3a1dcb6e7_1775069045123.png";
 import adImage5 from "@assets/hf_20260331_224450_8b5e2669-0a2a-4145-a99b-43a598824f9c_1775069045124.png";
-import adImage6 from "@assets/hf_20260331_230237_44a7bbf6-1377-485b-ad3d-f53b405618b2_1775069045124.png";
-import adImage7 from "@assets/hf_20260331_230419_67fa3871-7775-49d8-8b07-0c76f8db8068_1775069045124.png";
-import adImage8 from "@assets/hf_20260331_230555_45d2d155-a2fd-4ad2-9eea-fe2030757ea6_1775069045125.png";
-import adImage9 from "@assets/hf_20260331_230503_b44878eb-fcd8-4466-afea-ed214c623fbe_1775069045125.png";
 import adImage10 from "@assets/hf_20260331_230741_81df4f8e-d965-47fb-9bff-b9baf6919e16_1775069045125.png";
 import adImage11 from "@assets/hf_20260331_225628_02a16758-c580-46a9-99e9-34cbb1e7008e_(1)_1775069045126.png";
 import adImage12 from "@assets/hf_20260331_224921_6f1b66c0-8461-4062-80db-26c8a5c63c91_1775069045126.png";
@@ -140,10 +136,6 @@ export default function Home() {
     { title: "Launch Campaign", subtitle: "Bold lifestyle ad for modern brands.", media: adImage3, type: "image", category: "Image Ads" },
     { title: "New Season", subtitle: "Editorial fashion brand creative.", media: adImage4, type: "image", category: "Image Ads" },
     { title: "New Era", subtitle: "Cinematic fashion campaign creative.", media: adImage5, type: "image", category: "Image Ads" },
-    { title: "Campaign Creative", subtitle: "Beauty close-up with CTA overlay.", media: adImage6, type: "image", category: "Image Ads" },
-    { title: "Brand Name", subtitle: "Lifestyle swimwear brand ad.", media: adImage7, type: "image", category: "Image Ads" },
-    { title: "Mareva", subtitle: "Premium swimwear editorial ad.", media: adImage8, type: "image", category: "Image Ads" },
-    { title: "Seaduce", subtitle: "Summer campaign group lifestyle shot.", media: adImage9, type: "image", category: "Image Ads" },
     { title: "Sunkini", subtitle: "Luxury swimwear brand creative.", media: adImage10, type: "image", category: "Image Ads" },
     { title: "Designed for Stillness", subtitle: "Minimal lifestyle product ad.", media: adImage11, type: "image", category: "Image Ads" },
     { title: "Atelier Lab", subtitle: "Fashion case study brand creative.", media: adImage12, type: "image", category: "Image Ads" },
