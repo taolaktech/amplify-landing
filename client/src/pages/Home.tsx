@@ -607,12 +607,12 @@ export default function Home() {
                 highlight={true}
                 bestFor="Brands running multiple campaigns across Meta and Google."
                 features={[
+                  { text: "Everything in Starter" },
                   { text: "1,500 AI credits/month" },
                   { text: "Facebook, Instagram + Google Ads generation" },
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 200 AI ad creatives per month" },
                   { text: "10GB asset storage" },
-                  { text: "Everything in Starter" },
                 ]}
               />
               
@@ -622,13 +622,13 @@ export default function Home() {
                 description="Unlimited creative production for brands scaling multiple campaigns."
                 bestFor="Scaling brands running multiple campaigns and testing creatives weekly."
                 features={[
+                  { text: "Everything in Grow" },
                   { text: "3,000 AI credits/month" },
                   { text: "Facebook, Instagram + Google Ads generation" },
                   { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 500 AI ad creatives per month" },
                   { text: "Automated A/B testing for offers and creatives" },
                   { text: "1TB asset storage" },
-                  { text: "Everything in Grow" },
                 ]}
               />
             </div>
