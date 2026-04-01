@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertSubscriberSchema, type InsertSubscriber } from "@shared/schema";
@@ -17,7 +17,9 @@ import {
   Play,
   Star,
   Sparkles,
-  CircleCheck
+  CircleCheck,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 
 import step1Image from "@assets/Connect_store_1768435395497.gif";
@@ -59,6 +61,13 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("Top Ads of the Week");
   const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [testimonialVideo, setTestimonialVideo] = useState<string | null>(null);
+  const galleryScrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollGallery = (direction: "left" | "right") => {
+    const el = galleryScrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: direction === "left" ? -320 : 320, behavior: "smooth" });
+  };
   const createSubscriber = useCreateSubscriber();
 
   const form = useForm<InsertSubscriber>({
@@ -467,52 +476,75 @@ export default function Home() {
               <p className="text-gray-400">Copy winning ad creatives trending across Shopify right now — proven to convert.</p>
             </div>
 
-            {/* Ad Cards - Horizontal scroll on mobile */}
-            <div className="flex md:grid md:grid-cols-5 gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
-              {filteredAds.length > 0 ? filteredAds.map((ad, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-slate-800 rounded-xl overflow-hidden group flex-shrink-0 w-[160px] md:w-auto snap-start"
-                  data-testid={`card-ad-${idx}`}
-                >
-                  <div className="aspect-[9/16] bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
-                    {ad.type === "video" ? (
-                      <video 
-                        src={ad.media}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        muted
-                        loop
-                        playsInline
-                        onMouseEnter={(e) => e.currentTarget.play()}
-                        onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
-                      />
-                    ) : (
-                      <img 
-                        src={ad.media}
-                        alt={ad.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    )}
-                    {ad.type === "video" && (
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
-                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-                          <Play className="h-6 w-6 text-white fill-white" />
+            {/* Ad Gallery - Single row horizontal slider */}
+            <div className="relative">
+              {/* Left arrow */}
+              <button
+                onClick={() => scrollGallery("left")}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-slate-700 hover:bg-slate-600 text-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+                data-testid="button-gallery-prev"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+
+              {/* Scrollable row */}
+              <div
+                ref={galleryScrollRef}
+                className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+              >
+                {filteredAds.length > 0 ? filteredAds.map((ad, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-slate-800 rounded-xl overflow-hidden group flex-shrink-0 w-[180px] snap-start"
+                    data-testid={`card-ad-${idx}`}
+                  >
+                    <div className="aspect-[9/16] bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
+                      {ad.type === "video" ? (
+                        <video
+                          src={ad.media}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          muted
+                          loop
+                          playsInline
+                          onMouseEnter={(e) => e.currentTarget.play()}
+                          onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                        />
+                      ) : (
+                        <img
+                          src={ad.media}
+                          alt={ad.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      )}
+                      {ad.type === "video" && (
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+                          <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                            <Play className="h-6 w-6 text-white fill-white" />
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
+                    <div className="p-3">
+                      <h4 className="font-semibold text-white text-sm mb-1">{ad.title}</h4>
+                      <p className="text-xs text-gray-400">{ad.subtitle}</p>
+                    </div>
                   </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-white text-sm mb-1">{ad.title}</h4>
-                    <p className="text-xs text-gray-400">{ad.subtitle}</p>
+                )) : (
+                  <div className="w-full text-center py-12 text-gray-500">
+                    No ads in this category yet.
                   </div>
-                </div>
-              )) : (
-                <div className="col-span-5 text-center py-12 text-gray-500">
-                  No ads in this category yet.
-                </div>
-              )}
+                )}
+              </div>
+
+              {/* Right arrow */}
+              <button
+                onClick={() => scrollGallery("right")}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-slate-700 hover:bg-slate-600 text-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+                data-testid="button-gallery-next"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
             </div>
-            <p className="text-center text-gray-500 text-xs mt-2 md:hidden">Swipe to see more</p>
           </div>
         </section>
 
@@ -565,7 +597,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-500 text-xs mt-2 md:hidden">Swipe to see more</p>
           </div>
         </section>
 
