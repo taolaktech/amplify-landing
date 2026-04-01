@@ -43,7 +43,6 @@ import adVideo12 from "@assets/Download_(4)_1768436430400.mp4";
 import adVideo13 from "@assets/Download_(5)_1768436430400.mp4";
 import adVideo14 from "@assets/Download_(6)_1768436430400.mp4";
 import adVideo15 from "@assets/Download_(9)_1768436430401.mp4";
-import adImage1 from "@assets/b82c1957-5f8a-4cd2-998e-bf7f45f86db2_1768436430399.png";
 import adImage2 from "@assets/hf_20260331_223236_12d1a1c5-54ce-451f-9ae8-ce817b9699cf_1775069045122.png";
 import adImage3 from "@assets/hf_20260331_225702_811b5214-7236-45dd-9de7-16450847eb6a_(1)_1775069045123.png";
 import adImage4 from "@assets/hf_20260331_224411_0d36861a-e6bb-4634-bd8a-a0d3a1dcb6e7_1775069045123.png";
@@ -55,6 +54,16 @@ import adImage9 from "@assets/hf_20260331_230503_b44878eb-fcd8-4466-afea-ed214c6
 import adImage10 from "@assets/hf_20260331_230741_81df4f8e-d965-47fb-9bff-b9baf6919e16_1775069045125.png";
 import adImage11 from "@assets/hf_20260331_225628_02a16758-c580-46a9-99e9-34cbb1e7008e_(1)_1775069045126.png";
 import adImage12 from "@assets/hf_20260331_224921_6f1b66c0-8461-4062-80db-26c8a5c63c91_1775069045126.png";
+import psImage1 from "@assets/hf_20260331_230503_b44878eb-fcd8-4466-afea-ed214c623fbe_1775069282934.png";
+import psImage2 from "@assets/hf_20260331_230237_44a7bbf6-1377-485b-ad3d-f53b405618b2_1775069282942.png";
+import psImage3 from "@assets/1b4739e4-836e-4d2c-ac1c-4ff3647179de_1775069309447.png";
+import psImage4 from "@assets/1c98d4a1-2fa3-4344-b6ac-6c29f45693dd_1775069309455.png";
+import psImage5 from "@assets/3aa3afa0-2198-4edc-a9d9-cf50ab5deb35_1775069309455.png";
+import psImage6 from "@assets/3e9a4922-5724-44ba-8b02-4497e8fc3779_1775069309456.png";
+import psImage7 from "@assets/5a02e6c7-d7fd-4ce5-93c0-160224707c13_1775069309456.png";
+import psImage8 from "@assets/5cfd59ef-1474-42cb-8432-673a8e206a4b_1775069309456.png";
+import psImage9 from "@assets/5fe8b733-320b-4bcf-ab9b-8be7eac8a2a6_1775069309457.png";
+import psImage10 from "@assets/6da1073c-b66a-4448-9269-80afa64e9ac9_1775069309457.png";
 
 export default function Home() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "quarterly" | "annual">("monthly");
@@ -117,7 +126,16 @@ export default function Home() {
     { title: "Brand Video", subtitle: "Premium brand storytelling.", media: adVideo13, type: "video", category: "Video Ads" },
     { title: "Lifestyle Ad", subtitle: "Product in real-world context.", media: adVideo14, type: "video", category: "Video Ads" },
     { title: "Quick Promo", subtitle: "Fast-paced promotional content.", media: adVideo15, type: "video", category: "Video Ads" },
-    { title: "Product Shot", subtitle: "Professional product photography.", media: adImage1, type: "image", category: "Product Shoots" },
+    { title: "Seaduce", subtitle: "Summer campaign group lifestyle shot.", media: psImage1, type: "image", category: "Product Shoots" },
+    { title: "Campaign Creative", subtitle: "Beauty close-up with CTA overlay.", media: psImage2, type: "image", category: "Product Shoots" },
+    { title: "Muse Skin", subtitle: "Bold skincare product hold shot.", media: psImage3, type: "image", category: "Product Shoots" },
+    { title: "Street Style", subtitle: "Casual lifestyle fashion portrait.", media: psImage4, type: "image", category: "Product Shoots" },
+    { title: "Golden Hour", subtitle: "Warm outdoor fashion editorial.", media: psImage5, type: "image", category: "Product Shoots" },
+    { title: "Mirror Selfie", subtitle: "Lifestyle product moment shoot.", media: psImage6, type: "image", category: "Product Shoots" },
+    { title: "Activewear", subtitle: "Studio fitness apparel shoot.", media: psImage7, type: "image", category: "Product Shoots" },
+    { title: "Knitwear", subtitle: "Cosy fashion close-up portrait.", media: psImage8, type: "image", category: "Product Shoots" },
+    { title: "Café Portrait", subtitle: "Authentic lifestyle brand moment.", media: psImage9, type: "image", category: "Product Shoots" },
+    { title: "Lip Color", subtitle: "Beauty product application shot.", media: psImage10, type: "image", category: "Product Shoots" },
     { title: "Great Product Ad", subtitle: "Skincare creative with bold headline.", media: adImage2, type: "image", category: "Image Ads" },
     { title: "Launch Campaign", subtitle: "Bold lifestyle ad for modern brands.", media: adImage3, type: "image", category: "Image Ads" },
     { title: "New Season", subtitle: "Editorial fashion brand creative.", media: adImage4, type: "image", category: "Image Ads" },
