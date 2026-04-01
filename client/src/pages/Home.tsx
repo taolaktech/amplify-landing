@@ -267,11 +267,6 @@ export default function Home() {
                     alt="Copy Competitor Ads" 
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                    <Button size="sm" className="bg-gray-900 hover:bg-gray-800 text-white rounded-md text-xs px-4">
-                      Shop Now
-                    </Button>
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-gray-900 mb-0.5">Copy Competitor Ads,</h3>
