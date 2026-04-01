@@ -25,7 +25,7 @@ import {
 import step1Image from "@assets/Connect_store_1768435395497.gif";
 import step2Image from "@assets/campaign-snapshot_(1)_1768435612757.jpeg";
 import step3Image from "@assets/insights-screenshot_(2)_1768435612765.png";
-import modelImage from "@assets/Kahe_set_in_S_P_6_610x_crop_center_(1)_1768434928821.webp";
+import modelImage from "@assets/hf_20260331_223248_64b19599-ff32-4336-b712-365f5dd88632_1775071421919.png";
 import insightsScreenshot from "@assets/insights-screenshot_(1)_1768434928822.png";
 
 import adVideo1 from "@assets/c7b6bc98-06b5-4abe-b953-d711054aa817_1768436430392.mp4";
@@ -264,7 +264,7 @@ export default function Home() {
                 <div className="aspect-square relative overflow-hidden">
                   <img 
                     src={modelImage} 
-                    alt="Fashion Model" 
+                    alt="Copy Competitor Ads" 
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
