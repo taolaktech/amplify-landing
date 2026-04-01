@@ -46,6 +46,10 @@ import adVideo15 from "@assets/Download_(9)_1768436430401.mp4";
 import ugcVideo1 from "@assets/0821a6d94135486ea7b1851055a54779_1775069728569.MP4";
 import ugcVideo2 from "@assets/3a5a9fa1f6994ce4b18b98e5dad5c9f7_1775069728577.MP4";
 import ugcVideo3 from "@assets/00db676bdcf54a4d9c28e979b475b370.MP4_1775069728578.mp4";
+import viralVideo1 from "@assets/f67f1a90b6c14d86bdd6ac84dea4a6f1_1775069749301.MP4";
+import viralVideo2 from "@assets/preview_video_0e8782fa_compressed_v2_1775069926112.mp4";
+import viralVideo3 from "@assets/preview_video_318c01b0_compressed_v2_1775069926125.mp4";
+import viralVideo4 from "@assets/ee6c1b4fc71b4b9d96daed7510440707_1775069926126.MP4";
 import adImage2 from "@assets/hf_20260331_223236_12d1a1c5-54ce-451f-9ae8-ce817b9699cf_1775069045122.png";
 import adImage3 from "@assets/hf_20260331_225702_811b5214-7236-45dd-9de7-16450847eb6a_(1)_1775069045123.png";
 import adImage4 from "@assets/hf_20260331_224411_0d36861a-e6bb-4634-bd8a-a0d3a1dcb6e7_1775069045123.png";
@@ -123,6 +127,10 @@ export default function Home() {
     { title: "Community Moment", subtitle: "Real people, real results.", media: ugcVideo3, type: "video", category: "Social & UGC Ads" },
     { title: "Viral Stitch", subtitle: "Trending duet-style content.", media: adVideo9, type: "video", category: "Viral Video Stitches" },
     { title: "Reaction Video", subtitle: "Engaging response format content.", media: adVideo10, type: "video", category: "Viral Video Stitches" },
+    { title: "Stitch Creator", subtitle: "High-engagement viral stitch format.", media: viralVideo1, type: "video", category: "Viral Video Stitches" },
+    { title: "Trend Hijack", subtitle: "Riding trending audio and formats.", media: viralVideo2, type: "video", category: "Viral Video Stitches" },
+    { title: "Duet Ad", subtitle: "Side-by-side reaction style creative.", media: viralVideo3, type: "video", category: "Viral Video Stitches" },
+    { title: "Viral Hook", subtitle: "Stop-scroll opening stitch creative.", media: viralVideo4, type: "video", category: "Viral Video Stitches" },
     { title: "Product Demo", subtitle: "Clear product demonstration video.", media: adVideo11, type: "video", category: "Video Ads" },
     { title: "Feature Highlight", subtitle: "Key benefits showcased.", media: adVideo12, type: "video", category: "Video Ads" },
     { title: "Brand Video", subtitle: "Premium brand storytelling.", media: adVideo13, type: "video", category: "Video Ads" },
