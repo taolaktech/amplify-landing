@@ -1,0 +1,114 @@
+Privacy Policy
+We respect your privacy and are committed to protecting the data you share with us through your use of Amplify.
+Last Updated: Apr 1 2026 | Effective Date: Apr 1 2026
+Introduction
+We respect your privacy and are committed to protecting the data you share with us through your use of Amplify. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered automated marketing platform and related services.
+By using our Services and connecting third-party accounts (including Google, Meta and Shopify), you consent to the access and use of your data as described in this Privacy Policy.
+What We Collect
+Shopify Store Data
+Product catalogs, descriptions, and pricing information
+Order history and transaction data
+Customer insights and demographic information
+Store configuration and settings
+Inventory levels and product performance metrics
+Google User Data
+When you connect your Google account to Amplify, we may access the following data via Google OAuth:
+Basic profile information (such as your name and email address) through openid, userinfo.email, and userinfo.profile
+Google Ads data via the Google Ads API (https://www.googleapis.com/auth/adwords), including:
+Campaign data (ads, creatives, targeting configurations)
+Performance metrics (impressions, clicks, conversions, ROAS)
+Account structure and campaign settings
+We only request access to Google user data that is necessary to provide Amplify’s core functionality.
+Ad Performance Metrics
+Campaign performance data from Facebook and Instagram
+Google Ads campaign metrics and insights
+Click-through rates, conversion data, and ROI metrics
+Audience engagement and demographic insights
+User Input and Configuration
+Campaign configuration settings and preferences
+Budget allocations and bidding strategies
+Target audience selections and parameters
+Creative assets and advertising content
+Account settings and user preferences
+Authentication Credentials
+Authentication credentials for connected third-party services are collected via secure OAuth protocols, including access tokens for Shopify store connections, Meta (Facebook/Instagram) business accounts, and Google Ads account access.
+Google API Services User Data Policy Compliance
+Amplify’s use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.
+Specifically:
+We only use Google user data to provide user-facing features within Amplify
+We do not use Google user data for advertising, profiling, or resale
+We do not transfer Google user data to third parties for independent use
+We do not retain Google user data longer than necessary to provide our services 
+Meta Platform Data Compliance
+We collect Meta platform data in full compliance with Meta's Developer Platform Terms and data usage policies.
+Platform Data Collection
+We collect Meta platform data to enable campaign creation, optimization, audience targeting, and performance reporting. Platform Data includes:
+Ad Accounts and account metadata
+Campaign Structures and configurations
+Performance Insights and analytics data
+Page Metadata and business information
+Audience data for targeting optimization
+Creative assets and ad content
+Data Usage Scope
+Meta platform data is used exclusively for campaign-related functions and is not sold, rented, or used for profiling unrelated to ad automation.
+Access Revocation
+You may revoke access at any time from your Meta settings by visiting Facebook Settings → Apps and Websites and removing Amplify from your connected applications.
+Data Usage
+Use of Google User Data
+Amplify uses Google user data strictly to provide user-facing features, including:
+Authenticating and identifying users securely
+Connecting and managing Google Ads accounts
+Enabling users to:
+View campaign performance and analytics
+Create, edit, and manage advertising campaigns
+Receive AI-powered recommendations to optimize campaigns
+Google user data is only used to provide and improve core application functionality.
+We do not use Google user data for advertising, profiling, or resale purposes.
+Service Improvement
+We may use aggregated, anonymized data to improve our platform features and AI algorithms, including enhancing campaign optimization algorithms and developing new platform features.
+Important: We do not use your data to build user profiles outside the scope of ad automation or share your data with third parties for their marketing purposes.
+Data Retention & Deletion
+Retention Policy
+Google user data: Retained only while the user has an active Amplify account or until access is revoked 
+Active campaign data: Retained while campaigns are running
+Account information: Retained while account is active
+Billing records: Retained for 7 years for tax and legal compliance
+Support communications: Retained for 3 years
+
+Data Sharing
+We do not sell, rent, or trade user data, including Google user data.
+We may share data only in the following limited circumstances:
+With trusted infrastructure providers (e.g., cloud hosting, databases) strictly required to operate Amplify
+With service providers that support platform functionality under strict data protection agreements
+When required by law, regulation, or legal process
+We do not share Google user data with third parties for advertising or marketing purposes.
+Data Deletion Options
+You can request account deletion at any time. Use our data deletion form, email us at support@useamplify.ai, or contact us through your account settings.
+You may also delete your data by:
+Disconnecting your Google account from Amplify
+Revoking access via your Google account security settings
+All associated Google user data will be permanently deleted within 30 days of a valid request or disconnection.
+Deletion Timeline
+Upon receiving a valid deletion request, we will acknowledge your request within 2 business days and complete data deletion within 30 days.
+Your Rights
+Access and Portability
+You can request access to, correction of, or deletion of your data at any time. We will provide your data in a portable format within 30 days of a valid request.
+Access Revocation
+You have the right to revoke Amplify's access to your connected accounts at any time through your platform settings.
+Legal Rights
+Depending on your location, you may have additional rights under data protection laws such as GDPR, CCPA, or other applicable privacy regulations.
+Data Security
+We implement industry-standard security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+End-to-end encryption of data in transit and at rest
+Regular security assessments and penetration testing
+Multi-factor authentication and access controls
+Employee training on data protection and security
+SOC 2 Type II compliance and regular audits
+Contact Us
+Data Protection Officer
+Amplify Ads LLC
+909 Reinli Street
+Austin, TX 78751
+Email: support@useamplify.ai
+Phone: +1-647-671-1349
+
