@@ -679,6 +679,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            <p className="text-center text-gray-500 mt-8 max-w-2xl mx-auto">
+              Other tools generate AI slop without strategy. Amplify provides intelligence and thinking that makes the ads execution work.
+            </p>
           </div>
         </section>
 
