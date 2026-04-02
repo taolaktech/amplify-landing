@@ -218,16 +218,26 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-gray-400" />
-                No credit card required
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16 mt-6">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-gray-900">100+</p>
+                <p className="text-sm text-gray-500 mt-0.5">Shopify brands</p>
               </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-gray-400 fill-gray-400" />
-                Trusted by 100+ Shopify stores
+              <div className="w-px h-8 bg-gray-200 hidden sm:block" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-gray-900">2.4×</p>
+                <p className="text-sm text-gray-500 mt-0.5">avg. ROAS improvement</p>
+              </div>
+              <div className="w-px h-8 bg-gray-200 hidden sm:block" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-gray-900">&lt; 10 min</p>
+                <p className="text-sm text-gray-500 mt-0.5">to first live campaign</p>
               </div>
             </div>
+
+            <p className="text-sm text-gray-400 italic mt-5">
+              "Amplify paid for itself in the first week." — Kyra A., fashion accessories store
+            </p>
           </div>
         </section>
 
