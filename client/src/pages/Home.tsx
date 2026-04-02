@@ -601,7 +601,7 @@ export default function Home() {
                 {
                   capability: "TikTok trend research",
                   others: "Not available",
-                  amplify: "Viral format analysis — ongoing",
+                  amplify: "Viral format analysis before every campaign launch",
                   othersX: true,
                   bold: false,
                 },
