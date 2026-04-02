@@ -206,7 +206,7 @@ export default function Home() {
                 onClick={() => window.open("http://app.useamplify.ai/", "_blank")}
                 data-testid="button-hero-try-free"
               >
-                Try for Free <ArrowRight className="ml-2 h-4 w-4" />
+                Start Free — No card needed <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button 
                 variant="outline"
@@ -214,7 +214,7 @@ export default function Home() {
                 onClick={() => setDemoModalOpen(true)}
                 data-testid="button-hero-watch-demo"
               >
-                <Play className="mr-2 h-4 w-4 fill-current" /> Watch Demo
+                <Play className="mr-2 h-4 w-4 fill-current" /> See it in 2 minutes
               </Button>
             </div>
 
