@@ -537,9 +537,6 @@ export default function Home() {
               </button>
             </div>
 
-            <p className="text-center text-gray-500 text-sm mt-8">
-              Updated every Monday. 500+ new creatives added each week.
-            </p>
           </div>
         </section>
 
