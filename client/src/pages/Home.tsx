@@ -255,10 +255,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-gray-900 mb-0.5">Copy Competitor Ads,</h3>
-                  <h3 className="font-semibold text-emerald-500 mb-3">Generate stunning on brand ads</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">Stunning on-brand ads that scale what works</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
-                    Launch fast across Meta and Google, uncover winning hooks early, and kill weak creatives before they waste spend.
+                    Generate high-converting creatives across Meta and Google built from real market intelligence — not templates. Uncover your winning hooks early, then clone and scale them automatically.
                   </p>
                 </div>
               </div>
@@ -302,10 +301,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6 pt-2">
-                  <h3 className="font-semibold text-gray-900 mb-0.5">Actionable insights that</h3>
-                  <h3 className="font-semibold text-emerald-500 mb-3">drives real results</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">Marketing based on real customer intelligence</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
-                    Smart insights from Shopify, Meta, and Google power AI decisions like when to pause, scale, or relaunch — without manual checks.
+                    Most Shopify merchants launch from a blank template and a gut feeling. Amplify runs a full competitor research, review mining, and hook analysis sprint — before it touches a single dollar of your budget.
                   </p>
                 </div>
               </div>
@@ -337,10 +335,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6 pt-4">
-                  <h3 className="font-semibold text-gray-900 mb-0.5">Meta and Google offer hundreds of optimization rules –</h3>
-                  <h3 className="font-semibold text-orange-500 mb-3">launch your ads with confidence</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">Stop paying to find out what doesn't work</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
-                    Amplify automatically starts your campaigns with proven configurations that remove guesswork and drive real returns.
+                    You launch 5–10 creatives to find 1 winner. But without a strategy built from real market intelligence, those aren't tests — they're expensive guesses. The other 9 were always going to lose.
                   </p>
                 </div>
               </div>
