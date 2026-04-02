@@ -185,6 +185,22 @@ export default function Home() {
     {
       question: "Is there a contract or commitment?",
       answer: "No long-term contracts required. All Amplify plans are month-to-month, and you can upgrade, downgrade, or cancel at any time. We're confident you'll love the results you get with Amplify."
+    },
+    {
+      question: "What should I expect when I first set up Amplify?",
+      answer: "Amplify visits your brand website, scans the Meta Ad Library for your niche and competitors, mines customer reviews for real language and switching triggers, analyses TikTok and Instagram Reels for viral format patterns, and synthesises everything into a structured creative strategy. Then it builds your ad creatives from that strategy and launches them. The whole process takes under 30 minutes."
+    },
+    {
+      question: "Do I need to prepare anything before connecting my store?",
+      answer: "No. You connect your Shopify store, complete the onboarding flow, choose your channels and marketing objective, and Amplify does the rest. No brief, no creative input, no configuration required."
+    },
+    {
+      question: "Can I see the strategy output before the ads launch?",
+      answer: "Yes. Every research scan produces a full strategy document that you can review, edit, and download. You can approve the ads before they go live."
+    },
+    {
+      question: "How is this different from hiring a creative agency?",
+      answer: "A creative agency takes 1–2 weeks to conduct market research and costs $800–$3,000. They interview you, do the research manually, write the strategy, and hand it back. Amplify does the same research and strategy work in under 30 minutes, at a flat monthly cost, and then also builds and runs the ads without you needing to manage a relationship, approve invoices, or sit through briefing calls."
     }
   ];
 
