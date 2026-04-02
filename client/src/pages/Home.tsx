@@ -594,7 +594,7 @@ export default function Home() {
                 {
                   capability: "Competitor ad intelligence",
                   others: "Limited",
-                  amplify: "Live Meta Ad Library scan — weekly",
+                  amplify: "Live Meta Ad Library scan",
                   othersX: false,
                   bold: false,
                 },
