@@ -28,20 +28,20 @@ export function PricingCard({
   return (
     <div 
       className={cn(
-        "relative rounded-2xl p-8 flex flex-col h-full border",
+        "relative rounded-2xl p-8 flex flex-col h-full transition-transform",
         highlight 
-          ? "border-violet-200 shadow-lg bg-white" 
-          : "border-gray-200 bg-white"
+          ? "bg-gradient-to-br from-violet-100 via-fuchsia-50 to-rose-100 shadow-2xl scale-[1.03] border-0" 
+          : "bg-white border border-gray-200 shadow-sm hover:shadow-md"
       )}
     >
       {highlight && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white px-5 py-1.5 rounded-full text-xs font-semibold shadow-md whitespace-nowrap">
           Most Popular
         </div>
       )}
       
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+        <h3 className={cn("text-lg font-semibold mb-3", highlight ? "text-gray-900" : "text-gray-900")}>
           {title}
         </h3>
         <div className="flex items-baseline gap-1 mb-3">
@@ -58,8 +58,11 @@ export function PricingCard({
         <div className="space-y-3">
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-start gap-2">
-              <Check className="h-4 w-4 text-violet-600 mt-0.5 flex-shrink-0" strokeWidth={2.5} />
-              <span className="text-sm text-gray-600">
+              <Check
+                className={cn("h-4 w-4 mt-0.5 flex-shrink-0", highlight ? "text-violet-600" : "text-violet-600")}
+                strokeWidth={2.5}
+              />
+              <span className="text-sm text-gray-700">
                 {feature.text}
               </span>
             </div>
@@ -68,7 +71,10 @@ export function PricingCard({
       </div>
 
       {bestFor && (
-        <div className="mb-6 bg-gray-50 rounded-lg px-4 py-3 border border-gray-100">
+        <div className={cn(
+          "mb-6 rounded-xl px-4 py-3 border",
+          highlight ? "bg-white/50 border-white/60" : "bg-gray-50 border-gray-100"
+        )}>
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Best for</p>
           <p className="text-sm text-gray-700">{bestFor}</p>
         </div>
@@ -77,9 +83,9 @@ export function PricingCard({
       <div className="mt-auto">
         <Button 
           className={cn(
-            "w-full rounded-full font-medium transition-transform hover:scale-105",
+            "w-full rounded-full font-medium transition-all hover:scale-105",
             highlight 
-              ? "bg-violet-600 hover:bg-violet-700 text-white" 
+              ? "bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-md border-0" 
               : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
           )}
           onClick={() => window.open("http://app.useamplify.ai/", "_blank")}
