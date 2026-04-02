@@ -185,6 +185,7 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-violet-200/40 to-transparent" />
           
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">AI-powered ad automation for Shopify merchants</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up opacity-0">
               Run proven ads that work
               <br />
