@@ -594,14 +594,14 @@ export default function Home() {
                 {
                   capability: "Competitor ad intelligence",
                   others: "Limited",
-                  amplify: "Live Meta Ad Library scan every sprint",
+                  amplify: "Live Meta Ad Library scan — weekly",
                   othersX: false,
                   bold: false,
                 },
                 {
                   capability: "TikTok trend research",
                   others: "Not available",
-                  amplify: "Viral format analysis included in every sprint",
+                  amplify: "Viral format analysis — ongoing",
                   othersX: true,
                   bold: false,
                 },
