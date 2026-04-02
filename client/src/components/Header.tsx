@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
 import amplifyLogo from "@assets/amplify-logo_1768435198168.png";
@@ -13,20 +14,23 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location, navigate] = useLocation();
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNav = (href: string) => {
     setMobileMenuOpen(false);
+    if (location === "/") {
+      const element = document.querySelector(href);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/" + href);
+    }
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer" onClick={() => navigate("/")}>
             <img src={amplifyLogo} alt="Amplify" className="h-7" />
           </div>
 
@@ -34,7 +38,7 @@ export function Header() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNav(link.href)}
                 className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 data-testid={`nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
               >
@@ -68,7 +72,7 @@ export function Header() {
               {navLinks.map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={() => handleNav(link.href)}
                   className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors text-left"
                 >
                   {link.label}
