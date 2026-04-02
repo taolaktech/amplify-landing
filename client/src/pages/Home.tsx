@@ -835,7 +835,7 @@ export default function Home() {
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative w-full aspect-video overflow-hidden">
                     <img 
                       src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
                       alt={`${t.name} testimonial`}
