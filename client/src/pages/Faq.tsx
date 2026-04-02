@@ -47,10 +47,10 @@ export default function Faq() {
               Can't find what you're looking for? Get in touch and we'll help you out.
             </p>
             <a
-              href="mailto:hello@useamplify.ai"
+              href="mailto:support@useamplify.ai"
               className="inline-flex items-center text-violet-600 font-medium text-sm hover:text-violet-700"
             >
-              hello@useamplify.ai
+              support@useamplify.ai
             </a>
           </div>
         </div>
