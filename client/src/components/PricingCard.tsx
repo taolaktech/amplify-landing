@@ -30,7 +30,7 @@ export function PricingCard({
       className={cn(
         "relative rounded-2xl p-8 flex flex-col h-full transition-transform",
         highlight 
-          ? "bg-gradient-to-br from-violet-100 via-fuchsia-50 to-rose-100 shadow-2xl scale-[1.03] border-0" 
+          ? "bg-gradient-to-br from-violet-100 via-fuchsia-50 to-rose-100 shadow-2xl md:scale-[1.03] border-0" 
           : "bg-white border border-gray-200 shadow-sm hover:shadow-md"
       )}
     >

@@ -553,12 +553,13 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+            <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+              <div className="min-w-[560px]">
               {/* Header row */}
               <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
-                <div className="px-6 py-4 text-sm font-semibold text-gray-500">Capability</div>
-                <div className="px-6 py-4 text-sm font-semibold text-gray-500 border-l border-gray-200">Other Ad Tools</div>
-                <div className="px-6 py-4 text-sm font-semibold text-violet-700 border-l border-gray-200">Amplify</div>
+                <div className="px-4 md:px-6 py-4 text-xs md:text-sm font-semibold text-gray-500">Capability</div>
+                <div className="px-4 md:px-6 py-4 text-xs md:text-sm font-semibold text-gray-500 border-l border-gray-200">Other Ad Tools</div>
+                <div className="px-4 md:px-6 py-4 text-xs md:text-sm font-semibold text-violet-700 border-l border-gray-200">Amplify</div>
               </div>
 
               {[
@@ -630,8 +631,8 @@ export default function Home() {
                   key={idx}
                   className={`grid grid-cols-3 border-b border-gray-100 last:border-0 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
                 >
-                  <div className="px-6 py-5 text-sm font-medium text-gray-700">{row.capability}</div>
-                  <div className="px-6 py-5 text-sm text-gray-500 border-l border-gray-100">
+                  <div className="px-4 md:px-6 py-4 md:py-5 text-xs md:text-sm font-medium text-gray-700">{row.capability}</div>
+                  <div className="px-4 md:px-6 py-4 md:py-5 text-xs md:text-sm text-gray-500 border-l border-gray-100">
                     {row.othersX ? (
                       <span className="flex items-start gap-1.5">
                         <span className="text-gray-400 font-semibold mt-0.5">✕</span>
@@ -639,7 +640,7 @@ export default function Home() {
                       </span>
                     ) : row.others}
                   </div>
-                  <div className="px-6 py-5 text-sm text-gray-800 border-l border-gray-100">
+                  <div className="px-4 md:px-6 py-4 md:py-5 text-xs md:text-sm text-gray-800 border-l border-gray-100">
                     <span className="flex items-start gap-1.5">
                       <span className="text-emerald-500 mt-0.5 flex-shrink-0">✅</span>
                       <span className={row.bold ? "font-bold" : ""}>{row.amplify}</span>
@@ -647,6 +648,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
 
             <p className="text-center text-gray-500 mt-8 max-w-2xl mx-auto">
@@ -689,7 +691,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-5 md:gap-8">
               <PricingCard 
                 title="Starter Plan"
                 price={formatPrice(35)}
