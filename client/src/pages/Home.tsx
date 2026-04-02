@@ -125,11 +125,11 @@ export default function Home() {
     { title: "Product Detail", subtitle: "Close-up product detail photograph.", media: `${S3}/IMG_4211.jpg`, type: "image", category: "Product Shoots" },
     { title: "Campaign Image", subtitle: "On-location campaign photograph.", media: `${S3}/IMG_4212.jpg`, type: "image", category: "Product Shoots" },
     { title: "Brand Portrait", subtitle: "Natural light brand portrait.", media: `${S3}/IMG_4213.jpg`, type: "image", category: "Product Shoots" },
-    { title: "Clean Product Shot", subtitle: "Minimal clean product photograph.", media: `${S3}/IMG_4216.jpg`, type: "image", category: "Product Shoots" },
-    { title: "Outdoor Lifestyle", subtitle: "Outdoor lifestyle product image.", media: `${S3}/IMG_4218.jpg`, type: "image", category: "Product Shoots" },
-    { title: "Street Style", subtitle: "Casual lifestyle fashion portrait.", media: `${S3}/IMG_4219.jpg`, type: "image", category: "Product Shoots" },
-    { title: "Featured Product", subtitle: "Hero product showcase photograph.", media: `${S3}/IMG_4220.jpg`, type: "image", category: "Product Shoots" },
-    { title: "Studio Shot", subtitle: "Studio-lit product photograph.", media: `${S3}/IMG_4223.jpg`, type: "image", category: "Product Shoots" },
+    { title: "Clean Product Shot", subtitle: "Minimal clean product photograph.", media: `${S3}/IMG_4216.jpg`, type: "image", category: "Image Ads" },
+    { title: "Outdoor Lifestyle", subtitle: "Outdoor lifestyle product image.", media: `${S3}/IMG_4218.jpg`, type: "image", category: "Image Ads" },
+    { title: "Street Style", subtitle: "Casual lifestyle fashion portrait.", media: `${S3}/IMG_4219.jpg`, type: "image", category: "Image Ads" },
+    { title: "Featured Product", subtitle: "Hero product showcase photograph.", media: `${S3}/IMG_4220.jpg`, type: "image", category: "Image Ads" },
+    { title: "Studio Shot", subtitle: "Studio-lit product photograph.", media: `${S3}/IMG_4223.jpg`, type: "image", category: "Image Ads" },
   ];
 
   const filteredAds = adTemplates.filter(ad => ad.category === activeCategory);
