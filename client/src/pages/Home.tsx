@@ -574,43 +574,107 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
-        <section id="testimonials" className="py-20 bg-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-              Loved by Shopify merchants
-            </h2>
-            <p className="text-gray-400 text-center mb-12">
-              See what our customers have to say about Amplify
-            </p>
+        {/* COMPARISON TABLE */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-3">Why Amplify</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Everything other tools skip
+              </h2>
+            </div>
 
-            {/* Testimonials - Horizontal scroll on mobile */}
-            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
-              {testimonials.map((t, idx) => (
-                <div 
+            <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+              {/* Header row */}
+              <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
+                <div className="px-6 py-4 text-sm font-semibold text-gray-500">Capability</div>
+                <div className="px-6 py-4 text-sm font-semibold text-gray-500 border-l border-gray-200">Other Ad Tools</div>
+                <div className="px-6 py-4 text-sm font-semibold text-violet-700 border-l border-gray-200">Amplify</div>
+              </div>
+
+              {[
+                {
+                  capability: "Creative generation",
+                  others: "Template-based, generic output",
+                  amplify: "AI-generated, strategy-backed, on-brand",
+                  othersX: false,
+                  bold: false,
+                },
+                {
+                  capability: "Pre-launch research",
+                  others: "You do it yourself",
+                  amplify: "Automated: website, ad library, amazon reviews, trends",
+                  othersX: true,
+                  bold: false,
+                },
+                {
+                  capability: "Strategy document",
+                  others: "Not included",
+                  amplify: "Full creative brief generated before every ad campaign",
+                  othersX: true,
+                  bold: false,
+                },
+                {
+                  capability: "Customer voice mining",
+                  others: "Manual",
+                  amplify: "Automated review analysis — real language, real hooks",
+                  othersX: true,
+                  bold: false,
+                },
+                {
+                  capability: "Competitor ad intelligence",
+                  others: "Limited",
+                  amplify: "Live Meta Ad Library scan every sprint",
+                  othersX: false,
+                  bold: false,
+                },
+                {
+                  capability: "TikTok trend research",
+                  others: "Not available",
+                  amplify: "Viral format analysis included in every sprint",
+                  othersX: true,
+                  bold: false,
+                },
+                {
+                  capability: "Budget protection",
+                  others: "Manual rules",
+                  amplify: "Automatic AI guardrails — pauses losers for you",
+                  othersX: false,
+                  bold: false,
+                },
+                {
+                  capability: "Commission on ad spend",
+                  others: "Often 2–5%",
+                  amplify: "0% — flat rate only",
+                  othersX: false,
+                  bold: true,
+                },
+                {
+                  capability: "Creative refresh",
+                  others: "You start over",
+                  amplify: "Automatic ads refresh when fatigue detected",
+                  othersX: false,
+                  bold: false,
+                },
+              ].map((row, idx) => (
+                <div
                   key={idx}
-                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group flex-shrink-0 w-[280px] md:w-auto snap-start"
-                  onClick={() => setTestimonialVideo(t.videoId)}
-                  data-testid={`card-testimonial-${idx}`}
+                  className={`grid grid-cols-3 border-b border-gray-100 last:border-0 ${idx % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
                 >
-                  <div className="aspect-[9/16] relative overflow-hidden">
-                    <img 
-                      src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
-                      alt={`${t.name} testimonial`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play className="h-8 w-8 text-white fill-white" />
-                      </div>
-                    </div>
+                  <div className="px-6 py-5 text-sm font-medium text-gray-700">{row.capability}</div>
+                  <div className="px-6 py-5 text-sm text-gray-500 border-l border-gray-100">
+                    {row.othersX ? (
+                      <span className="flex items-start gap-1.5">
+                        <span className="text-gray-400 font-semibold mt-0.5">✕</span>
+                        <span>{row.others}</span>
+                      </span>
+                    ) : row.others}
                   </div>
-                  <div className="p-5 border-t border-slate-700">
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">"{t.quote}"</p>
-                    <div>
-                      <p className="text-white text-sm font-semibold">{t.name}</p>
-                      <p className="text-gray-500 text-xs mt-0.5">{t.handle}</p>
-                    </div>
+                  <div className="px-6 py-5 text-sm text-gray-800 border-l border-gray-100">
+                    <span className="flex items-start gap-1.5">
+                      <span className="text-emerald-500 mt-0.5 flex-shrink-0">✅</span>
+                      <span className={row.bold ? "font-bold" : ""}>{row.amplify}</span>
+                    </span>
                   </div>
                 </div>
               ))}
@@ -768,6 +832,50 @@ export default function Home() {
                 {createSubscriber.isPending ? "Joining..." : "Try for Free"}
               </Button>
             </form>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section id="testimonials" className="py-20 bg-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+              Loved by Shopify merchants
+            </h2>
+            <p className="text-gray-400 text-center mb-12">
+              See what our customers have to say about Amplify
+            </p>
+
+            {/* Testimonials - Horizontal scroll on mobile */}
+            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
+              {testimonials.map((t, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 cursor-pointer group flex-shrink-0 w-[280px] md:w-auto snap-start"
+                  onClick={() => setTestimonialVideo(t.videoId)}
+                  data-testid={`card-testimonial-${idx}`}
+                >
+                  <div className="aspect-[9/16] relative overflow-hidden">
+                    <img 
+                      src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
+                      alt={`${t.name} testimonial`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="h-8 w-8 text-white fill-white" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-5 border-t border-slate-700">
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">"{t.quote}"</p>
+                    <div>
+                      <p className="text-white text-sm font-semibold">{t.name}</p>
+                      <p className="text-gray-500 text-xs mt-0.5">{t.handle}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>
