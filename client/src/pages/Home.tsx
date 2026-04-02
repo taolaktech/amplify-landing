@@ -133,9 +133,24 @@ export default function Home() {
   const filteredAds = adTemplates.filter(ad => ad.category === activeCategory);
 
   const testimonials = [
-    { name: "Kyra", channel: "Amplify Ads", videoId: "lIEPeEHZZH8" },
-    { name: "Kaya", channel: "Amplify Ads", videoId: "18XqlvyiYco" },
-    { name: "Haley", channel: "Amplify Ads", videoId: "EKejm_BetE8" },
+    {
+      name: "Kyra A.",
+      handle: "women's accessories · Shopify",
+      videoId: "lIEPeEHZZH8",
+      quote: "I'd just been quoted £1,800 by a marketing agency to run a strategy session for my brand. I tried Amplify instead. It did the competitor research, wrote the creative brief, built the ads, and launched them in one afternoon. I genuinely don't know how to go back.",
+    },
+    {
+      name: "Kaya A.",
+      handle: "skincare brand · Shopify",
+      videoId: "18XqlvyiYco",
+      quote: "I'd burned through £600 testing ad angles that didn't work. Amplify's first sprint pulled real language from my competitors' one-star reviews and built hooks around it. The first concept it launched became my best-ever ad. I'm still running it.",
+    },
+    {
+      name: "Haley A.",
+      handle: "home décor · Shopify",
+      videoId: "EKejm_BetE8",
+      quote: "I'd never run ads before. I connected my store, and watched Amplify do the rest. It felt like having a proper creative team except it cost £99 a month and didn't need briefs.",
+    },
   ];
 
   const faqItems = [
@@ -578,21 +593,6 @@ export default function Home() {
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
-                  <div className="p-4 flex items-center justify-between border-b border-slate-700">
-                    <div>
-                      <p className="text-white text-sm font-medium">Review from {t.name}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <div className="w-5 h-5 bg-violet-600 rounded-full flex items-center justify-center">
-                          <span className="text-xs text-white">A</span>
-                        </div>
-                        <span className="text-gray-400 text-xs">{t.channel}</span>
-                        <Button variant="outline" size="sm" className="text-xs h-6 px-2 bg-transparent border-gray-600 text-gray-300">
-                          Subscribe
-                        </Button>
-                      </div>
-                    </div>
-                    <ArrowRight className="h-4 w-4 text-gray-400 -rotate-45" />
-                  </div>
                   <div className="aspect-[9/16] relative overflow-hidden">
                     <img 
                       src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
@@ -603,6 +603,13 @@ export default function Home() {
                       <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                         <Play className="h-8 w-8 text-white fill-white" />
                       </div>
+                    </div>
+                  </div>
+                  <div className="p-5 border-t border-slate-700">
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">"{t.quote}"</p>
+                    <div>
+                      <p className="text-white text-sm font-semibold">{t.name}</p>
+                      <p className="text-gray-500 text-xs mt-0.5">{t.handle}</p>
                     </div>
                   </div>
                 </div>
