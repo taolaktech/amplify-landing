@@ -694,6 +694,7 @@ export default function Home() {
                 price={formatPrice(35)}
                 description="Perfect for launching your first ad creatives and validating product ideas."
                 bestFor="New Shopify stores testing Meta ads."
+                ctaLabel="Launch Campaign"
                 features={[
                   { text: "500 AI credits/month for ad generation" },
                   { text: "Facebook & Instagram ads only" },
@@ -712,6 +713,7 @@ export default function Home() {
                 description="Built for brands moving past testing into consistent growth."
                 highlight={true}
                 bestFor="Brands running multiple campaigns across Meta and Google."
+                ctaLabel="Start 7 day Free Trial"
                 features={[
                   { text: "Everything in Starter" },
                   { text: "1,500 AI credits/month" },
@@ -727,6 +729,7 @@ export default function Home() {
                 price={formatPrice(199)}
                 description="Unlimited creative production for brands scaling multiple campaigns."
                 bestFor="Scaling brands running multiple campaigns and testing creatives weekly."
+                ctaLabel="Start 7 day Free Trial"
                 features={[
                   { text: "Everything in Grow" },
                   { text: "3,000 AI credits/month" },
