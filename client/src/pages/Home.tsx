@@ -774,7 +774,7 @@ export default function Home() {
 
             <div className="text-center mt-8">
               <Link href="/faq" className="text-violet-400 hover:text-violet-300 text-sm font-medium transition-colors">
-                See all {faqItems.length} questions →
+                View all FAQ →
               </Link>
             </div>
           </div>
