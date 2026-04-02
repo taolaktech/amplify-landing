@@ -608,7 +608,7 @@ export default function Home() {
                 {
                   capability: "Budget protection",
                   others: "Manual rules",
-                  amplify: "Automatic AI guardrails — pauses losers for you",
+                  amplify: "Automatic AI guardrails — scales winning ads and pauses non-performing ads for you",
                   othersX: false,
                   bold: false,
                 },
