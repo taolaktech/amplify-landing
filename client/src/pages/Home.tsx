@@ -836,7 +836,7 @@ export default function Home() {
                   data-testid={`card-testimonial-${idx}`}
                 >
                   <div className="p-4 pb-0 flex justify-center">
-                    <div className="w-40 h-40 relative overflow-hidden rounded-xl flex-shrink-0">
+                    <div className="w-24 h-36 relative overflow-hidden rounded-xl flex-shrink-0">
                       <img 
                         src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
                         alt={`${t.name} testimonial`}
@@ -850,7 +850,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-5 pt-4">
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">"{t.quote}"</p>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">{t.quote}</p>
                     <div>
                       <p className="text-white text-sm font-semibold">{t.name}</p>
                       <p className="text-gray-500 text-xs mt-0.5">{t.handle}</p>
