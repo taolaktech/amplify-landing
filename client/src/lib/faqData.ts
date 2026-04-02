@@ -17,7 +17,7 @@ export const faqItems = [
   },
   {
     question: "How much does Amplify cost?",
-    answer: "Amplify offers several pricing tiers to fit businesses of all sizes. We have plans starting at $29/month. Our pricing is transparent with no hidden fees. Check our pricing section for more details."
+    answer: "Amplify offers several pricing tiers to fit businesses of all sizes. We have plans starting at $35/month. Our pricing is transparent with no hidden fees. Check our pricing section for more details."
   },
   {
     question: "Can I control my ad spend with Amplify?",
