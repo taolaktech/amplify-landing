@@ -341,8 +341,7 @@ export default function Home() {
         <section id="how-it-works" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Amplify works</h2>
-              <p className="text-gray-600">Get started in minutes and see results in days, not months.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get from zero to a live, optimised campaign in one afternoon</h2>
             </div>
 
             {/* Step 1 */}
@@ -353,20 +352,20 @@ export default function Home() {
                     <div className="w-8 h-8 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center text-sm font-semibold">
                       1
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Connect your Shopify store</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Connect in 60 seconds</h3>
                   </div>
                   <p className="text-gray-600 mb-6">
-                    Get started by connecting your Shopify store with just a few clicks. Our seamless integration imports all your products, customers, and sales data automatically.
+                    One-click Shopify integration. Your products, pricing, customers, and sales history sync automatically. Amplify reads what's sold before — so it already knows what to promote.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2 text-sm text-gray-600">
                       <CircleCheck className="h-4 w-4 text-teal-500" /> One-click Shopify integration
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Secure data connection
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Auto-syncs products, pricing and sales history
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Automatic product syncing
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Knows what to promote before your first ad
                     </li>
                   </ul>
                 </div>
@@ -387,20 +386,20 @@ export default function Home() {
                     <div className="w-8 h-8 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center text-sm font-semibold">
                       2
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Create AI-powered campaigns that protect your ad spend</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Generate and launch in minutes</h3>
                   </div>
                   <p className="text-gray-600 mb-6">
-                    Generate high-converting ads automatically across Google, Instagram, and Facebook.
+                    Pick a proven ad format or copy a top-performing creative from your niche. AI builds your ad using your brand. Preview it, approve it, launch it to Meta and Google with one click — no designer needed.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Copy and launch winning ads from competitors
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Pick a proven format or copy a top-performing creative
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Preview and launch with confidence using platform-optimized creatives
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> AI builds your ad using your brand assets
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> AI guardrails protect your budget by auto-pausing ads when ROAS drops and scaling winners
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> One-click launch to Meta and Google — no designer needed
                     </li>
                   </ul>
                 </div>
@@ -408,27 +407,27 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center text-sm font-semibold">
                       3
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Optimize with AI insights</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Let AI handle the rest</h3>
                   </div>
                   <p className="text-gray-600 mb-6">
-                    Let our AI analyze your performance data and provide actionable insights to improve your ROAS and grow your sales.
+                    Amplify monitors every campaign 24/7. It kills losers, scales winners, and surfaces plain-English recommendations. Your only job is to approve the decisions you want to act on.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> AI-powered recommendations
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> 24/7 campaign monitoring, no babysitting required
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Performance analytics
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Kills losers and scales winners automatically
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Automated budget adjustments
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Plain-English decisions for you to approve
                     </li>
                   </ul>
                 </div>
@@ -437,6 +436,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Closer line */}
+            <p className="text-center text-gray-600 text-lg">
+              Most Amplify merchants see their first winning ad within 7 days.
+            </p>
           </div>
         </section>
 
