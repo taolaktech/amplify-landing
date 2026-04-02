@@ -835,12 +835,17 @@ export default function Home() {
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
-                  <div className="relative w-full h-48 bg-slate-900 overflow-hidden flex items-center justify-center">
+                  <div className="relative w-full aspect-[9/16] overflow-hidden">
                     <img 
                       src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
                       alt={`${t.name} testimonial`}
-                      className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                        <Play className="h-6 w-6 text-white fill-white ml-0.5" />
+                      </div>
+                    </div>
                   </div>
                   <div className="p-5 pt-4">
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">{t.quote}</p>
