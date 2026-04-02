@@ -835,11 +835,11 @@ export default function Home() {
                   onClick={() => setTestimonialVideo(t.videoId)}
                   data-testid={`card-testimonial-${idx}`}
                 >
-                  <div className="relative w-full aspect-video overflow-hidden">
+                  <div className="relative w-full h-48 bg-slate-900 overflow-hidden flex items-center justify-center">
                     <img 
                       src={`https://img.youtube.com/vi/${t.videoId}/maxresdefault.jpg`}
                       alt={`${t.name} testimonial`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-5 pt-4">
