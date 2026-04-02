@@ -580,7 +580,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-3">Why Amplify</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Everything other tools skip
+                You've probably tried another tool. Here's what Amplify does that they don't.
               </h2>
             </div>
 
