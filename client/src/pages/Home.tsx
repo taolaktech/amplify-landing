@@ -442,7 +442,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <p className="text-xs font-semibold uppercase tracking-widest text-violet-400 mb-3">Competitive Intelligence</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Copy what's actually converting right now across all of Shopify
+                Copy what's actually converting right now for your niche.
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
                 Every week, Amplify surfaces the highest-performing ads running across Shopify stores in your niche. One click to adapt them for your brand, your product, your voice.
