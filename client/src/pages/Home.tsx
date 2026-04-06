@@ -321,7 +321,7 @@ export default function Home() {
                 <div className="p-6 pt-4">
                   <h3 className="font-semibold text-gray-900 mb-3">Stop paying to find out what doesn't work</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
-                    You launch 5–10 creatives to find 1 winner. But without a strategy built from real market intelligence, those aren't tests — they're expensive guesses. The other 9 were always going to lose.
+                    You launch 5–10 creatives to find 1 winner. But without a strategy built from real market intelligence, those aren't tests, they're expensive guesses. The other 9 were always going to lose.
                   </p>
                 </div>
               </div>
