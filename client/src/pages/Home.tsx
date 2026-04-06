@@ -733,11 +733,11 @@ export default function Home() {
                 features={[
                   { text: "Everything in Grow" },
                   { text: "3,000 AI credits/month" },
-                  { text: "Facebook, Instagram + Google Ads generation" },
-                  { text: "Generate image ads, video ads, ad copy and Google text ads" },
                   { text: "Generate up to 500 AI ad creatives per month" },
-                  { text: "Automated A/B testing for offers and creatives" },
                   { text: "1TB asset storage" },
+                  { text: "Automated market intelligence across your website, Meta Ad Library, Amazon & Reddit reviews, and trends" },
+                  { text: "Full AI-generated creative briefs with proven hooks, angles, and messaging before every campaign" },
+                  { text: "Live competitor ad tracking with Winning Ads identification" },
                 ]}
               />
             </div>
