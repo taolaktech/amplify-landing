@@ -347,7 +347,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-gray-900">Connect in 60 seconds</h3>
                   </div>
                   <p className="text-gray-600 mb-6">
-                    One-click Shopify integration. Your products, pricing, customers, and sales history sync automatically. Amplify reads what's sold before — so it already knows what to promote.
+                    One-click Shopify integration. Your products, pricing, customers, and sales history sync automatically. Amplify AI is already trained on thousands of winning ads in your niche so it already knows what to promote.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-2 text-sm text-gray-600">
