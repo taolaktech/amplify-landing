@@ -603,25 +603,11 @@ export default function Home() {
                   bold: false,
                 },
                 {
-                  capability: "Budget protection",
-                  others: "Manual rules",
-                  amplify: "Automatic AI guardrails — scales winning ads and pauses non-performing ads for you",
-                  othersX: false,
-                  bold: false,
-                },
-                {
                   capability: "Commission on ad spend",
                   others: "Often 2–5%",
                   amplify: "0% — flat rate only",
                   othersX: false,
                   bold: true,
-                },
-                {
-                  capability: "Creative refresh",
-                  others: "You start over",
-                  amplify: "Automatic ads refresh when fatigue detected",
-                  othersX: false,
-                  bold: false,
                 },
               ].map((row, idx) => (
                 <div
