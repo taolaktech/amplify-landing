@@ -354,7 +354,7 @@ export default function Home() {
                       <CircleCheck className="h-4 w-4 text-teal-500" /> One-click Shopify integration
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
-                      <CircleCheck className="h-4 w-4 text-teal-500" /> Auto-syncs products, pricing and sales history
+                      <CircleCheck className="h-4 w-4 text-teal-500" /> Auto-syncs products details, pricing and sales trends
                     </li>
                     <li className="flex items-center gap-2 text-sm text-gray-600">
                       <CircleCheck className="h-4 w-4 text-teal-500" /> Knows what to promote before your first ad
