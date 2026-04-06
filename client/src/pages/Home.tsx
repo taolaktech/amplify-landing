@@ -445,7 +445,7 @@ export default function Home() {
                 Copy what's actually converting right now for your niche.
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Every week, Amplify surfaces the highest-performing ads running across Shopify stores in your niche. One click to adapt them for your brand, your product, your voice.
+                Every week, Amplify surfaces the highest-performing ads running across Meta and Google ads network in your niche. One click to adapt them for your brand, your product, your voice.
               </p>
             </div>
 
