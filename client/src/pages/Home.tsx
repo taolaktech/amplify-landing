@@ -769,8 +769,8 @@ export default function Home() {
         {/* WAITLIST FORM - Visible with proper styling */}
         <section id="waitlist" className="py-16 bg-white">
           <div className="max-w-md mx-auto px-4">
-            <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">Join the Waitlist</h3>
-            <p className="text-gray-600 text-center mb-6">Be the first to know when we launch.</p>
+            <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">Join the Waitlist & Get 500 Free Credits</h3>
+            <p className="text-gray-600 text-center mb-6">Sign up today and receive 500 free credits to use when you get access.</p>
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
                 <Input 
@@ -796,7 +796,7 @@ export default function Home() {
                 className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-6 h-10"
                 data-testid="button-waitlist-submit"
               >
-                {createSubscriber.isPending ? "Joining..." : "Try for Free"}
+                {createSubscriber.isPending ? "Joining..." : "Give me 500 credits!"}
               </Button>
             </form>
           </div>
