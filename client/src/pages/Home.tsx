@@ -721,10 +721,9 @@ export default function Home() {
                   { text: "3,000 AI credits/month" },
                   { text: "Generate up to 500 AI ad creatives per month" },
                   { text: "1TB asset storage" },
-                  { text: "Automated market intelligence across your website, Meta Ad Library, Amazon & Reddit reviews, and trends" },
+                  { text: "Automated market intelligence including voice of customer research across your website, Meta Ad Library, Amazon & Reddit reviews, and trends" },
                   { text: "Full AI-generated creative briefs with proven hooks, angles, and messaging before every campaign" },
                   { text: "Live competitor ad tracking with Winning Ads identification" },
-                  { text: "Voice of customer research" },
                 ]}
               />
             </div>
