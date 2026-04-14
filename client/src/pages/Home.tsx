@@ -724,6 +724,7 @@ export default function Home() {
                   { text: "Automated market intelligence across your website, Meta Ad Library, Amazon & Reddit reviews, and trends" },
                   { text: "Full AI-generated creative briefs with proven hooks, angles, and messaging before every campaign" },
                   { text: "Live competitor ad tracking with Winning Ads identification" },
+                  { text: "Voice of customer research" },
                 ]}
               />
             </div>
